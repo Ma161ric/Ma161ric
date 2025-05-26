@@ -3,49 +3,87 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Marcel Richter – Portfolio</title>
+    <title>Marcel Richter – Embedded Systems Portfolio</title>
+
+    <!-- CSS -->
     <link rel="stylesheet" href="style.css" />
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
   </head>
   <body>
     <header>
       <div class="container">
-        <img
-          src="assets/sunset.gif"
-          alt="Profilbild von Marcel Richter"
-          class="avatar"
-        />
+        <img src="assets/profilbild.jpg" alt="Profilbild" class="avatar" />
         <div class="intro">
           <h1>👋 Hi, ich bin <span class="name">Marcel Richter</span></h1>
           <p class="studium">
-            Student der Angewandten Informatik<br />an der HTWG Konstanz
+            🎓 Student der Angewandten Informatik<br />an der HTWG Konstanz
           </p>
           <p class="focus">🧭 Vertiefung: Embedded Systems</p>
+          <button id="darkModeToggle">🌗 Dark Mode</button>
         </div>
       </div>
     </header>
 
     <main>
       <section class="projekte">
+        <section class="skills" data-aos="fade-up">
+          <h2>🛠️ Skills & Tools</h2>
+          <div class="badges">
+            <span class="badge">C</span>
+            <span class="badge">C++</span>
+            <span class="badge">Python</span>
+            <span class="badge">VHDL</span>
+            <span class="badge">Embedded Linux</span>
+            <span class="badge">Git</span>
+            <span class="badge">GitHub</span>
+            <span class="badge">VS Code</span>
+            <span class="badge">KiCad</span>
+            <span class="badge">MQTT</span>
+            <span class="badge">CAN</span>
+          </div>
+        </section>
+
         <h2>📂 Meine Projekte</h2>
+
+        <!-- Filter -->
+        <div class="filter">
+          <button data-filter="all">Alle</button>
+          <button data-filter="python">Python</button>
+          <button data-filter="c">C</button>
+          <button data-filter="hardware">Hardware</button>
+        </div>
+
+        <!-- Projekt-Grid -->
         <div class="grid">
-          <div class="projekt">
-            <h3><a href="https://github.com/Ma161ric/Projekt1">Projekt1</a></h3>
-            <p>Beschreibung des Projekts 1.</p>
+          <div class="projekt" data-tech="python" data-aos="fade-up">
+            <h3><a href="#">Python Logger</a></h3>
+            <p>
+              Ein Projekt zur Sensordatenerfassung mit Python und grafischer
+              Ausgabe.
+            </p>
           </div>
-          <div class="projekt">
-            <h3><a href="https://github.com/Ma161ric/Projekt2">Projekt2</a></h3>
-            <p>Beschreibung des Projekts 2.</p>
+          <div class="projekt" data-tech="c" data-aos="fade-up">
+            <h3><a href="#">Interruptgesteuerte Steuerung</a></h3>
+            <p>Mikrocontrollerprojekt in C mit Echtzeitverhalten.</p>
           </div>
-          <div class="projekt">
-            <h3><a href="https://github.com/Ma161ric/Projekt3">Projekt3</a></h3>
-            <p>Beschreibung des Projekts 3.</p>
-          </div>
-          <div class="projekt">
-            <h3><a href="https://github.com/Ma161ric/Projekt4">Projekt4</a></h3>
-            <p>Beschreibung des Projekts 4.</p>
+          <div class="projekt" data-tech="hardware" data-aos="fade-up">
+            <h3><a href="#">Temperatursensor & CAN</a></h3>
+            <p>Sensorintegration und CAN-Kommunikation zwischen MCUs.</p>
           </div>
         </div>
       </section>
     </main>
+
+    <!-- FOOTER mit zentriertem Button -->
+    <footer class="footer">
+      <a href="kontakt.html" class="kontakt-button">📫 Kontakt aufnehmen</a>
+    </footer>
+
+    <!-- JS & AOS -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+      AOS.init({ duration: 1000, once: true });
+    </script>
+    <script src="script.js"></script>
   </body>
 </html>

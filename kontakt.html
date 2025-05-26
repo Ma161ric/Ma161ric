@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kontakt – Marcel Richter</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="kontaktseite">
+      <h1>📫 Kontakt aufnehmen</h1>
+      <p>
+        Schreib mir eine Nachricht oder erreiche mich direkt über mein
+        Portfolio.
+      </p>
+
+      <form class="kontakt-formular">
+        <label for="name">Name</label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          placeholder="Dein Name"
+          required
+        />
+
+        <label for="email">E-Mail</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="Deine E-Mail"
+          required
+        />
+
+        <label for="nachricht">Nachricht</label>
+        <textarea
+          id="nachricht"
+          name="nachricht"
+          rows="6"
+          placeholder="Deine Nachricht"
+          required
+        ></textarea>
+
+        <button type="submit">📨 Nachricht senden</button>
+      </form>
+
+      <div class="zurueck-link">
+        <a href="index.html">🔙 Zurück zur Startseite</a>
+      </div>
+    </main>
+  </body>
+</html>

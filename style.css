@@ -115,3 +115,209 @@ main {
     grid-template-columns: 1fr;
   }
 }
+
+body.dark {
+  background-color: #121212;
+  color: #eee;
+}
+
+.projekt,
+.kontakt form {
+  transition: background-color 0.3s ease;
+}
+
+body.dark .projekt {
+  background-color: #1e1e1e;
+}
+
+#darkModeToggle {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+.filter {
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.filter button {
+  margin: 0 0.5rem;
+  padding: 0.5rem 1rem;
+  background-color: #343a40;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.filter button:hover {
+  background-color: #495057;
+}
+
+.kontaktseite {
+  max-width: 600px;
+  margin: 4rem auto;
+  padding: 2rem;
+  color: #fff;
+}
+
+.kontaktseite h1 {
+  text-align: center;
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+
+.kontakt-formular {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.kontakt-formular label {
+  font-weight: bold;
+  color: #e0e1dd;
+}
+
+.kontakt-formular input,
+.kontakt-formular textarea {
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  background-color: #f8f8f8;
+  color: #111;
+  transition: border 0.3s ease, background-color 0.3s ease;
+}
+
+.kontakt-formular input:focus,
+.kontakt-formular textarea:focus {
+  border-color: #00b4d8;
+  outline: none;
+}
+
+.kontakt-formular button {
+  background-color: #00b4d8;
+  color: white;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.kontakt-formular button:hover {
+  background-color: #0091b2;
+}
+
+/* DARK MODE */
+body.dark .kontakt-formular input,
+body.dark .kontakt-formular textarea {
+  background-color: #2a2a2a;
+  color: #fff;
+  border: 1px solid #444;
+}
+
+body.dark .kontaktseite {
+  color: #eee;
+}
+
+.zurueck-link {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.zurueck-link a {
+  text-decoration: none;
+  color: #00b4d8;
+  font-weight: bold;
+}
+
+.zurueck-link a:hover {
+  text-decoration: underline;
+}
+
+.footer {
+  text-align: center;
+  padding: 2rem;
+}
+
+.kontakt-zentrale {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.kontakt-button {
+  background-color: #00b4d8;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: bold;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.kontakt-button:hover {
+  background-color: #0091b2;
+  transform: translateY(-2px);
+}
+
+body.dark .kontakt-button {
+  background-color: #0077a6;
+}
+
+body.dark .kontakt-button:hover {
+  background-color: #005f86;
+}
+
+.skills {
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+.skills h2 {
+  color: #f8f9fa;
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+}
+
+.badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: center;
+}
+
+.badge {
+  background-color: #1b263b;
+  color: #00b4d8;
+  border: 1px solid #00b4d8;
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.badge:hover {
+  background-color: #00b4d8;
+  color: white;
+}
+
+body.dark .badge {
+  background-color: #2a2a2a;
+  border-color: #0077a6;
+  color: #0077a6;
+}
+
+body.dark .badge:hover {
+  background-color: #0077a6;
+  color: #fff;
+}
