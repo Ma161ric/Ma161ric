@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Marcel Richter – Embedded Systems Portfolio</title>
+    <title>Marcel Richter – Portfolio</title>
 
     <!-- CSS -->
     <link rel="stylesheet" href="style.css" />
@@ -12,21 +12,21 @@
   <body>
     <header>
       <div class="container">
-        <img src="assets/profilbild.jpg" alt="Profilbild" class="avatar" />
+        <button id="darkModeToggle">🌗 Dark Mode</button>
+        <img src="assets/colour.jpg" alt="Profilbild" class="avatar" />
         <div class="intro">
           <h1>👋 Hi, ich bin <span class="name">Marcel Richter</span></h1>
           <p class="studium">
             🎓 Student der Angewandten Informatik<br />an der HTWG Konstanz
           </p>
-          <p class="focus">🧭 Vertiefung: Embedded Systems</p>
-          <button id="darkModeToggle">🌗 Dark Mode</button>
+          <p class="focus">Embedded Systems</p>
         </div>
       </div>
     </header>
 
-    <main>
+    <main data-aos="fade-up">
       <section class="projekte">
-        <section class="skills" data-aos="fade-up">
+        <section class="skills">
           <h2>🛠️ Skills & Tools</h2>
           <div class="badges">
             <span class="badge">C</span>
@@ -55,18 +55,18 @@
 
         <!-- Projekt-Grid -->
         <div class="grid">
-          <div class="projekt" data-tech="python" data-aos="fade-up">
+          <div class="projekt" data-tech="python">
             <h3><a href="#">Python Logger</a></h3>
             <p>
               Ein Projekt zur Sensordatenerfassung mit Python und grafischer
               Ausgabe.
             </p>
           </div>
-          <div class="projekt" data-tech="c" data-aos="fade-up">
+          <div class="projekt" data-tech="c">
             <h3><a href="#">Interruptgesteuerte Steuerung</a></h3>
             <p>Mikrocontrollerprojekt in C mit Echtzeitverhalten.</p>
           </div>
-          <div class="projekt" data-tech="hardware" data-aos="fade-up">
+          <div class="projekt" data-tech="hardware">
             <h3><a href="#">Temperatursensor & CAN</a></h3>
             <p>Sensorintegration und CAN-Kommunikation zwischen MCUs.</p>
           </div>
@@ -84,6 +84,7 @@
     <script>
       AOS.init({ duration: 1000, once: true });
     </script>
+
     <script src="script.js"></script>
   </body>
 </html>

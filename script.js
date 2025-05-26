@@ -1,7 +1,16 @@
 // Dark Mode
-const toggleBtn = document.getElementById("darkModeToggle");
-toggleBtn.addEventListener("click", () => {
+const toggleButton = document.getElementById("darkModeToggle");
+
+if (localStorage.getItem("darkMode") === "true") {
+  document.body.classList.add("dark");
+  toggleButton.textContent = "🌞 Bright Mode";
+}
+
+toggleButton.addEventListener("click", () => {
   document.body.classList.toggle("dark");
+  const darkModeAktiv = document.body.classList.contains("dark");
+  toggleButton.textContent = darkModeAktiv ? "🌞 Bright Mode" : "🌙 Dark Mode";
+  localStorage.setItem("darkMode", darkModeAktiv);
 });
 
 // Filter
