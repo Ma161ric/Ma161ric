@@ -246,6 +246,10 @@ body.dark .intro h1 {
   color: #c0d4e5;
 }
 
+body.dark .intro p {
+  color: #a9bfd3;
+}
+
 body.dark #darkModeToggle {
   background-color: #91c0dc;
   color: #1e1e1e;
@@ -253,6 +257,10 @@ body.dark #darkModeToggle {
 
 body.dark #darkModeToggle:hover {
   background-color: #6ba3c7;
+}
+
+body.dark .projekte h2 {
+  color: #c0d4e5;
 }
 
 #darkModeToggle {
