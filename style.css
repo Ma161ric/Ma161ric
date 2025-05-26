@@ -255,7 +255,6 @@ body.dark #darkModeToggle:hover {
   background-color: #6ba3c7;
 }
 
-
 #darkModeToggle {
   position: absolute;
   top: 1rem;
@@ -286,7 +285,116 @@ body.dark #darkModeToggle:hover {
   background-color: #6ba3c7;
 }
 
+/* Kontaktseite */
+.kontaktseite {
+  max-width: 600px;
+  margin: 4rem auto;
+  padding: 2rem;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
 
+body.dark .kontaktseite {
+  background-color: #2a354a;
+  color: #dbeaf5;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Kontaktformular */
+.kontakt-formular {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.kontakt-formular label {
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+body.dark .kontakt-formular label {
+  color: #c0d4e5;
+}
+
+.kontakt-formular input,
+.kontakt-formular textarea {
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  background-color: #f5f6fa;
+  color: #1e1e1e;
+  transition: border 0.3s ease, background-color 0.3s ease;
+}
+
+.kontakt-formular input:focus,
+.kontakt-formular textarea:focus {
+  border-color: #2c6e91;
+  outline: none;
+  background-color: #fff;
+}
+
+body.dark .kontakt-formular input,
+body.dark .kontakt-formular textarea {
+  background-color: #3a475e;
+  border-color: #5a7ea0;
+  color: #ffffff;
+}
+
+body.dark .kontakt-formular input:focus,
+body.dark .kontakt-formular textarea:focus {
+  background-color: #45546b;
+  border-color: #91c0dc;
+}
+
+/* Submit-Button */
+.kontakt-formular button {
+  background-color: #2c6e91;
+  color: white;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.kontakt-formular button:hover {
+  background-color: #1d4e6d;
+  transform: translateY(-2px);
+}
+
+body.dark .kontakt-formular button {
+  background-color: #91c0dc;
+  color: #1e1e1e;
+}
+
+body.dark .kontakt-formular button:hover {
+  background-color: #6ba3c7;
+}
+
+/* Zurück-Link */
+.zurueck-link {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.zurueck-link a {
+  text-decoration: none;
+  color: #2c6e91;
+  font-weight: bold;
+}
+
+.zurueck-link a:hover {
+  text-decoration: underline;
+}
+
+body.dark .zurueck-link a {
+  color: #91c0dc;
+}
 
 /* Responsive */
 @media (max-width: 600px) {
