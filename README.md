@@ -31,16 +31,15 @@ Im Rahmen meines Studiums mit Schwerpunkt auf Embedded Systems beschäftige ich 
 
 ---
 
-- 🔌 **Sensorik-Modul**: Entwicklung eines Entfernungsmessers mit Kalibrierung und Datenverarbeitung.
-- 🎛️ **Digitale Filter**: Implementierung von FIR- und IIR-Filtern zur Signalverarbeitung.
-- 🕹️ **Embedded Game**: Programmierung eines Spiels auf einem Mikrocontroller mit LED-Matrix-Anzeige.
-- 📡 **IoT-Wetterstation**: Aufbau einer vernetzten Wetterstation mit Datenübertragung an eine Webplattform.
+## 📚 Aktuelle Projekte
+
+- **Embedded Systems Projekt**: Umbau eines iPod Classic zu einem Raspberry Pi-basierten Mediaplayer.
+- **IoT-Anwendung**: Implementierung eines eigenen Smart-Home-Projekts mit Mikrocontrollern und Sensoren.
 
 ---
 
 ## 📫 Kontakt
 
-- 📧 E-Mail: ma161ric@htwg-konstanz.de
 - 🌐 Portfolio: [ma161ric.github.io](https://ma161ric.github.io)
 
 ---
