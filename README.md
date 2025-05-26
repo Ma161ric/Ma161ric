@@ -40,7 +40,7 @@ Im Rahmen meines Studiums mit Schwerpunkt auf Embedded Systems beschäftige ich 
 
 ## 📫 Kontakt
 
-- 🌐 Portfolio: [ma161ric.github.io](https://ma161ric.github.io)
+- [🌐 Portfolio](https://ma161ric.github.io/ma161ric)
 
 ---
 
