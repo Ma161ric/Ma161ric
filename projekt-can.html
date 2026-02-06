@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CAN Bus Kommunikation | Marcel Richter</title>
+  <meta name="description" content="CAN Bus Projekt: Temperaturdaten erfassen und zwischen Knoten austauschen mit nachvollziehbarem Logging.">
+  
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+  <!-- Navigation Header -->
+  <header class="site-header">
+    <nav class="nav-container">
+      <a href="index.html" class="nav-logo">Marcel Richter</a>
+      
+      <ul class="nav-links">
+        <li><a href="index.html" data-i18n="navHome">Start</a></li>
+        <li><a href="index.html#projects" data-i18n="navProjects">Projekte</a></li>
+        <li><a href="cv.html" data-i18n="navCV">Lebenslauf</a></li>
+        <li><a href="kontakt.html" data-i18n="navContact">Kontakt</a></li>
+        <li><a href="https://www.linkedin.com/in/marcel-ric/" target="_blank" rel="noopener" data-i18n="navLinkedIn">💼 LinkedIn</a></li>
+      </ul>
+      
+      <div class="nav-controls">
+        <button id="darkModeToggle" class="toggle-btn" aria-label="Dark Mode umschalten">🌙 Dark Mode</button>
+        <button id="languageToggle" class="toggle-btn" aria-label="Sprache wechseln">🇬🇧 English</button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main class="content">
+    <article class="project-detail" data-aos="fade-up">
+      <!-- Project Header -->
+      <header class="project-header">
+        <h1>CAN Bus Kommunikation</h1>
+        <p class="project-oneliner">Temperaturdaten erfassen und zwischen Knoten austauschen. Fokus auf Nachrichtenformat und nachvollziehbares Logging.</p>
+      </header>
+
+      <!-- Ziel -->
+      <section class="project-section">
+        <h2 data-i18n="projectGoalTitle">🎯 Ziel</h2>
+        <p>Das Projekt beschäftigt sich mit der Erfassung von Temperaturdaten und deren Austausch zwischen mehreren Knoten über einen CAN-Bus. Der Fokus liegt auf einem strukturierten Nachrichtenformat, nachvollziehbarem Logging und sicherer Fehlerbehandlung bei Kommunikationsproblemen.</p>
+      </section>
+
+      <!-- Mein Beitrag -->
+      <section class="project-section">
+        <h2 data-i18n="projectContributionTitle">🔧 Mein Beitrag</h2>
+        <ul>
+          <li>Definition eines strukturierten Nachrichtenformats für Sensordaten</li>
+          <li>Implementierung der CAN-Schnittstelle und Fehlerbehandlung</li>
+          <li>Logging-Mechanismus zur Nachvollziehbarkeit von Nachrichten und Fehlern</li>
+        </ul>
+      </section>
+
+      <!-- Tech Stack -->
+      <section class="project-section">
+        <h2 data-i18n="projectTechTitle">💻 Tech Stack</h2>
+        <div class="badges">
+          <span class="badge">C</span>
+          <span class="badge">CAN Bus</span>
+          <span class="badge">Embedded</span>
+          <span class="badge">Schnittstellen</span>
+          <span class="badge">Debugging</span>
+          <span class="badge">Git</span>
+        </div>
+      </section>
+
+      <!-- Umsetzung -->
+      <section class="project-section">
+        <h2 data-i18n="projectImplementationTitle">⚙️ Umsetzung</h2>
+        <p>Die Umsetzung begann mit der Definition des Nachrichtenformats. Es wurde ein einfaches Protokoll definiert, das Sensor-ID, Temperaturwert und Checksumme enthält. Die CAN-Schnittstelle wurde konfiguriert und ein Empfangs- und Sendemechanismus implementiert. Besonderes Augenmerk wurde auf Fehlerszenarien wie verlorene Nachrichten und falsche Checksummen gelegt. Ein Logging-System protokolliert alle Nachrichten und Fehler für spätere Analyse.</p>
+      </section>
+
+      <!-- Screenshots -->
+      <section class="project-section">
+        <h2 data-i18n="projectScreenshotsTitle">📸 Screenshots</h2>
+        <div class="project-screenshot">
+          [Screenshot Platzhalter: CAN-Bus Analyzer oder Logging-Ausgabe]
+        </div>
+      </section>
+
+      <!-- Lessons Learned -->
+      <section class="project-section">
+        <h2 data-i18n="projectLessonsTitle">📚 Lessons Learned</h2>
+        <ul>
+          <li>Strukturierte Nachrichtenformate erleichtern Debugging und Wartung.</li>
+          <li>Logging ist unverzichtbar für die Analyse von Kommunikationsproblemen.</li>
+        </ul>
+      </section>
+
+      <!-- Links -->
+      <section class="project-section">
+        <h2 data-i18n="projectLinksTitle">🔗 Links</h2>
+        <div class="project-links">
+          <a href="#" class="btn btn-secondary" data-i18n="projectRepo">GitHub Repository</a>
+          <a href="#" class="btn btn-secondary" data-i18n="projectDemo">Live Demo</a>
+        </div>
+      </section>
+
+      <!-- Navigation -->
+      <nav class="project-nav">
+        <a href="index.html#projects" class="btn btn-secondary" data-i18n="projectBackToProjects">← Zurück zu Projekten</a>
+        <a href="kontakt.html" class="btn btn-primary" data-i18n="projectContactCTA">📫 Kontakt</a>
+      </nav>
+    </article>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-content">
+      <ul class="footer-links">
+        <li><a href="index.html" data-i18n="navHome">Start</a></li>
+        <li><a href="cv.html" data-i18n="navCV">Lebenslauf</a></li>
+        <li><a href="kontakt.html" data-i18n="footerContact">📫 Kontakt</a></li>
+        <li><a href="https://www.linkedin.com/in/marcel-ric/" target="_blank" rel="noopener" data-i18n="footerLinkedIn">💼 LinkedIn</a></li>
+      </ul>
+      <div class="footer-legal">
+        <a href="impressum.html" data-i18n="footerImpressum">Impressum</a>
+        <a href="datenschutz.html" data-i18n="footerDatenschutz">Datenschutz</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

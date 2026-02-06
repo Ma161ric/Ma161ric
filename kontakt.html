@@ -1,167 +1,219 @@
 <!DOCTYPE html>
 <html lang="de">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Kontakt | Marcel Richter</title>
-    <meta
-      name="description"
-      content="Kontaktseite von Marcel Richter. Schreib mir per E-Mail oder nutze das Kontaktformular."
-    />
-    <link rel="stylesheet" href="style.css" />
-  </head>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kontakt | Marcel Richter</title>
+  <meta name="description" content="Kontaktiere Marcel Richter. Schreib mir eine Nachricht oder nutze das Kontaktformular.">
+  
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Navigation Header -->
+  <header class="site-header">
+    <nav class="nav-container">
+      <a href="index.html" class="nav-logo">Marcel Richter</a>
+      
+      <ul class="nav-links">
+        <li><a href="index.html" data-i18n="navHome">Start</a></li>
+        <li><a href="index.html#projects" data-i18n="navProjects">Projekte</a></li>
+        <li><a href="cv.html" data-i18n="navCV">Lebenslauf</a></li>
+        <li><a href="kontakt.html" data-i18n="navContact">Kontakt</a></li>
+        <li><a href="https://www.linkedin.com/in/marcel-ric/" target="_blank" rel="noopener" data-i18n="navLinkedIn">💼 LinkedIn</a></li>
+      </ul>
+      
+      <div class="nav-controls">
+        <button id="darkModeToggle" class="toggle-btn" aria-label="Dark Mode umschalten">🌙 Dark Mode</button>
+        <button id="languageToggle" class="toggle-btn" aria-label="Sprache wechseln">🇬🇧 English</button>
+      </div>
+    </nav>
+  </header>
 
-  <body>
-    <button id="darkModeToggle" aria-label="Dark Mode umschalten">
-      🌗 Dark Mode
-    </button>
-
-    <main class="kontaktseite">
-      <h1>📫 Kontakt aufnehmen</h1>
-
-      <p>
-        Schreib mir gern eine Nachricht an
-        <a href="mailto:marcel.richter.fn@gmx.de">marcel.richter.fn@gmx.de</a>
-        oder nutze das Kontaktformular. Ich freue mich auf deine Nachricht.
+  <!-- Main Content -->
+  <main>
+    <div class="form-wrapper">
+      <h1 data-i18n="contactTitle">📫 Kontakt aufnehmen</h1>
+      
+      <p class="form-intro" data-i18n="contactIntro">
+        Schreib mir gern eine Nachricht oder nutze das Kontaktformular. Ich freue mich auf deine Nachricht.
       </p>
 
-      <div class="kontakt-links">
-        <a
-          class="link-btn"
-          href="https://www.linkedin.com/in/marcel-ric/"
-          target="_blank"
-          rel="noopener"
-          >💼 LinkedIn</a
-        >
-        <a class="link-btn" href="index.html">🏠 Startseite</a>
-      </div>
+      <p style="text-align: center; margin-bottom: 1.5rem;">
+        <span data-i18n="contactEmail">E-Mail:</span> 
+        <a href="mailto:marcel.richter.fn@gmx.de">marcel.richter.fn@gmx.de</a>
+      </p>
 
-      <form
-        id="kontaktForm"
-        class="kontakt-formular"
-        action="https://formsubmit.co/marcel.richter.fn%40gmx.de"
+      <form 
+        id="kontaktForm" 
+        class="contact-form"
+        action="https://formsubmit.co/marcel.richter.fn@gmx.de" 
         method="POST"
         novalidate
       >
-        <!-- Formsubmit Optionen -->
-        <input type="hidden" name="_captcha" value="false" />
-        <input
-          type="hidden"
-          name="_subject"
-          value="Neue Nachricht von der Website"
-        />
-        <input type="hidden" name="_template" value="table" />
-
-        <!-- Optional. Wenn du lieber ohne JS umleiten willst, aktivieren und das JS Redirect entfernen -->
-        <input type="hidden" name="_next" value="danke.html" />
+        <!-- FormSubmit Konfiguration -->
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_subject" value="Neue Nachricht von der Portfolio Website">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_next" value="https://ma161ric.github.io/Ma161ric/danke.html">
 
         <!-- Honeypot gegen Spam -->
-        <div style="display: none;">
+        <div style="position: absolute; left: -5000px;" aria-hidden="true">
           <label for="website">Website</label>
-          <input type="text" id="website" name="_honey" tabindex="-1" autocomplete="off" />
+          <input type="text" id="website" name="_honey" tabindex="-1" autocomplete="off">
         </div>
 
-        <label for="name">Name</label>
-        <input
-          type="text"
-          id="name"
-          name="name"
-          placeholder="Dein Name"
-          required
-          autocomplete="name"
-        />
+        <!-- Name -->
+        <div>
+          <label for="name" data-i18n="contactName">Name</label>
+          <input 
+            type="text" 
+            id="name" 
+            name="name" 
+            data-i18n-placeholder="contactNamePlaceholder"
+            placeholder="Dein Name"
+            required 
+            autocomplete="name"
+          >
+        </div>
 
-        <label for="email">E-Mail</label>
-        <input
-          type="email"
-          id="email"
-          name="email"
-          placeholder="Deine E-Mail"
-          required
-          autocomplete="email"
-        />
+        <!-- E-Mail -->
+        <div>
+          <label for="email" data-i18n="contactEmail">E-Mail</label>
+          <input 
+            type="email" 
+            id="email" 
+            name="email" 
+            data-i18n-placeholder="contactEmailPlaceholder"
+            placeholder="Deine E-Mail"
+            required 
+            autocomplete="email"
+          >
+        </div>
 
-        <label for="nachricht">Nachricht</label>
-        <textarea
-          id="nachricht"
-          name="nachricht"
-          rows="6"
-          placeholder="Deine Nachricht"
-          required
-        ></textarea>
+        <!-- Nachricht -->
+        <div>
+          <label for="nachricht" data-i18n="contactMessage">Nachricht</label>
+          <textarea 
+            id="nachricht" 
+            name="nachricht" 
+            rows="6"            data-i18n-placeholder="contactMessagePlaceholder"
+            placeholder="Deine Nachricht"
+            required
+          ></textarea>
+        </div>
 
-        <button type="submit" id="submitBtn">📨 Nachricht senden</button>
+        <!-- Submit Button -->
+        <button type="submit" id="submitBtn" class="btn btn-primary" data-i18n="contactSubmit">
+          📨 Nachricht senden
+        </button>
 
-        <div
-          id="errorMessage"
+        <!-- Error Message -->
+        <div 
+          id="errorMessage" 
           class="error-message"
-          style="display: none; color: red; margin-top: 10px;"
-          role="alert"
+          style="display: none;"
+          role="alert" 
           aria-live="polite"
         ></div>
 
-        <div
-          id="successMessage"
+        <!-- Success Message -->
+        <div 
+          id="successMessage" 
           class="success-message"
-          style="display: none; margin-top: 10px;"
+          style="display: none;"
           aria-live="polite"
         >
-          ✅ Nachricht wurde gesendet. Weiterleitung läuft.
+          ✅ Nachricht wurde gesendet. Weiterleitung läuft...
         </div>
       </form>
 
-      <div class="zurueck-link">
-        <a href="index.html">🔙 Zurück zur Startseite</a>
+      <div class="form-actions">
+        <a href="index.html" class="btn btn-secondary" data-i18n="contactBackHome">🔙 Zurück zur Startseite</a>
       </div>
-    </main>
+    </div>
+  </main>
 
-    <script src="script.js"></script>
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-content">
+      <ul class="footer-links">
+        <li><a href="index.html" data-i18n="navHome">Start</a></li>
+        <li><a href="cv.html" data-i18n="navCV">Lebenslauf</a></li>
+        <li><a href="kontakt.html" data-i18n="footerContact">📫 Kontakt</a></li>
+        <li><a href="https://www.linkedin.com/in/marcel-ric/" target="_blank" rel="noopener" data-i18n="footerLinkedIn">💼 LinkedIn</a></li>
+      </ul>
+      <div class="footer-legal">
+        <a href="impressum.html" data-i18n="footerImpressum">Impressum</a>
+        <a href="datenschutz.html" data-i18n="footerDatenschutz">Datenschutz</a>
+      </div>
+    </div>
+  </footer>
 
-    <script>
-      document.getElementById("kontaktForm").addEventListener("submit", async (e) => {
-        e.preventDefault();
+  <!-- Scripts -->
+  <script src="script.js"></script>
+  
+  <!-- Contact Form Handler -->
+  <script>
+    document.getElementById("kontaktForm").addEventListener("submit", async (e) => {
+      e.preventDefault();
 
-        const form = e.target;
-        const submitBtn = document.getElementById("submitBtn");
-        const errorMessage = document.getElementById("errorMessage");
-        const successMessage = document.getElementById("successMessage");
+      const form = e.target;
+      const submitBtn = document.getElementById("submitBtn");
+      const errorMessage = document.getElementById("errorMessage");
+      const successMessage = document.getElementById("successMessage");
 
-        errorMessage.style.display = "none";
-        errorMessage.textContent = "";
-        successMessage.style.display = "none";
+      // Reset messages
+      errorMessage.style.display = "none";
+      errorMessage.textContent = "";
+      successMessage.style.display = "none";
 
-        if (!form.checkValidity()) {
-          errorMessage.textContent = "Bitte prüfe deine Eingaben und fülle alle Pflichtfelder aus.";
-          errorMessage.style.display = "block";
+      // Validate form
+      if (!form.checkValidity()) {
+        const lang = getCurrentLanguage ? getCurrentLanguage() : "de";
+        const msg = translations && translations[lang] ? translations[lang].contactValidation : "Bitte prüfe deine Eingaben und fülle alle Pflichtfelder aus.";
+        errorMessage.textContent = msg;
+        errorMessage.style.display = "block";
+        return;
+      }
+
+      // Disable button
+      submitBtn.disabled = true;
+      const lang = getCurrentLanguage ? getCurrentLanguage() : "de";
+      const sendingMsg = translations && translations[lang] ? translations[lang].contactSending : "⏳ Wird gesendet...";
+      submitBtn.textContent = sendingMsg;
+
+      try {
+        const response = await fetch(form.action, {
+          method: "POST",
+          headers: { 
+            "Accept": "application/json" 
+          },
+          body: new FormData(form)
+        });
+
+        if (response.ok) {
+          successMessage.style.display = "block";
+          // Redirect after 1 second
+          setTimeout(() => {
+            window.location.href = "danke.html";
+          }, 1000);
           return;
         }
 
-        submitBtn.disabled = true;
-        submitBtn.textContent = "⏳ Wird gesendet...";
+        throw new Error("Server error: " + response.status);
+      } catch (error) {
+        const lang = getCurrentLanguage ? getCurrentLanguage() : "de";
+        const errorMsg = translations && translations[lang] ? translations[lang].contactError : "❌ Fehler beim Senden. Bitte versuche es später erneut oder schreibe mir direkt per E-Mail.";
+        errorMessage.textContent = errorMsg;
+        errorMessage.style.display = "block";
 
-        try {
-          const response = await fetch(form.action, {
-            method: "POST",
-            headers: { Accept: "application/json" },
-            body: new FormData(form),
-          });
-
-          if (response.ok) {
-            successMessage.style.display = "block";
-            window.location.href = "danke.html";
-            return;
-          }
-
-          throw new Error("Server error: " + response.status);
-        } catch (error) {
-          errorMessage.textContent =
-            "❌ Fehler beim Senden. Bitte versuche es später erneut oder schreibe mir direkt per E-Mail.";
-          errorMessage.style.display = "block";
-
-          submitBtn.disabled = false;
-          submitBtn.textContent = "📨 Nachricht senden";
-        }
-      });
-    </script>
-  </body>
+        // Re-enable button
+        submitBtn.disabled = false;
+        const submitMsg = translations && translations[lang] ? translations[lang].contactSubmit : "📨 Nachricht senden";
+        submitBtn.textContent = submitMsg;
+      }
+    });
+  </script>
+</body>
 </html>

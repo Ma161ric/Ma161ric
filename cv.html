@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lebenslauf | Marcel Richter</title>
+  <meta name="description" content="Lebenslauf von Marcel Richter. Student der Angewandten Informatik mit Schwerpunkt Embedded Systems.">
+  
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+  <!-- Navigation Header -->
+  <header class="site-header">
+    <nav class="nav-container">
+      <a href="index.html" class="nav-logo">Marcel Richter</a>
+      
+      <ul class="nav-links">
+        <li><a href="index.html" data-i18n="navHome">Start</a></li>
+        <li><a href="index.html#projects" data-i18n="navProjects">Projekte</a></li>
+        <li><a href="cv.html" data-i18n="navCV">Lebenslauf</a></li>
+        <li><a href="kontakt.html" data-i18n="navContact">Kontakt</a></li>
+        <li><a href="https://www.linkedin.com/in/marcel-ric/" target="_blank" rel="noopener" data-i18n="navLinkedIn">💼 LinkedIn</a></li>
+      </ul>
+      
+      <div class="nav-controls">
+        <button id="darkModeToggle" class="toggle-btn" aria-label="Dark Mode umschalten">🌙 Dark Mode</button>
+        <button id="languageToggle" class="toggle-btn" aria-label="Sprache wechseln">🇬🇧 English</button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main class="content">
+    <div class="project-detail" data-aos="fade-up">
+      <h1 data-i18n="cvTitle">📄 Lebenslauf</h1>
+
+      <!-- Ausbildung -->
+      <section class="cv-section">
+        <h2 data-i18n="cvEducationTitle">🎓 Ausbildung</h2>
+        <div class="cv-item">
+          <h3 data-i18n="cvEducationDegree">Bachelor of Science, Angewandte Informatik</h3>
+          <p data-i18n="cvEducationSchool">HTWG Konstanz</p>
+          <p data-i18n="cvEducationFocus">Schwerpunkt: Embedded Systems</p>
+          <p>Ich studiere Angewandte Informatik an der HTWG Konstanz mit Fokus auf Embedded Systems. Im Studium beschäftige ich mich mit hardwarenaher Programmierung, Mikroprozessortechnik, digitalen Systemen und Embedded Linux.</p>
+        </div>
+      </section>
+
+      <!-- Praxiserfahrung -->
+      <section class="cv-section">
+        <h2 data-i18n="cvExperienceTitle">💼 Praxiserfahrung</h2>
+        <div class="cv-item">
+          <p data-i18n="cvExperiencePlaceholder">Praxissemester und berufliche Stationen (Platzhalter für eigene Inhalte)</p>
+          <p>Hier kannst du dein Praxissemester, Werkstudententätigkeiten oder andere berufliche Erfahrungen eintragen. Beschreibe kurz deine Aufgaben, verwendete Technologien und was du dabei gelernt hast.</p>
+        </div>
+      </section>
+
+      <!-- Skills -->
+      <section class="cv-section">
+        <h2 data-i18n="cvSkillsTitle">🛠️ Technische Skills</h2>
+        <div class="badges">
+          <span class="badge">C</span>
+          <span class="badge">C++</span>
+          <span class="badge">Python</span>
+          <span class="badge">VHDL (Grundlagen)</span>
+          <span class="badge">Embedded Linux</span>
+          <span class="badge">Git</span>
+          <span class="badge">VS Code</span>
+          <span class="badge">Debugging</span>
+          <span class="badge">Mikrocontroller</span>
+        </div>
+      </section>
+
+      <!-- Actions -->
+      <div class="cv-actions">
+        <a href="assets/CV_Marcel_Richter.pdf" class="btn btn-primary" download data-i18n="cvDownload">📥 CV als PDF herunterladen</a>
+        <a href="kontakt.html" class="btn btn-secondary" data-i18n="cvContactBtn">📫 Kontakt aufnehmen</a>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-content">
+      <ul class="footer-links">
+        <li><a href="index.html" data-i18n="navHome">Start</a></li>
+        <li><a href="cv.html" data-i18n="navCV">Lebenslauf</a></li>
+        <li><a href="kontakt.html" data-i18n="footerContact">📫 Kontakt</a></li>
+        <li><a href="https://www.linkedin.com/in/marcel-ric/" target="_blank" rel="noopener" data-i18n="footerLinkedIn">💼 LinkedIn</a></li>
+      </ul>
+      <div class="footer-legal">
+        <a href="impressum.html" data-i18n="footerImpressum">Impressum</a>
+        <a href="datenschutz.html" data-i18n="footerDatenschutz">Datenschutz</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

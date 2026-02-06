@@ -1,44 +1,69 @@
 <!DOCTYPE html>
 <html lang="de">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Danke | Marcel Richter</title>
-    <meta
-      name="description"
-      content="Danke Seite. Nachricht wurde gesendet."
-    />
-    <link rel="stylesheet" href="style.css" />
-  </head>
-
-  <body>
-    <button id="darkModeToggle" aria-label="Dark Mode umschalten">
-      🌗 Dark Mode
-    </button>
-
-    <main class="kontaktseite">
-      <h1>✅ Danke für deine Nachricht</h1>
-      <p>Ich habe deine Nachricht erhalten und melde mich so bald wie möglich.</p>
-
-      <div class="kontakt-links">
-        <a class="link-btn" href="index.html">🏠 Zur Startseite</a>
-        <a class="link-btn" href="kontakt.html">📫 Noch eine Nachricht</a>
-        <a
-          class="link-btn"
-          href="https://www.linkedin.com/in/marcel-ric/"
-          target="_blank"
-          rel="noopener"
-          >💼 LinkedIn</a
-        >
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Danke | Marcel Richter</title>
+  <meta name="description" content="Vielen Dank für deine Nachricht. Ich melde mich so bald wie möglich.">
+  
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Navigation Header -->
+  <header class="site-header">
+    <nav class="nav-container">
+      <a href="index.html" class="nav-logo">Marcel Richter</a>
+      
+      <ul class="nav-links">
+        <li><a href="index.html" data-i18n="navHome">Start</a></li>
+        <li><a href="index.html#projects" data-i18n="navProjects">Projekte</a></li>
+        <li><a href="cv.html" data-i18n="navCV">Lebenslauf</a></li>
+        <li><a href="kontakt.html" data-i18n="navContact">Kontakt</a></li>
+        <li><a href="https://www.linkedin.com/in/marcel-ric/" target="_blank" rel="noopener" data-i18n="navLinkedIn">💼 LinkedIn</a></li>
+      </ul>
+      
+      <div class="nav-controls">
+        <button id="darkModeToggle" class="toggle-btn" aria-label="Dark Mode umschalten">🌙 Dark Mode</button>
+        <button id="languageToggle" class="toggle-btn" aria-label="Sprache wechseln">🇬🇧 English</button>
       </div>
-    </main>
+    </nav>
+  </header>
 
-    <footer class="footer">
-      <div class="footer-inner">
-        <a href="kontakt.html" class="kontakt-button">📫 Noch eine Nachricht senden</a>
+  <!-- Main Content -->
+  <main>
+    <div class="thank-you-container">
+      <h1 data-i18n="thankYouTitle">✅ Danke für deine Nachricht</h1>
+      
+      <p data-i18n="thankYouMessage">
+        Ich habe deine Nachricht erhalten und melde mich so bald wie möglich.
+      </p>
+
+      <div class="thank-you-links">
+        <a href="index.html" class="btn btn-primary" data-i18n="thankYouHome">🏠 Zur Startseite</a>
+        <a href="kontakt.html" class="btn btn-secondary" data-i18n="thankYouContact">📫 Noch eine Nachricht</a>
+        <a href="https://www.linkedin.com/in/marcel-ric/" target="_blank" rel="noopener" class="btn btn-secondary" data-i18n="thankYouLinkedIn">💼 LinkedIn</a>
       </div>
-    </footer>
+    </div>
+  </main>
 
-    <script src="script.js"></script>
-  </body>
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-content">
+      <ul class="footer-links">
+        <li><a href="index.html" data-i18n="navHome">Start</a></li>
+        <li><a href="cv.html" data-i18n="navCV">Lebenslauf</a></li>
+        <li><a href="kontakt.html" data-i18n="footerContact">📫 Kontakt</a></li>
+        <li><a href="https://www.linkedin.com/in/marcel-ric/" target="_blank" rel="noopener" data-i18n="footerLinkedIn">💼 LinkedIn</a></li>
+      </ul>
+      <div class="footer-legal">
+        <a href="impressum.html" data-i18n="footerImpressum">Impressum</a>
+        <a href="datenschutz.html" data-i18n="footerDatenschutz">Datenschutz</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="script.js"></script>
+</body>
 </html>

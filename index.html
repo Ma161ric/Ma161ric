@@ -1,183 +1,172 @@
 <!DOCTYPE html>
 <html lang="de">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Marcel Richter | Portfolio</title>
-
-    <meta
-      name="description"
-      content="Portfolio von Marcel Richter. Angewandte Informatik mit Schwerpunkt Embedded Systems. Projekte, Skills, Kontakt und Links."
-    />
-
-    <!-- CSS -->
-    <link rel="stylesheet" href="style.css" />
-    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
-  </head>
-
-  <body>
-    <header>
-      <div class="container">
-        <div class="topbar">
-          <button id="darkModeToggle" aria-label="Dark Mode umschalten">
-            🌗 Dark Mode
-          </button>
-
-          <nav class="quicklinks" aria-label="Schnelllinks">
-            <a
-              class="link-btn"
-              href="https://www.linkedin.com/in/marcel-ric/"
-              target="_blank"
-              rel="noopener"
-              >💼 LinkedIn</a
-            >
-            <a
-              class="link-btn"
-              href="https://Ma161ric.github.io/Ma161ric"
-              target="_blank"
-              rel="noopener"
-              >🌐 Portfolio</a
-            >
-            <a class="link-btn" href="kontakt.html">📫 Kontakt</a>
-          </nav>
-        </div>
-
-        <div class="hero">
-          <img
-            src="assets/profilbild.jpg"
-            srcset="assets/profilbild.jpg 1x, assets/profilbild@2x.jpg 2x"
-            alt="Profilbild von Marcel Richter"
-            class="avatar"
-          />
-
-          <div class="intro">
-            <h1>👋 Hi, ich bin <span class="name">Marcel Richter</span></h1>
-
-            <p class="studium">
-              🎓 Student der Angewandten Informatik<br />an der HTWG Konstanz
-            </p>
-
-            <p class="focus">Schwerpunkt: Embedded Systems</p>
-
-            <p class="tagline">
-              Ich interessiere mich für hardwarenahe Software, zuverlässige
-              Systeme und Kommunikation zwischen Geräten. Hier zeige ich Projekte
-              und Skills, die ich im Studium und in eigenen Arbeiten aufgebaut
-              habe.
-            </p>
-          </div>
-        </div>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Marcel Richter | Portfolio</title>
+  <meta name="description" content="Portfolio von Marcel Richter. Angewandte Informatik mit Schwerpunkt Embedded Systems. Projekte, Skills, Kontakt und Links.">
+  <meta name="keywords" content="Marcel Richter, Embedded Systems, C, C++, Embedded Linux, Portfolio, HTWG Konstanz">
+  <meta name="author" content="Marcel Richter">
+  
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+  <!-- Navigation Header -->
+  <header class="site-header">
+    <nav class="nav-container">
+      <a href="index.html" class="nav-logo">Marcel Richter</a>
+      
+      <ul class="nav-links">
+        <li><a href="index.html" data-i18n="navHome">Start</a></li>
+        <li><a href="index.html#projects" data-i18n="navProjects">Projekte</a></li>
+        <li><a href="cv.html" data-i18n="navCV">Lebenslauf</a></li>
+        <li><a href="kontakt.html" data-i18n="navContact">Kontakt</a></li>
+        <li><a href="https://www.linkedin.com/in/marcel-ric/" target="_blank" rel="noopener" data-i18n="navLinkedIn">💼 LinkedIn</a></li>
+      </ul>
+      
+      <div class="nav-controls">
+        <button id="darkModeToggle" class="toggle-btn" aria-label="Dark Mode umschalten">🌙 Dark Mode</button>
+        <button id="languageToggle" class="toggle-btn" aria-label="Sprache wechseln">🇬🇧 English</button>
       </div>
-    </header>
+    </nav>
+  </header>
 
-    <main data-aos="fade-up">
-      <section class="content">
-        <section class="about" id="about">
-          <h2>🧩 Kurzprofil</h2>
-          <ul class="bullets">
-            <li>Embedded Entwicklung mit Fokus auf C und C++</li>
-            <li>Grundlagen digitaler Systeme und Mikroprozessortechnik</li>
-            <li>Sensorik und Peripherie, Interrupts, Timer, Zustandsmaschinen</li>
-            <li>Embedded Linux Grundlagen und Tooling im Alltag</li>
-          </ul>
-        </section>
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="hero-content" data-aos="fade-up">
+      <img 
+        src="assets/profilbild.jpg" 
+        srcset="assets/profilbild.jpg 1x, assets/profilbild@2x.jpg 2x"
+        alt="Profilbild von Marcel Richter" 
+        class="hero-avatar"
+      >
+      <div class="hero-text">
+        <h1>
+          <span data-i18n="heroGreeting">👋 Hi, ich bin</span> 
+          <span class="hero-name">Marcel Richter</span>
+        </h1>
+        <p class="hero-subtitle" data-i18n="heroSubtitle">
+          🎓 Student der Angewandten Informatik an der HTWG Konstanz
+        </p>
+        <p class="hero-focus" data-i18n="heroFocus">
+          Schwerpunkt: Embedded Systems
+        </p>
+        <p class="hero-tagline" data-i18n="heroTagline">
+          Ich interessiere mich für hardwarenahe Software, zuverlässige Systeme und Kommunikation zwischen Geräten. Hier zeige ich Projekte und Skills, die ich im Studium und in eigenen Arbeiten aufgebaut habe.
+        </p>
+      </div>
+    </div>
+  </section>
 
-        <section class="skills" id="skills">
-          <h2>🛠️ Skills & Tools</h2>
-          <div class="badges" aria-label="Skills">
-            <span class="badge">C</span>
-            <span class="badge">C++</span>
-            <span class="badge">Python</span>
-            <span class="badge">VHDL (Grundlagen)</span>
-            <span class="badge">Embedded Linux</span>
-            <span class="badge">Git</span>
-            <span class="badge">VS Code</span>
-          </div>
+  <!-- Main Content -->
+  <main class="content">
+    <!-- Kurzprofil Section -->
+    <section id="about" data-aos="fade-up">
+      <h2 data-i18n="aboutTitle">🧩 Kurzprofil</h2>
+      <ul class="bullets">
+        <li data-i18n="aboutItem1">Embedded Entwicklung mit Fokus auf C und C++</li>
+        <li data-i18n="aboutItem2">Grundlagen digitaler Systeme und Mikroprozessortechnik</li>
+        <li data-i18n="aboutItem3">Sensorik und Peripherie, Interrupts, Timer, Zustandsmaschinen</li>
+        <li data-i18n="aboutItem4">Embedded Linux Grundlagen und Tooling im Alltag</li>
+      </ul>
+    </section>
 
-          <p class="hint">
-            Hinweis: Ich liste hier nur Dinge, die ich praktisch genutzt habe.
-            Tiefe und Details zeige ich in den Projekten.
+    <!-- Skills Section -->
+    <section id="skills" data-aos="fade-up">
+      <h2 data-i18n="skillsTitle">🛠️ Skills & Tools</h2>
+      <div class="badges">
+        <span class="badge">C</span>
+        <span class="badge">C++</span>
+        <span class="badge">Python</span>
+        <span class="badge">VHDL (Grundlagen)</span>
+        <span class="badge">Embedded Linux</span>
+        <span class="badge">Git</span>
+        <span class="badge">VS Code</span>
+      </div>
+      <p class="hint" data-i18n="skillsHint">
+        Hinweis: Ich liste hier nur Dinge, die ich praktisch genutzt habe. Tiefe und Details zeige ich in den Projekten.
+      </p>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" data-aos="fade-up">
+      <h2 data-i18n="projectsTitle">📂 Projekte</h2>
+      
+      <div class="projects-grid">
+        <!-- Project 1: IoT Sensor -->
+        <article class="project-card">
+          <h3><a href="projekt-iot.html" data-i18n="projectIoTTitle">IoT Sensor Projekt</a></h3>
+          <p class="project-summary" data-i18n="projectIoTSummary">
+            Sensorwerte erfassen, verarbeiten und übertragen. Fokus auf robuste Kommunikation und saubere Struktur.
           </p>
-        </section>
-
-        <section class="projects" id="projects">
-          <h2>📂 Projekte</h2>
-
-          <div class="filter" aria-label="Projektfilter">
-            <button data-filter="all" class="active">Alle</button>
-            <button data-filter="iot">IoT</button>
-            <button data-filter="embedded">Embedded</button>
-            <button data-filter="hardware">Hardware</button>
+          <ul class="project-features">
+            <li data-i18n="projectIoTFeature1">Messwerte, Status, einfache Fehlerfälle</li>
+            <li data-i18n="projectIoTFeature2">Mikrocontroller, Sensorik, C oder C++</li>
+          </ul>
+          <div class="project-tech">
+            <span class="tech-tag">IoT</span>
+            <span class="tech-tag">C/C++</span>
+            <span class="tech-tag">Sensoren</span>
           </div>
+        </article>
 
-          <div class="grid" aria-label="Projektliste">
-            <article class="projekt" data-tech="iot">
-              <h3><a href="#" aria-label="IoT Projekt ansehen">IoT Projekt</a></h3>
-              <p>
-                Sensorwerte erfassen, verarbeiten und übertragen. Fokus auf
-                robuste Kommunikation und saubere Struktur.
-              </p>
-              <ul class="mini">
-                <li>Features: Messwerte, Status, einfache Fehlerfälle</li>
-                <li>Tech: Mikrocontroller, Sensorik, C oder C++</li>
-              </ul>
-            </article>
-
-            <article class="projekt" data-tech="embedded">
-              <h3>
-                <a href="#" aria-label="Embedded Systems Projekt ansehen"
-                  >Embedded Systems Projekt</a
-                >
-              </h3>
-              <p>
-                Hardwarenahe Anwendung mit klar definiertem Timing. Fokus auf
-                Interrupts, Timer und Zustandsmaschine.
-              </p>
-              <ul class="mini">
-                <li>Fokus: Echtzeitnahes Verhalten und Debugging</li>
-                <li>Tech: C, Toolchain, Git</li>
-              </ul>
-            </article>
-
-            <article class="projekt" data-tech="hardware">
-              <h3>
-                <a href="#" aria-label="Temperatursensor und Bus Projekt ansehen"
-                  >Temperatursensor & Bus-Kommunikation</a
-                >
-              </h3>
-              <p>
-                Temperaturdaten erfassen und zwischen Knoten austauschen. Fokus
-                auf Nachrichtenformat und nachvollziehbares Logging.
-              </p>
-              <ul class="mini">
-                <li>Fokus: Protokoll, Payload, Fehlerszenarien</li>
-                <li>Tech: Embedded C, Schnittstellen, Debugging</li>
-              </ul>
-            </article>
+        <!-- Project 2: Embedded Systems -->
+        <article class="project-card">
+          <h3><a href="projekt-embedded.html" data-i18n="projectEmbeddedTitle">Embedded Systems Projekt</a></h3>
+          <p class="project-summary" data-i18n="projectEmbeddedSummary">
+            Hardwarenahe Anwendung mit klar definiertem Timing. Fokus auf Interrupts, Timer und Zustandsmaschine.
+          </p>
+          <ul class="project-features">
+            <li data-i18n="projectEmbeddedFeature1">Echtzeitnahes Verhalten und Debugging</li>
+            <li data-i18n="projectEmbeddedFeature2">C, Toolchain, Git</li>
+          </ul>
+          <div class="project-tech">
+            <span class="tech-tag">Embedded</span>
+            <span class="tech-tag">C</span>
+            <span class="tech-tag">Realtime</span>
           </div>
-        </section>
-      </section>
-    </main>
+        </article>
 
-    <footer class="footer">
-      <div class="footer-inner">
-        <a href="kontakt.html" class="kontakt-button">📫 Kontakt</a>
-        <a
-          href="https://www.linkedin.com/in/marcel-ric/"
-          class="kontakt-button"
-          target="_blank"
-          rel="noopener"
-          >💼 LinkedIn</a
-        >
+        <!-- Project 3: CAN Bus -->
+        <article class="project-card">
+          <h3><a href="projekt-can.html" data-i18n="projectCANTitle">CAN Bus Kommunikation</a></h3>
+          <p class="project-summary" data-i18n="projectCANSummary">
+            Temperaturdaten erfassen und zwischen Knoten austauschen. Fokus auf Nachrichtenformat und nachvollziehbares Logging.
+          </p>
+          <ul class="project-features">
+            <li data-i18n="projectCANFeature1">Protokoll, Payload, Fehlerszenarien</li>
+            <li data-i18n="projectCANFeature2">Embedded C, Schnittstellen, Debugging</li>
+          </ul>
+          <div class="project-tech">
+            <span class="tech-tag">CAN Bus</span>
+            <span class="tech-tag">C</span>
+            <span class="tech-tag">Hardware</span>
+          </div>
+        </article>
       </div>
-    </footer>
+    </section>
+  </main>
 
-    <!-- JS & AOS -->
-    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-    <script>
-      AOS.init({ duration: 900, once: true });
-    </script>
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-content">
+      <ul class="footer-links">
+        <li><a href="index.html" data-i18n="navHome">Start</a></li>
+        <li><a href="cv.html" data-i18n="navCV">Lebenslauf</a></li>
+        <li><a href="kontakt.html" data-i18n="footerContact">📫 Kontakt</a></li>
+        <li><a href="https://www.linkedin.com/in/marcel-ric/" target="_blank" rel="noopener" data-i18n="footerLinkedIn">💼 LinkedIn</a></li>
+      </ul>
+      <div class="footer-legal">
+        <a href="impressum.html" data-i18n="footerImpressum">Impressum</a>
+        <a href="datenschutz.html" data-i18n="footerDatenschutz">Datenschutz</a>
+      </div>
+    </div>
+  </footer>
 
-    <script src="script.js"></script>
-  </body>
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script src="script.js"></script>
+</body>
 </html>
