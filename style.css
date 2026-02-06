@@ -92,15 +92,15 @@ body.dark {
 /* Dark Mode Enhanced Background */
 body.dark::before {
   background-image: url('assets/Image_dark.png');
-  opacity: 0.95;
+  opacity: 1;
   filter: blur(12px);
 }
 
 body.dark main::before {
   background: 
-    radial-gradient(circle at 20% 80%, rgba(96, 165, 250, 0.04) 0%, transparent 50%),
-    radial-gradient(circle at 80% 20%, rgba(168, 85, 247, 0.03) 0%, transparent 50%),
-    radial-gradient(circle at 40% 40%, rgba(34, 211, 238, 0.03) 0%, transparent 50%);
+    radial-gradient(circle at 20% 80%, rgba(96, 165, 250, 0.03) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(168, 85, 247, 0.02) 0%, transparent 50%),
+    radial-gradient(circle at 40% 40%, rgba(34, 211, 238, 0.02) 0%, transparent 50%);
   filter: blur(25px);
 }
 
@@ -150,7 +150,7 @@ body::before {
   background-repeat: no-repeat;
   background-attachment: fixed;
   filter: blur(12px);
-  opacity: 0.95;
+  opacity: 1;
   transition: opacity var(--transition-slow), filter var(--transition-slow);
 }
 
