@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Impressum | Marcel Richter</title>
   <meta name="description" content="Impressum von Marcel Richter">
-  
+
   <!-- CSS -->
   <link rel="stylesheet" href="style.css">
 </head>
@@ -14,14 +14,14 @@
   <header class="site-header">
     <nav class="nav-container">
       <a href="index.html" class="nav-logo">Marcel Richter</a>
-      
+
       <!-- Hamburger Menu Button (Mobile) -->
       <button id="hamburger" class="hamburger" aria-label="Menu">
         <span></span>
         <span></span>
         <span></span>
       </button>
-      
+
       <!-- Desktop Navigation -->
       <ul class="nav-links">
         <li><a href="index.html" data-i18n="navHome">Start</a></li>
@@ -30,17 +30,17 @@
         <li><a href="kontakt.html" data-i18n="navContact">Kontakt</a></li>
         <li><a href="https://www.linkedin.com/in/marcel-ric/" target="_blank" rel="noopener" data-i18n="navLinkedIn">LinkedIn</a></li>
       </ul>
-      
+
       <!-- Desktop Controls -->
       <div class="nav-controls">
         <button id="darkModeToggle" class="toggle-btn" aria-label="Dark Mode umschalten">Dark Mode</button>
         <button id="languageToggle" class="toggle-btn" aria-label="Sprache wechseln">English</button>
       </div>
     </nav>
-    
+
     <!-- Mobile Menu Overlay -->
     <div id="mobileOverlay" class="mobile-overlay"></div>
-    
+
     <!-- Mobile Menu -->
     <div id="mobileMenu" class="mobile-menu">
       <ul class="mobile-menu-links">
@@ -50,7 +50,7 @@
         <li><a href="kontakt.html" data-i18n="navContact">Kontakt</a></li>
         <li><a href="https://www.linkedin.com/in/marcel-ric/" target="_blank" rel="noopener" data-i18n="navLinkedIn">LinkedIn</a></li>
       </ul>
-      
+
       <div class="mobile-controls">
         <button id="mobileDarkToggle" class="toggle-btn" aria-label="Dark Mode umschalten">Dark Mode</button>
         <button id="mobileLangToggle" class="toggle-btn" aria-label="Sprache wechseln">English</button>
@@ -66,43 +66,45 @@
       <h2>Angaben gemäß § 5 TMG</h2>
       <p>
         Marcel Richter<br>
-        [Adresse Platzhalter]<br>
-        [PLZ Ort Platzhalter]
+        <span data-i18n="impressumAddressPlaceholder">[Adresse Platzhalter]</span><br>
+        <span data-i18n="impressumCityPlaceholder">[PLZ Ort Platzhalter]</span>
       </p>
 
       <h2>Kontakt</h2>
       <p>
-        E-Mail: <a href="mailto:marcel.richter.fn@gmx.de">marcel.richter.fn@gmx.de</a><br>
-        LinkedIn: <a href="https://www.linkedin.com/in/marcel-ric/" target="_blank" rel="noopener">https://www.linkedin.com/in/marcel-ric/</a>
+        <span data-i18n="contactEmail">E-Mail</span>:
+        <a href="mailto:marcel.richter.fn@gmx.de">marcel.richter.fn@gmx.de</a><br>
+        <span data-i18n="navLinkedIn">LinkedIn</span>:
+        <a href="https://www.linkedin.com/in/marcel-ric/" target="_blank" rel="noopener">linkedin.com/in/marcel-ric</a>
       </p>
 
-      <h2>Haftungsausschluss</h2>
-      
-      <h3>Haftung für Inhalte</h3>
-      <p>
-        Die Inhalte dieser Seiten wurden mit größter Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte kann ich jedoch keine Gewähr übernehmen. Als Diensteanbieter bin ich gemäß § 7 Abs.1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich.
+      <h2 data-i18n="impressumDisclaimerTitle">Haftungsausschluss</h2>
+
+      <h3 data-i18n="impressumContentLiabilityTitle">Haftung für Inhalte</h3>
+      <p data-i18n="impressumContentLiabilityText">
+        Die Inhalte dieser Seiten wurden mit größter Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte kann ich jedoch keine Gewähr übernehmen. Als Diensteanbieter bin ich gemäß § 7 Abs. 1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich.
       </p>
 
-      <h3>Haftung für Links</h3>
-      <p>
+      <h3 data-i18n="impressumLinksLiabilityTitle">Haftung für Links</h3>
+      <p data-i18n="impressumLinksLiabilityText">
         Diese Website enthält Links zu externen Websites Dritter, auf deren Inhalte ich keinen Einfluss habe. Deshalb kann ich für diese fremden Inhalte auch keine Gewähr übernehmen. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich.
       </p>
 
-      <h3>Urheberrecht</h3>
-      <p>
-        Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers.
+      <h3 data-i18n="impressumCopyrightTitle">Urheberrecht</h3>
+      <p data-i18n="impressumCopyrightText">
+        Die durch den Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers.
       </p>
 
-      <h2>Externe Dienste</h2>
-      <p>Diese Website nutzt folgende externe Dienste:</p>
+      <h2 data-i18n="impressumExternalServicesTitle">Externe Dienste</h2>
+      <p data-i18n="impressumExternalServicesIntro">Diese Website nutzt folgende externe Dienste:</p>
       <ul>
-        <li><strong>FormSubmit.co:</strong> Kontaktformular-Service zur Übermittlung von Nachrichten</li>
-        <li><strong>AOS (Animate On Scroll):</strong> JavaScript-Bibliothek für Scroll-Animationen (unpkg CDN)</li>
-        <li><strong>GitHub Pages:</strong> Hosting-Plattform für statische Websites</li>
+        <li><strong>FormSubmit.co:</strong> <span data-i18n="impressumServiceFormSubmit">Kontaktformular-Service zur Übermittlung von Nachrichten</span></li>
+        <li><strong>AOS (Animate On Scroll):</strong> <span data-i18n="impressumServiceAOS">JavaScript-Bibliothek für Scroll-Animationen</span></li>
+        <li><strong>GitHub Pages:</strong> <span data-i18n="impressumServiceGitHubPages">Hosting-Plattform für statische Websites</span></li>
       </ul>
 
       <div style="margin-top: 2rem;">
-        <a href="index.html" class="btn btn-secondary">← Zurück zur Startseite</a>
+        <a href="index.html" class="btn btn-secondary" data-i18n="legalBackHome">← Zurück zur Startseite</a>
       </div>
     </div>
   </main>

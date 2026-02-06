@@ -7,25 +7,23 @@
   <meta name="description" content="Portfolio von Marcel Richter. Angewandte Informatik mit Schwerpunkt Embedded Systems. Projekte, Skills, Kontakt und Links.">
   <meta name="keywords" content="Marcel Richter, Embedded Systems, C, C++, Embedded Linux, Portfolio, HTWG Konstanz">
   <meta name="author" content="Marcel Richter">
-  
-  <!-- CSS -->
+
   <link rel="stylesheet" href="style.css">
   <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
 </head>
 <body>
-  <!-- Navigation Header -->
   <header class="site-header">
     <nav class="nav-container">
       <a href="index.html" class="nav-logo">Marcel Richter</a>
-      
-      <!-- Hamburger Menu Button (Mobile) -->
-      <button id="hamburger" class="hamburger" aria-label="Menu">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-      
-      <!-- Desktop Navigation -->
+
+      <div class="nav-mobile-controls">
+        <button id="hamburger" class="hamburger" aria-label="Menu" aria-controls="mobileMenu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+
       <ul class="nav-links">
         <li><a href="index.html" data-i18n="navHome">Start</a></li>
         <li><a href="index.html#projects" data-i18n="navProjects">Projekte</a></li>
@@ -33,16 +31,16 @@
         <li><a href="kontakt.html" data-i18n="navContact">Kontakt</a></li>
         <li><a href="https://www.linkedin.com/in/marcel-ric/" target="_blank" rel="noopener" data-i18n="navLinkedIn">LinkedIn</a></li>
       </ul>
-      
-      <!-- Desktop Controls -->
+
       <div class="nav-controls">
         <button id="darkModeToggle" class="toggle-btn" aria-label="Dark Mode umschalten">Dark Mode</button>
         <button id="languageToggle" class="toggle-btn" aria-label="Sprache wechseln">English</button>
       </div>
     </nav>
-    
-    <!-- Mobile Menu Overlay -->
-    <div class="mobile-menu" id="mobileMenu">
+
+    <div id="mobileOverlay" class="mobile-overlay"></div>
+
+    <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
       <ul class="mobile-menu-links">
         <li><a href="index.html" data-i18n="navHome">Start</a></li>
         <li><a href="index.html#projects" data-i18n="navProjects">Projekte</a></li>
@@ -50,21 +48,25 @@
         <li><a href="kontakt.html" data-i18n="navContact">Kontakt</a></li>
         <li><a href="https://www.linkedin.com/in/marcel-ric/" target="_blank" rel="noopener" data-i18n="navLinkedIn">LinkedIn</a></li>
       </ul>
+
+      <div class="mobile-controls">
+        <button id="mobileDarkToggle" class="toggle-btn" aria-label="Dark Mode umschalten">Dark Mode</button>
+        <button id="mobileLangToggle" class="toggle-btn" aria-label="Sprache wechseln">English</button>
+      </div>
     </div>
   </header>
 
-  <!-- Hero Section -->
   <section class="hero-section">
     <div class="hero-content glass" data-aos="fade-up">
-      <img 
-        src="assets/profilbild.jpg" 
+      <img
+        src="assets/profilbild.jpg"
         srcset="assets/profilbild.jpg 1x, assets/profilbild@2x.jpg 2x"
-        alt="Profilbild von Marcel Richter" 
+        alt="Profilbild von Marcel Richter"
         class="hero-avatar"
       >
       <div class="hero-text">
         <h1>
-          <span data-i18n="heroGreeting">👋 Hi, ich bin</span> 
+          <span data-i18n="heroGreeting">👋 Hi, ich bin</span>
           <span class="hero-name">Marcel Richter</span>
         </h1>
         <p class="hero-subtitle" data-i18n="heroSubtitle">
@@ -80,9 +82,7 @@
     </div>
   </section>
 
-  <!-- Main Content -->
   <main class="content">
-    <!-- Kurzprofil Section -->
     <section id="about" data-aos="fade-up">
       <h2 data-i18n="aboutTitle">Kurzprofil</h2>
       <ul class="bullets">
@@ -93,7 +93,6 @@
       </ul>
     </section>
 
-    <!-- Skills Section -->
     <section id="skills" data-aos="fade-up">
       <h2 data-i18n="skillsTitle">Skills & Tools</h2>
       <div class="badges">
@@ -110,12 +109,10 @@
       </p>
     </section>
 
-    <!-- Projects Section -->
     <section id="projects" data-aos="fade-up">
       <h2 data-i18n="projectsTitle">Projekte</h2>
-      
+
       <div class="projects-grid">
-        <!-- Project 1: IoT Sensor -->
         <article class="project-card">
           <h3><a href="projekt-iot.html" data-i18n="projectIoTTitle">IoT Sensor Projekt</a></h3>
           <p class="project-summary" data-i18n="projectIoTSummary">
@@ -132,7 +129,6 @@
           </div>
         </article>
 
-        <!-- Project 2: Embedded Systems -->
         <article class="project-card">
           <h3><a href="projekt-embedded.html" data-i18n="projectEmbeddedTitle">Embedded Systems Projekt</a></h3>
           <p class="project-summary" data-i18n="projectEmbeddedSummary">
@@ -149,7 +145,6 @@
           </div>
         </article>
 
-        <!-- Project 3: CAN Bus -->
         <article class="project-card">
           <h3><a href="projekt-can.html" data-i18n="projectCANTitle">CAN Bus Kommunikation</a></h3>
           <p class="project-summary" data-i18n="projectCANSummary">
@@ -168,31 +163,31 @@
       </div>
     </section>
 
-    <!-- CV Preview Section -->
     <section id="cv-preview" data-aos="fade-up">
       <h2 data-i18n="cvPreviewTitle">Lebenslauf</h2>
-      
+
       <div class="cv-preview-grid">
-        <!-- Education -->
         <div class="cv-preview-card glass">
           <h3 data-i18n="cvEducationTitle">Ausbildung</h3>
           <div class="cv-preview-item">
             <h4 data-i18n="cvEducationDegree">Bachelor of Science, Angewandte Informatik</h4>
             <p class="cv-preview-detail" data-i18n="cvEducationSchool">HTWG Konstanz</p>
             <p class="cv-preview-detail" data-i18n="cvEducationFocus">Schwerpunkt: Embedded Systems</p>
-            <p class="cv-preview-description" data-i18n="cvEducationDescription">Ich studiere Angewandte Informatik an der HTWG Konstanz mit Fokus auf Embedded Systems. Im Studium beschäftige ich mich mit hardwarenaher Programmierung, Mikroprozessortechnik, digitalen Systemen und Embedded Linux.</p>
+            <p class="cv-preview-description" data-i18n="cvEducationDescription">
+              Ich studiere Angewandte Informatik an der HTWG Konstanz mit Fokus auf Embedded Systems. Im Studium beschäftige ich mich mit hardwarenaher Programmierung, Mikroprozessortechnik, digitalen Systemen und Embedded Linux.
+            </p>
           </div>
         </div>
 
-        <!-- Experience -->
         <div class="cv-preview-card glass">
           <h3 data-i18n="cvExperienceTitle">Praxiserfahrung</h3>
           <div class="cv-preview-item">
-            <p class="cv-preview-description" data-i18n="cvExperienceDescription">Hier kannst du dein Praxissemester, Werkstudententätigkeiten oder andere berufliche Erfahrungen eintragen. Beschreibe kurz deine Aufgaben, verwendete Technologien und was du dabei gelernt hast.</p>
+            <p class="cv-preview-description" data-i18n="cvExperienceDescription">
+              Hier kannst du dein Praxissemester, Werkstudententätigkeiten oder andere berufliche Erfahrungen eintragen. Beschreibe kurz deine Aufgaben, verwendete Technologien und was du dabei gelernt hast.
+            </p>
           </div>
         </div>
 
-        <!-- Technical Skills -->
         <div class="cv-preview-card glass cv-skills-card">
           <h3 data-i18n="cvSkillsTitle">🛠️ Technische Skills</h3>
           <div class="badges">
@@ -216,7 +211,6 @@
     </section>
   </main>
 
-  <!-- Footer -->
   <footer class="site-footer">
     <div class="footer-content">
       <ul class="footer-links">
@@ -232,7 +226,6 @@
     </div>
   </footer>
 
-  <!-- Scripts -->
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
   <script src="script.js"></script>
 </body>

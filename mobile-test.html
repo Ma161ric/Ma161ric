@@ -11,19 +11,19 @@
       backdrop-filter: blur(14px);
       border: 1px solid var(--glass-border);
       border-radius: var(--radius-lg);
-      padding: var(--spacing-xl);
+      padding: var(--spacing-lg);
       margin-bottom: var(--spacing-lg);
     }
     .test-section h2 {
       text-align: left;
-      font-size: 1.5rem;
+      font-size: 1.25rem;
       margin-bottom: var(--spacing-md);
       color: var(--color-primary);
     }
     .button-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-      gap: var(--spacing-md);
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      gap: var(--spacing-sm);
       margin-top: var(--spacing-md);
     }
     .badge-grid {
@@ -32,33 +32,54 @@
       gap: var(--spacing-sm);
       margin-top: var(--spacing-md);
     }
+    .status-box {
+      background: rgba(34, 197, 94, 0.1);
+      border: 1px solid rgba(34, 197, 94, 0.3);
+      color: #16a34a;
+      padding: var(--spacing-md);
+      border-radius: var(--radius-md);
+      margin-bottom: var(--spacing-lg);
+      font-weight: 600;
+    }
+    .debug-info {
+      background: rgba(59, 130, 246, 0.1);
+      border: 1px solid rgba(59, 130, 246, 0.3);
+      color: var(--color-primary);
+      padding: var(--spacing-sm);
+      border-radius: var(--radius-sm);
+      font-size: 0.85rem;
+      font-family: monospace;
+      margin-top: var(--spacing-sm);
+    }
   </style>
 </head>
 <body>
   <header class="site-header">
     <nav class="nav-container">
       <a href="index.html" class="nav-logo">Mobile Test</a>
-      
-      <button id="hamburger" class="hamburger" aria-label="Menu">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-      
+
+      <div class="nav-mobile-controls">
+        <button id="hamburger" class="hamburger" aria-label="Menu" aria-controls="mobileMenu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+
       <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
-        <li><a href="mobile-test.html">Test</a></li>
+        <li><a href="mobile-test.html" class="active">Test</a></li>
       </ul>
-      
+
       <div class="nav-controls">
         <button id="darkModeToggle" class="toggle-btn">Dark Mode</button>
         <button id="languageToggle" class="toggle-btn">English</button>
       </div>
     </nav>
-    
+
     <div id="mobileOverlay" class="mobile-overlay"></div>
-    
-    <div id="mobileMenu" class="mobile-menu">
+
+    <div id="mobileMenu" class="mobile-menu" aria-hidden="true">
       <ul class="mobile-menu-links">
         <li><a href="index.html">Start</a></li>
         <li><a href="cv.html">Lebenslauf</a></li>
@@ -66,7 +87,7 @@
         <li><a href="projekt-iot.html">IoT Projekt</a></li>
         <li><a href="mobile-test.html">Mobile Test</a></li>
       </ul>
-      
+
       <div class="mobile-controls">
         <button id="mobileDarkToggle" class="toggle-btn">Dark Mode</button>
         <button id="mobileLangToggle" class="toggle-btn">English</button>
@@ -75,31 +96,51 @@
   </header>
 
   <main class="content">
+    <div class="status-box">
+      ✓ Mobile Menu funktioniert! Klicke auf das Hamburger Menü oben rechts (3 Striche).
+    </div>
+
     <div class="test-section">
-      <h2>🎯 Button Interactions</h2>
-      <p>Tippe auf die Buttons um den Ripple-Effekt zu sehen:</p>
+      <h2>📱 Hamburger Menu</h2>
+      <p>Das Hamburger Menü ist jetzt:</p>
+      <ul class="bullets">
+        <li>Rechts am Rand positioniert</li>
+        <li>Gleiche Höhe wie der Name (44px)</li>
+        <li>Smooth Slide In Animation</li>
+        <li>Gestaffelte Link Animationen</li>
+        <li>ESC zum Schließen</li>
+        <li>Klick auf Overlay schließt</li>
+      </ul>
+      <div class="debug-info">
+        💡 Tipp: Verkleinere dein Browser Fenster auf &lt; 768px um das Hamburger Menü zu sehen!
+      </div>
+    </div>
+
+    <div class="test-section">
+      <h2>🎯 Button Tests</h2>
+      <p>Teste die Ripple Effekte:</p>
       <div class="button-grid">
         <button class="btn btn-primary">Primary</button>
         <button class="btn btn-secondary">Secondary</button>
-        <button class="btn btn-primary">Mit Ripple</button>
-        <button class="btn btn-secondary">Auch hier</button>
+        <button class="btn btn-primary">Ripple</button>
+        <button class="btn btn-secondary">Effekt</button>
       </div>
     </div>
 
     <div class="test-section">
       <h2>🎚️ Toggle Buttons</h2>
-      <p>Teste die Toggle-Buttons mit verbessertem Feedback:</p>
+      <p>Teste die Toggles (feste Breite 110px):</p>
       <div class="button-grid">
-        <button class="toggle-btn">Dark Mode</button>
-        <button class="toggle-btn">Light Mode</button>
-        <button class="toggle-btn">English</button>
-        <button class="toggle-btn">Deutsch</button>
+        <button class="toggle-btn" onclick="alert('Toggle 1')">Dark Mode</button>
+        <button class="toggle-btn" onclick="alert('Toggle 2')">Light Mode</button>
+        <button class="toggle-btn" onclick="alert('Toggle 3')">English</button>
+        <button class="toggle-btn" onclick="alert('Toggle 4')">Deutsch</button>
       </div>
     </div>
 
     <div class="test-section">
       <h2>🏷️ Badges</h2>
-      <p>Badges mit Touch-Feedback:</p>
+      <p>Touch optimierte Badges:</p>
       <div class="badge-grid">
         <span class="badge">C</span>
         <span class="badge">C++</span>
@@ -108,40 +149,25 @@
         <span class="badge">IoT</span>
         <span class="badge">Linux</span>
         <span class="badge">Git</span>
-        <span class="badge">CAN Bus</span>
       </div>
     </div>
 
     <div class="test-section">
-      <h2>🍔 Hamburger Menu</h2>
-      <p>Features:</p>
+      <h2>✨ Features</h2>
       <ul class="bullets">
-        <li>Smooth Slide-In Animation mit Bounce</li>
-        <li>Gestaffelte Link-Animationen</li>
-        <li>Ripple-Effekte auf Links</li>
-        <li>ESC zum Schließen</li>
-        <li>Overlay-Click zum Schließen</li>
-        <li>Body Scroll Lock</li>
-      </ul>
-    </div>
-
-    <div class="test-section">
-      <h2>✨ Mobile Features</h2>
-      <ul class="bullets">
-        <li>Ripple-Effekte auf allen interaktiven Elementen</li>
-        <li>44px+ Touch Targets überall</li>
-        <li>Smooth Bounce-Animationen</li>
-        <li>Optimierte Transitions (cubic-bezier)</li>
-        <li>Kein Tap-Highlight (verhindert Flash)</li>
-        <li>User-Select: none auf Buttons</li>
-        <li>Scale-Feedback bei :active</li>
+        <li>Ripple Effekte auf allen Buttons</li>
+        <li>44px Touch Targets</li>
+        <li>Bounce Animationen (cubic bezier)</li>
+        <li>Kein Tap Highlight Flash</li>
+        <li>Scale Feedback bei active</li>
+        <li>Optimiert für 60fps</li>
       </ul>
     </div>
   </main>
 
   <footer class="site-footer">
     <div class="footer-content">
-      <p>Mobile UX Test Page - Resize dein Browserfenster oder teste auf dem Handy!</p>
+      <p style="text-align: center;">Mobile UX Test. Öffne Browser DevTools (F12) für Console Logs!</p>
     </div>
   </footer>
 

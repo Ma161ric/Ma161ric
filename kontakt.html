@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Kontakt | Marcel Richter</title>
   <meta name="description" content="Kontaktiere Marcel Richter. Schreib mir eine Nachricht oder nutze das Kontaktformular.">
-  
+
   <!-- CSS -->
   <link rel="stylesheet" href="style.css">
 </head>
@@ -14,14 +14,14 @@
   <header class="site-header">
     <nav class="nav-container">
       <a href="index.html" class="nav-logo">Marcel Richter</a>
-      
+
       <!-- Hamburger Menu Button (Mobile) -->
       <button id="hamburger" class="hamburger" aria-label="Menu">
         <span></span>
         <span></span>
         <span></span>
       </button>
-      
+
       <!-- Desktop Navigation -->
       <ul class="nav-links">
         <li><a href="index.html" data-i18n="navHome">Start</a></li>
@@ -30,17 +30,17 @@
         <li><a href="kontakt.html" data-i18n="navContact">Kontakt</a></li>
         <li><a href="https://www.linkedin.com/in/marcel-ric/" target="_blank" rel="noopener" data-i18n="navLinkedIn">LinkedIn</a></li>
       </ul>
-      
+
       <!-- Desktop Controls -->
       <div class="nav-controls">
         <button id="darkModeToggle" class="toggle-btn" aria-label="Dark Mode umschalten">Dark Mode</button>
         <button id="languageToggle" class="toggle-btn" aria-label="Sprache wechseln">English</button>
       </div>
     </nav>
-    
+
     <!-- Mobile Menu Overlay -->
     <div id="mobileOverlay" class="mobile-overlay"></div>
-    
+
     <!-- Mobile Menu -->
     <div id="mobileMenu" class="mobile-menu">
       <ul class="mobile-menu-links">
@@ -50,7 +50,7 @@
         <li><a href="kontakt.html" data-i18n="navContact">Kontakt</a></li>
         <li><a href="https://www.linkedin.com/in/marcel-ric/" target="_blank" rel="noopener" data-i18n="navLinkedIn">LinkedIn</a></li>
       </ul>
-      
+
       <div class="mobile-controls">
         <button id="mobileDarkToggle" class="toggle-btn" aria-label="Dark Mode umschalten">Dark Mode</button>
         <button id="mobileLangToggle" class="toggle-btn" aria-label="Sprache wechseln">English</button>
@@ -59,23 +59,23 @@
   </header>
 
   <!-- Main Content -->
-  <main>
+  <main class="content">
     <div class="form-wrapper">
       <h1 data-i18n="contactTitle">Kontakt aufnehmen</h1>
-      
+
       <p class="form-intro" data-i18n="contactIntro">
         Schreib mir gern eine Nachricht oder nutze das Kontaktformular. Ich freue mich auf deine Nachricht.
       </p>
 
       <p style="text-align: center; margin-bottom: 1.5rem;">
-        <span data-i18n="contactEmail">E-Mail:</span> 
+        <span data-i18n="contactEmail">E-Mail:</span>
         <a href="mailto:marcel.richter.fn@gmx.de">marcel.richter.fn@gmx.de</a>
       </p>
 
-      <form 
-        id="kontaktForm" 
+      <form
+        id="kontaktForm"
         class="contact-form"
-        action="https://formsubmit.co/marcel.richter.fn@gmx.de" 
+        action="https://formsubmit.co/marcel.richter.fn@gmx.de"
         method="POST"
         novalidate
       >
@@ -83,7 +83,7 @@
         <input type="hidden" name="_captcha" value="false">
         <input type="hidden" name="_subject" value="Neue Nachricht von der Portfolio Website">
         <input type="hidden" name="_template" value="table">
-        <input type="hidden" name="_next" value="https://ma161ric.github.io/Ma161ric/danke.html">
+        <input type="hidden" name="_next" value="danke.html">
 
         <!-- Honeypot gegen Spam -->
         <div style="position: absolute; left: -5000px;" aria-hidden="true">
@@ -94,13 +94,13 @@
         <!-- Name -->
         <div>
           <label for="name" data-i18n="contactName">Name</label>
-          <input 
-            type="text" 
-            id="name" 
-            name="name" 
+          <input
+            type="text"
+            id="name"
+            name="name"
             data-i18n-placeholder="contactNamePlaceholder"
             placeholder="Dein Name"
-            required 
+            required
             autocomplete="name"
           >
         </div>
@@ -108,13 +108,13 @@
         <!-- E-Mail -->
         <div>
           <label for="email" data-i18n="contactEmail">E-Mail</label>
-          <input 
-            type="email" 
-            id="email" 
-            name="email" 
+          <input
+            type="email"
+            id="email"
+            name="email"
             data-i18n-placeholder="contactEmailPlaceholder"
             placeholder="Deine E-Mail"
-            required 
+            required
             autocomplete="email"
           >
         </div>
@@ -122,10 +122,11 @@
         <!-- Nachricht -->
         <div>
           <label for="nachricht" data-i18n="contactMessage">Nachricht</label>
-          <textarea 
-            id="nachricht" 
-            name="nachricht" 
-            rows="6"            data-i18n-placeholder="contactMessagePlaceholder"
+          <textarea
+            id="nachricht"
+            name="nachricht"
+            rows="6"
+            data-i18n-placeholder="contactMessagePlaceholder"
             placeholder="Deine Nachricht"
             required
           ></textarea>
@@ -137,17 +138,17 @@
         </button>
 
         <!-- Error Message -->
-        <div 
-          id="errorMessage" 
+        <div
+          id="errorMessage"
           class="error-message"
           style="display: none;"
-          role="alert" 
+          role="alert"
           aria-live="polite"
         ></div>
 
         <!-- Success Message -->
-        <div 
-          id="successMessage" 
+        <div
+          id="successMessage"
           class="success-message"
           style="display: none;"
           aria-live="polite"
@@ -180,7 +181,7 @@
 
   <!-- Scripts -->
   <script src="script.js"></script>
-  
+
   <!-- Contact Form Handler -->
   <script>
     document.getElementById("kontaktForm").addEventListener("submit", async (e) => {
@@ -191,54 +192,55 @@
       const errorMessage = document.getElementById("errorMessage");
       const successMessage = document.getElementById("successMessage");
 
-      // Reset messages
       errorMessage.style.display = "none";
       errorMessage.textContent = "";
       successMessage.style.display = "none";
 
-      // Validate form
       if (!form.checkValidity()) {
-        const lang = getCurrentLanguage ? getCurrentLanguage() : "de";
-        const msg = translations && translations[lang] ? translations[lang].contactValidation : "Bitte prüfe deine Eingaben und fülle alle Pflichtfelder aus.";
+        const lang = typeof getCurrentLanguage === "function" ? getCurrentLanguage() : "de";
+        const msg = (typeof translations !== "undefined" && translations[lang])
+          ? translations[lang].contactValidation
+          : "Bitte prüfe deine Eingaben und fülle alle Pflichtfelder aus.";
         errorMessage.textContent = msg;
         errorMessage.style.display = "block";
         return;
       }
 
-      // Disable button
       submitBtn.disabled = true;
-      const lang = getCurrentLanguage ? getCurrentLanguage() : "de";
-      const sendingMsg = translations && translations[lang] ? translations[lang].contactSending : "⏳ Wird gesendet...";
+      const lang = typeof getCurrentLanguage === "function" ? getCurrentLanguage() : "de";
+      const sendingMsg = (typeof translations !== "undefined" && translations[lang])
+        ? translations[lang].contactSending
+        : "⏳ Wird gesendet...";
       submitBtn.textContent = sendingMsg;
 
       try {
         const response = await fetch(form.action, {
           method: "POST",
-          headers: { 
-            "Accept": "application/json" 
-          },
+          headers: { "Accept": "application/json" },
           body: new FormData(form)
         });
 
         if (response.ok) {
           successMessage.style.display = "block";
-          // Redirect after 1 second
           setTimeout(() => {
             window.location.href = "danke.html";
-          }, 1000);
+          }, 900);
           return;
         }
 
         throw new Error("Server error: " + response.status);
       } catch (error) {
-        const lang = getCurrentLanguage ? getCurrentLanguage() : "de";
-        const errorMsg = translations && translations[lang] ? translations[lang].contactError : "❌ Fehler beim Senden. Bitte versuche es später erneut oder schreibe mir direkt per E-Mail.";
+        const lang = typeof getCurrentLanguage === "function" ? getCurrentLanguage() : "de";
+        const errorMsg = (typeof translations !== "undefined" && translations[lang])
+          ? translations[lang].contactError
+          : "❌ Fehler beim Senden. Bitte versuche es später erneut oder schreibe mir direkt per E-Mail.";
         errorMessage.textContent = errorMsg;
         errorMessage.style.display = "block";
 
-        // Re-enable button
         submitBtn.disabled = false;
-        const submitMsg = translations && translations[lang] ? translations[lang].contactSubmit : "📨 Nachricht senden";
+        const submitMsg = (typeof translations !== "undefined" && translations[lang])
+          ? translations[lang].contactSubmit
+          : "📨 Nachricht senden";
         submitBtn.textContent = submitMsg;
       }
     });
