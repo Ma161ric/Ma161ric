@@ -912,6 +912,61 @@ section h2 {
   margin-top: var(--spacing-2xl);
 }
 
+/* CV Preview on Index Page */
+.cv-preview-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--spacing-xl);
+  margin-bottom: var(--spacing-2xl);
+}
+
+.cv-preview-card {
+  padding: var(--spacing-xl);
+  border-radius: var(--radius-lg);
+  transition: all var(--transition-base);
+}
+
+.cv-preview-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--glass-shadow-hover);
+}
+
+.cv-preview-card h3 {
+  font-size: 1.25rem;
+  margin-bottom: var(--spacing-lg);
+  color: var(--color-text);
+  font-weight: 600;
+}
+
+.cv-preview-card h4 {
+  font-size: 1.1rem;
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-sm);
+  font-weight: 600;
+}
+
+.cv-preview-item {
+  margin-bottom: var(--spacing-md);
+}
+
+.cv-preview-detail {
+  color: var(--color-text-secondary);
+  margin-bottom: var(--spacing-xs);
+  font-size: 0.95rem;
+}
+
+.cv-skills-card {
+  grid-column: 1 / -1;
+}
+
+.cv-cta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-md);
+  justify-content: center;
+  margin-top: var(--spacing-2xl);
+}
+
 /* ============================================
    Footer
    ============================================ */

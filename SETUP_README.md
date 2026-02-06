@@ -40,33 +40,6 @@ Dies ist ein vollständig refactortes, statisches Portfolio. Es verwendet nur **
 
 ---
 
-## 🔄 Migration: Alte Dateien durch neue ersetzen
-
-Da die alten `index.html`, `kontakt.html` und `danke.html` noch existieren, musst du folgende Schritte manuell durchführen:
-
-### Schritt 1: Ersetze index.html
-```bash
-rm index.html
-mv index_new.html index.html
-```
-
-### Schritt 2: Ersetze kontakt.html
-```bash
-rm kontakt.html
-mv kontakt_new.html kontakt.html
-```
-
-### Schritt 3: Ersetze danke.html
-```bash
-rm danke.html
-mv danke_new.html danke.html
-```
-
-### Alternative: Lösche alte Dateien und benenne neue um
-Falls `rm` nicht funktioniert, kannst du die Dateien auch manuell im Explorer löschen und die `*_new.html` Dateien umbenennen.
-
----
-
 ## 🌐 Navigation
 
 Alle Seiten haben eine einheitliche Navigation im Header:

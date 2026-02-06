@@ -86,9 +86,12 @@ const translations = {
     cvEducationFocus: "Schwerpunkt: Embedded Systems",
     cvExperienceTitle: "💼 Praxiserfahrung",
     cvExperiencePlaceholder: "Praxissemester und berufliche Stationen (Platzhalter für eigene Inhalte)",
+    cvExperiencePreview: "Praxissemester und berufliche Stationen",
     cvSkillsTitle: "🛠️ Technische Skills",
     cvDownload: "📥 CV als PDF herunterladen",
     cvContactBtn: "📫 Kontakt aufnehmen",
+    cvPreviewTitle: "📄 Lebenslauf",
+    cvViewFull: "📄 Vollständigen Lebenslauf ansehen",
     
     // Project Detail
     projectGoalTitle: "🎯 Ziel",
@@ -194,9 +197,12 @@ const translations = {
     cvEducationFocus: "Focus: Embedded Systems",
     cvExperienceTitle: "💼 Experience",
     cvExperiencePlaceholder: "Internship and professional experience (placeholder for your content)",
+    cvExperiencePreview: "Internship and professional experience",
     cvSkillsTitle: "🛠️ Technical Skills",
     cvDownload: "📥 Download CV as PDF",
     cvContactBtn: "📫 Get in Touch",
+    cvPreviewTitle: "📄 Curriculum Vitae",
+    cvViewFull: "📄 View Full CV",
     
     // Project Detail
     projectGoalTitle: "🎯 Goal",
