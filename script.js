@@ -108,6 +108,33 @@ const translations = {
     projectRepo: "GitHub Repository",
     projectDemo: "Live Demo",
     
+    // IoT Project Details
+    projectIoTGoal: "Das Projekt befasst sich mit der Erfassung von Sensordaten, ihrer Verarbeitung und Übertragung. Der Fokus liegt auf einer robusten Kommunikation und einer sauberen, wartbaren Code-Struktur. Das System soll Messwerte zuverlässig erfassen und Status-Informationen bereitstellen, auch bei einfachen Fehlerszenarien.",
+    projectIoTContrib1: "Implementierung der Sensor-Schnittstelle und Datenerfassung",
+    projectIoTContrib2: "Entwicklung eines Protokolls zur strukturierten Datenübertragung",
+    projectIoTContrib3: "Fehlerbehandlung bei Sensor-Ausfällen und Kommunikationsfehlern",
+    projectIoTImplementation: "Die Umsetzung erfolgte in mehreren Schritten. Zunächst wurde der Sensor angebunden und die Datenerfassung implementiert. Anschließend wurde ein einfaches Protokoll definiert, um die Daten strukturiert zu übertragen. Die Fehlerbehandlung umfasst Timeouts, Checksummen und defensive Programmierung. Der Code wurde modular aufgebaut, um Wartbarkeit und Erweiterbarkeit zu gewährleisten.",
+    projectIoTLesson1: "Defensive Programmierung bei hardwarenaher Entwicklung zahlt sich aus.",
+    projectIoTLesson2: "Strukturierte Fehlerbehandlung erleichtert das Debugging erheblich.",
+    
+    // Embedded Project Details
+    projectEmbeddedGoal: "Entwicklung einer hardwarenahen Anwendung mit präzisem Timing. Das Projekt soll Interrupts, Timer und eine Zustandsmaschine nutzen, um echtzeitnahes Verhalten zu erreichen. Der Fokus liegt auf nachvollziehbarer Struktur und systematischem Debugging.",
+    projectEmbeddedContrib1: "Design und Implementierung einer ereignisgesteuerten Zustandsmaschine",
+    projectEmbeddedContrib2: "Konfiguration von Interrupts und Hardware-Timern",
+    projectEmbeddedContrib3: "Systematisches Debugging mit Oszilloskop und Logausgaben",
+    projectEmbeddedImplementation: "Die Umsetzung begann mit der Definition der Zustandsmaschine und der benötigten Events. Anschließend wurden die Hardware-Timer konfiguriert und Interrupt-Handler implementiert. Besonderes Augenmerk wurde auf minimale Interrupt-Laufzeiten und sichere Datenübergabe zwischen Interrupt- und Hauptkontext gelegt. Das Debugging erfolgte durch gezielte Logausgaben und Messungen mit dem Oszilloskop.",
+    projectEmbeddedLesson1: "Klare Trennung zwischen Interrupt- und Hauptkontext ist essentiell.",
+    projectEmbeddedLesson2: "Zustandsmaschinen machen komplexe Abläufe nachvollziehbar und testbar.",
+    
+    // CAN Project Details
+    projectCANGoal: "Das Projekt beschäftigt sich mit der Erfassung von Temperaturdaten und deren Austausch zwischen mehreren Knoten über einen CAN-Bus. Der Fokus liegt auf einem strukturierten Nachrichtenformat, nachvollziehbarem Logging und sicherer Fehlerbehandlung bei Kommunikationsproblemen.",
+    projectCANContrib1: "Definition eines strukturierten Nachrichtenformats für Sensordaten",
+    projectCANContrib2: "Implementierung der CAN-Schnittstelle und Fehlerbehandlung",
+    projectCANContrib3: "Logging-Mechanismus zur Nachvollziehbarkeit von Nachrichten und Fehlern",
+    projectCANImplementation: "Die Umsetzung begann mit der Definition des Nachrichtenformats. Es wurde ein einfaches Protokoll definiert, das Sensor-ID, Temperaturwert und Checksumme enthält. Die CAN-Schnittstelle wurde konfiguriert und ein Empfangs- und Sendemechanismus implementiert. Besonderes Augenmerk wurde auf Fehlerszenarien wie verlorene Nachrichten und falsche Checksummen gelegt. Ein Logging-System protokolliert alle Nachrichten und Fehler für spätere Analyse.",
+    projectCANLesson1: "Strukturierte Nachrichtenformate erleichtern Debugging und Wartung.",
+    projectCANLesson2: "Logging ist unverzichtbar für die Analyse von Kommunikationsproblemen.",
+    
     // Impressum
     impressumTitle: "Impressum",
     
@@ -220,6 +247,33 @@ const translations = {
     projectContactCTA: "📫 Contact",
     projectRepo: "GitHub Repository",
     projectDemo: "Live Demo",
+    
+    // IoT Project Details
+    projectIoTGoal: "The project deals with capturing sensor data, processing, and transmission. The focus is on robust communication and clean, maintainable code structure. The system should reliably capture measurements and provide status information, even in simple error scenarios.",
+    projectIoTContrib1: "Implementation of sensor interface and data acquisition",
+    projectIoTContrib2: "Development of a protocol for structured data transmission",
+    projectIoTContrib3: "Error handling for sensor failures and communication errors",
+    projectIoTImplementation: "Implementation was done in several steps. First, the sensor was connected and data acquisition was implemented. Then a simple protocol was defined to transmit data in a structured way. Error handling includes timeouts, checksums, and defensive programming. The code was built modularly to ensure maintainability and extensibility.",
+    projectIoTLesson1: "Defensive programming pays off in low-level development.",
+    projectIoTLesson2: "Structured error handling significantly facilitates debugging.",
+    
+    // Embedded Project Details
+    projectEmbeddedGoal: "Development of a hardware-oriented application with precise timing. The project uses interrupts, timers, and a state machine to achieve real-time behavior. The focus is on comprehensible structure and systematic debugging.",
+    projectEmbeddedContrib1: "Design and implementation of an event-driven state machine",
+    projectEmbeddedContrib2: "Configuration of interrupts and hardware timers",
+    projectEmbeddedContrib3: "Systematic debugging with oscilloscope and log outputs",
+    projectEmbeddedImplementation: "Implementation began with defining the state machine and required events. Then hardware timers were configured and interrupt handlers implemented. Special attention was paid to minimal interrupt runtimes and safe data transfer between interrupt and main context. Debugging was done through targeted log outputs and oscilloscope measurements.",
+    projectEmbeddedLesson1: "Clear separation between interrupt and main context is essential.",
+    projectEmbeddedLesson2: "State machines make complex processes comprehensible and testable.",
+    
+    // CAN Project Details
+    projectCANGoal: "The project deals with capturing temperature data and exchanging it between multiple nodes via a CAN bus. The focus is on structured message format, traceable logging, and safe error handling for communication problems.",
+    projectCANContrib1: "Definition of a structured message format for sensor data",
+    projectCANContrib2: "Implementation of CAN interface and error handling",
+    projectCANContrib3: "Logging mechanism for traceability of messages and errors",
+    projectCANImplementation: "Implementation began with defining the message format. A simple protocol was defined containing sensor ID, temperature value, and checksum. The CAN interface was configured and a receive and transmit mechanism implemented. Special attention was paid to error scenarios like lost messages and incorrect checksums. A logging system records all messages and errors for later analysis.",
+    projectCANLesson1: "Structured message formats facilitate debugging and maintenance.",
+    projectCANLesson2: "Logging is indispensable for analyzing communication problems.",
     
     // Impressum
     impressumTitle: "Legal Notice",
