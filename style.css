@@ -89,6 +89,18 @@ body.dark {
   --blob-3: rgba(168, 85, 247, 0.05);
 }
 
+/* Dark Mode Enhanced Background */
+body.dark::before {
+  background: 
+    radial-gradient(circle at 20% 80%, rgba(96, 165, 250, 0.15) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(168, 85, 247, 0.13) 0%, transparent 50%),
+    radial-gradient(circle at 40% 40%, rgba(34, 211, 238, 0.12) 0%, transparent 50%),
+    radial-gradient(ellipse 120% 80% at 50% -10%, rgba(59, 130, 246, 0.1), transparent),
+    radial-gradient(ellipse 80% 100% at -10% 50%, rgba(139, 92, 246, 0.08), transparent),
+    linear-gradient(135deg, var(--color-bg-from) 0%, var(--color-bg-to) 100%);
+  filter: blur(70px);
+}
+
 /* ============================================
    Reset & Base Styles
    ============================================ */
@@ -120,58 +132,61 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Background Blobs */
-body::before,
-body::after {
-  content: '';
-  position: fixed;
-  border-radius: 50%;
-  filter: blur(80px);
-  opacity: 0.6;
-  z-index: -1;
-  pointer-events: none;
-}
-
+/* Apple-style Background with Enhanced Mesh Gradient */
 body::before {
-  width: 500px;
-  height: 500px;
-  background: var(--blob-1);
-  top: -250px;
-  right: -150px;
-  animation: blob-float 20s ease-in-out infinite;
-}
-
-body::after {
-  width: 400px;
-  height: 400px;
-  background: var(--blob-2);
-  bottom: -200px;
-  left: -100px;
-  animation: blob-float 18s ease-in-out infinite reverse;
-}
-
-@keyframes blob-float {
-  0%, 100% { transform: translate(0, 0) scale(1); }
-  33% { transform: translate(30px, -50px) scale(1.05); }
-  66% { transform: translate(-20px, 30px) scale(0.95); }
-}
-
-/* Third blob (pseudo element on main) */
-main::before {
   content: '';
   position: fixed;
-  width: 350px;
-  height: 350px;
-  background: var(--blob-3);
-  border-radius: 50%;
-  filter: blur(80px);
-  opacity: 0.5;
-  top: 50%;
-  right: 20%;
-  z-index: -1;
-  pointer-events: none;
-  animation: blob-float 22s ease-in-out infinite;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+  background: 
+    radial-gradient(circle at 20% 80%, rgba(59, 130, 246, 0.2) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(139, 92, 246, 0.18) 0%, transparent 50%),
+    radial-gradient(circle at 40% 40%, rgba(6, 182, 212, 0.15) 0%, transparent 50%),
+    radial-gradient(ellipse 120% 80% at 50% -10%, rgba(96, 165, 250, 0.12), transparent),
+    radial-gradient(ellipse 80% 100% at -10% 50%, rgba(168, 85, 247, 0.1), transparent),
+    linear-gradient(135deg, var(--color-bg-from) 0%, var(--color-bg-to) 100%);
+  animation: float 25s ease-in-out infinite;
+  filter: blur(60px);
 }
+
+/* Subtle Background Texture */
+body::after {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: 0.03;
+  background-image: 
+    repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0, 0, 0, 0.03) 2px, rgba(0, 0, 0, 0.03) 4px),
+    repeating-linear-gradient(90deg, transparent, transparent 2px, rgba(0, 0, 0, 0.03) 2px, rgba(0, 0, 0, 0.03) 4px);
+}
+
+@keyframes float {
+  0%, 100% { 
+    transform: translate(0, 0) scale(1) rotate(0deg); 
+    opacity: 1;
+  }
+  25% { 
+    transform: translate(5%, -5%) scale(1.05) rotate(1deg); 
+    opacity: 0.9;
+  }
+  50% { 
+    transform: translate(-3%, 3%) scale(0.95) rotate(-1deg); 
+    opacity: 1;
+  }
+  75% { 
+    transform: translate(3%, -2%) scale(1.02) rotate(0.5deg); 
+    opacity: 0.95;
+  }
+}
+
+/* Remove main::before blob */
 
 /* ============================================
    Typography
@@ -227,13 +242,15 @@ a:focus-visible {
   padding: var(--spacing-2xl) var(--container-padding);
 }
 
-/* Glass Effect */
+/* Glass Effect - Apple Style */
 .glass {
   background: var(--glass-bg);
-  backdrop-filter: blur(var(--glass-blur));
-  -webkit-backdrop-filter: blur(var(--glass-blur));
+  backdrop-filter: saturate(180%) blur(var(--glass-blur));
+  -webkit-backdrop-filter: saturate(180%) blur(var(--glass-blur));
   border: 1px solid var(--glass-border);
-  box-shadow: var(--glass-shadow);
+  box-shadow: var(--glass-shadow), 
+              inset 0 1px 0 rgba(255, 255, 255, 0.1),
+              inset 0 0 20px rgba(255, 255, 255, 0.05);
   transition: all var(--transition-base);
   position: relative;
 }
@@ -245,15 +262,19 @@ a:focus-visible {
   left: 0;
   right: 0;
   height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
-  opacity: 0.6;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.6), transparent);
+  opacity: 0.9;
+  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
 }
 
 .glass:hover {
-  backdrop-filter: blur(var(--glass-blur-strong));
-  -webkit-backdrop-filter: blur(var(--glass-blur-strong));
-  box-shadow: var(--glass-shadow-hover);
-  border-color: rgba(255, 255, 255, 0.4);
+  backdrop-filter: saturate(200%) blur(var(--glass-blur-strong));
+  -webkit-backdrop-filter: saturate(200%) blur(var(--glass-blur-strong));
+  box-shadow: var(--glass-shadow-hover), 
+              inset 0 1px 0 rgba(255, 255, 255, 0.15),
+              inset 0 0 30px rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.5);
+  transform: translateY(-2px);
 }
 
 /* Fallback for browsers without backdrop-filter */
@@ -410,10 +431,10 @@ a:focus-visible {
   top: 0;
   z-index: 1000;
   background: var(--glass-bg);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
+  backdrop-filter: saturate(180%) blur(20px);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
   border-bottom: 1px solid var(--glass-border);
-  box-shadow: var(--glass-shadow);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 4px 20px rgba(0, 0, 0, 0.05);
   transition: all var(--transition-base);
 }
 
