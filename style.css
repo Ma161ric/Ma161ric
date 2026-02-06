@@ -92,16 +92,16 @@ body.dark {
 /* Dark Mode Enhanced Background */
 body.dark::before {
   background-image: url('assets/Image_dark.png');
-  opacity: 0.85;
-  filter: blur(15px);
+  opacity: 0.95;
+  filter: blur(12px);
 }
 
 body.dark main::before {
   background: 
-    radial-gradient(circle at 20% 80%, rgba(96, 165, 250, 0.06) 0%, transparent 50%),
-    radial-gradient(circle at 80% 20%, rgba(168, 85, 247, 0.05) 0%, transparent 50%),
-    radial-gradient(circle at 40% 40%, rgba(34, 211, 238, 0.04) 0%, transparent 50%);
-  filter: blur(30px);
+    radial-gradient(circle at 20% 80%, rgba(96, 165, 250, 0.04) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(168, 85, 247, 0.03) 0%, transparent 50%),
+    radial-gradient(circle at 40% 40%, rgba(34, 211, 238, 0.03) 0%, transparent 50%);
+  filter: blur(25px);
 }
 
 /* ============================================
@@ -149,8 +149,8 @@ body::before {
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  filter: blur(15px);
-  opacity: 0.9;
+  filter: blur(12px);
+  opacity: 0.95;
   transition: opacity var(--transition-slow), filter var(--transition-slow);
 }
 
@@ -164,11 +164,11 @@ main::before {
   height: 100%;
   z-index: -2;
   background: 
-    radial-gradient(circle at 20% 80%, rgba(59, 130, 246, 0.08) 0%, transparent 50%),
-    radial-gradient(circle at 80% 20%, rgba(139, 92, 246, 0.06) 0%, transparent 50%),
-    radial-gradient(circle at 40% 40%, rgba(6, 182, 212, 0.05) 0%, transparent 50%);
+    radial-gradient(circle at 20% 80%, rgba(59, 130, 246, 0.03) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(139, 92, 246, 0.02) 0%, transparent 50%),
+    radial-gradient(circle at 40% 40%, rgba(6, 182, 212, 0.02) 0%, transparent 50%);
   animation: float 25s ease-in-out infinite;
-  filter: blur(30px);
+  filter: blur(25px);
   pointer-events: none;
 }
 
