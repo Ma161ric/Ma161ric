@@ -22,10 +22,12 @@
   --color-accent-glow: rgba(6, 182, 212, 0.3);
   
   /* Glass Effect */
-  --glass-bg: rgba(255, 255, 255, 0.7);
-  --glass-border: rgba(255, 255, 255, 0.18);
-  --glass-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
-  --glass-shadow-hover: 0 12px 40px 0 rgba(31, 38, 135, 0.25);
+  --glass-bg: rgba(255, 255, 255, 0.45);
+  --glass-border: rgba(255, 255, 255, 0.3);
+  --glass-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.2);
+  --glass-shadow-hover: 0 12px 48px 0 rgba(31, 38, 135, 0.35);
+  --glass-blur: 20px;
+  --glass-blur-strong: 28px;
   
   /* Blob Colors */
   --blob-1: rgba(59, 130, 246, 0.1);
@@ -71,14 +73,16 @@ body.dark {
   --color-text-secondary: #cbd5e1;
   --color-primary: #60a5fa;
   --color-primary-hover: #3b82f6;
-  --color-primary-glow: rgba(96, 165, 250, 0.3);
+  --color-primary-glow: rgba(96, 165, 250, 0.4);
   --color-accent: #22d3ee;
-  --color-accent-glow: rgba(34, 211, 238, 0.25);
+  --color-accent-glow: rgba(34, 211, 238, 0.3);
   
-  --glass-bg: rgba(30, 41, 59, 0.6);
-  --glass-border: rgba(148, 163, 184, 0.1);
-  --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4);
-  --glass-shadow-hover: 0 12px 40px 0 rgba(0, 0, 0, 0.6);
+  --glass-bg: rgba(30, 41, 59, 0.4);
+  --glass-border: rgba(148, 163, 184, 0.15);
+  --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
+  --glass-shadow-hover: 0 12px 48px 0 rgba(0, 0, 0, 0.7);
+  --glass-blur: 24px;
+  --glass-blur-strong: 32px;
   
   --blob-1: rgba(96, 165, 250, 0.08);
   --blob-2: rgba(34, 211, 238, 0.06);
@@ -226,11 +230,30 @@ a:focus-visible {
 /* Glass Effect */
 .glass {
   background: var(--glass-bg);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
   border: 1px solid var(--glass-border);
   box-shadow: var(--glass-shadow);
   transition: all var(--transition-base);
+  position: relative;
+}
+
+.glass::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+  opacity: 0.6;
+}
+
+.glass:hover {
+  backdrop-filter: blur(var(--glass-blur-strong));
+  -webkit-backdrop-filter: blur(var(--glass-blur-strong));
+  box-shadow: var(--glass-shadow-hover);
+  border-color: rgba(255, 255, 255, 0.4);
 }
 
 /* Fallback for browsers without backdrop-filter */
@@ -267,7 +290,8 @@ a:focus-visible {
   align-items: center;
   padding: var(--spacing-sm) var(--spacing-lg);
   background: var(--glass-bg);
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
   border: 1px solid var(--glass-border);
   border-radius: var(--radius-full);
   font-size: 0.875rem;
@@ -275,14 +299,35 @@ a:focus-visible {
   color: var(--color-text);
   transition: all var(--transition-fast);
   white-space: nowrap;
+  position: relative;
+  overflow: hidden;
+}
+
+.badge::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: var(--radius-full);
+  background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
+  opacity: 0;
+  transition: opacity var(--transition-fast);
+  z-index: -1;
 }
 
 .badge:hover {
-  transform: translateY(-2px);
-  background: var(--color-primary);
+  transform: translateY(-3px) scale(1.05);
+  border-color: transparent;
+  box-shadow: 0 6px 20px var(--color-primary-glow);
   color: white;
-  border-color: var(--color-primary);
-  box-shadow: 0 4px 12px var(--color-primary-glow);
+  backdrop-filter: blur(var(--glass-blur-strong));
+  -webkit-backdrop-filter: blur(var(--glass-blur-strong));
+}
+
+.badge:hover::before {
+  opacity: 1;
 }
 
 /* Buttons */
@@ -301,6 +346,26 @@ a:focus-visible {
   text-decoration: none;
   white-space: nowrap;
   min-height: 44px;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  transform: translate(-50%, -50%);
+  transition: width 0.6s, height 0.6s;
+}
+
+.btn:hover::before {
+  width: 300px;
+  height: 300px;
 }
 
 .btn-primary {
@@ -310,23 +375,26 @@ a:focus-visible {
 }
 
 .btn-primary:hover {
-  transform: translateY(-3px);
+  transform: translateY(-3px) scale(1.02);
   box-shadow: 0 8px 24px var(--color-primary-glow);
 }
 
 .btn-secondary {
   background: var(--glass-bg);
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
   color: var(--color-text);
   border: 1.5px solid var(--glass-border);
 }
 
 .btn-secondary:hover {
-  transform: translateY(-3px);
-  background: var(--color-primary);
+  transform: translateY(-3px) scale(1.02);
+  backdrop-filter: blur(var(--glass-blur-strong));
+  -webkit-backdrop-filter: blur(var(--glass-blur-strong));
+  background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
   color: white;
-  border-color: var(--color-primary);
-  box-shadow: 0 6px 20px var(--color-primary-glow);
+  border-color: transparent;
+  box-shadow: 0 8px 24px var(--color-primary-glow);
 }
 
 .btn:focus-visible {
@@ -455,12 +523,12 @@ a:focus-visible {
 .hero-content > div, 
 .hero-content {
   background: var(--glass-bg);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
+  backdrop-filter: blur(var(--glass-blur-strong));
+  -webkit-backdrop-filter: blur(var(--glass-blur-strong));
   border: 1px solid var(--glass-border);
   border-radius: var(--radius-xl);
   padding: var(--spacing-2xl);
-  box-shadow: var(--glass-shadow);
+  box-shadow: 0 8px 40px rgba(31, 38, 135, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.2);
 }
 
 .hero-avatar {
@@ -584,8 +652,8 @@ section h2 {
 
 .project-card {
   background: var(--glass-bg);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
   border: 1px solid var(--glass-border);
   border-radius: var(--radius-lg);
   padding: var(--spacing-xl);
@@ -594,11 +662,31 @@ section h2 {
   display: flex;
   flex-direction: column;
   gap: var(--spacing-md);
+  position: relative;
+  overflow: hidden;
+}
+
+.project-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+  transition: left 0.5s;
+}
+
+.project-card:hover::before {
+  left: 100%;
 }
 
 .project-card:hover {
   transform: translateY(-6px);
   box-shadow: var(--glass-shadow-hover);
+  backdrop-filter: blur(var(--glass-blur-strong));
+  -webkit-backdrop-filter: blur(var(--glass-blur-strong));
+  border-color: var(--color-primary);
 }
 
 .project-card h3 {
@@ -924,11 +1012,41 @@ section h2 {
   padding: var(--spacing-xl);
   border-radius: var(--radius-lg);
   transition: all var(--transition-base);
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
+  position: relative;
+  overflow: hidden;
+}
+
+.cv-preview-card::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--color-primary), var(--color-accent));
+  transform: scaleX(0);
+  transition: transform var(--transition-base);
+}
+
+.cv-preview-card:hover::after {
+  transform: scaleX(1);
 }
 
 .cv-preview-card:hover {
-  transform: translateY(-2px);
+  transform: translateY(-4px);
   box-shadow: var(--glass-shadow-hover);
+  backdrop-filter: blur(var(--glass-blur-strong));
+  -webkit-backdrop-filter: blur(var(--glass-blur-strong));
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+.cv-preview-description {
+  margin-top: var(--spacing-md);
+  color: var(--color-text-secondary);
+  line-height: 1.7;
+  font-size: 0.95rem;
 }
 
 .cv-preview-card h3 {
