@@ -18,19 +18,45 @@
     <nav class="nav-container">
       <a href="index.html" class="nav-logo">Marcel Richter</a>
       
-      <ul class="nav-links">
+      <div class="nav-desktop">
+        <ul class="nav-links">
+          <li><a href="index.html" data-i18n="navHome">Start</a></li>
+          <li><a href="index.html#projects" data-i18n="navProjects">Projekte</a></li>
+          <li><a href="cv.html" data-i18n="navCV">Lebenslauf</a></li>
+          <li><a href="kontakt.html" data-i18n="navContact">Kontakt</a></li>
+          <li><a href="https://www.linkedin.com/in/marcel-ric/" target="_blank" rel="noopener" data-i18n="navLinkedIn">LinkedIn</a></li>
+        </ul>
+        
+        <div class="nav-controls">
+          <button id="darkModeToggle" class="toggle-btn" aria-label="Dark Mode umschalten">Dark Mode</button>
+          <button id="languageToggle" class="toggle-btn" aria-label="Sprache wechseln">English</button>
+        </div>
+      </div>
+      
+      <div class="nav-mobile-controls">
+        <button id="darkModeToggleMobile" class="toggle-btn-mobile" aria-label="Dark Mode umschalten">
+          <span class="icon-moon">🌙</span>
+          <span class="icon-sun">☀️</span>
+        </button>
+        <button id="languageToggleMobile" class="toggle-btn-mobile" aria-label="Sprache wechseln">EN</button>
+        <button id="mobileMenuToggle" class="hamburger" aria-label="Menü öffnen" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </nav>
+    
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu" id="mobileMenu">
+      <ul class="mobile-menu-links">
         <li><a href="index.html" data-i18n="navHome">Start</a></li>
         <li><a href="index.html#projects" data-i18n="navProjects">Projekte</a></li>
         <li><a href="cv.html" data-i18n="navCV">Lebenslauf</a></li>
         <li><a href="kontakt.html" data-i18n="navContact">Kontakt</a></li>
         <li><a href="https://www.linkedin.com/in/marcel-ric/" target="_blank" rel="noopener" data-i18n="navLinkedIn">LinkedIn</a></li>
       </ul>
-      
-      <div class="nav-controls">
-        <button id="darkModeToggle" class="toggle-btn" aria-label="Dark Mode umschalten">Dark Mode</button>
-        <button id="languageToggle" class="toggle-btn" aria-label="Sprache wechseln">English</button>
-      </div>
-    </nav>
+    </div>
   </header>
 
   <!-- Hero Section -->

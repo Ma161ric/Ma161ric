@@ -383,6 +383,9 @@ function updateDarkModeButton() {
   toggleButton.textContent = isDark 
     ? translations[currentLang].darkModeDark 
     : translations[currentLang].darkModeLight;
+  
+  // Update mobile button too
+  updateMobileDarkModeButton();
 }
 
 // ============================================
@@ -397,6 +400,8 @@ function setLanguage(lang) {
   updatePageLanguage();
   updateLanguageButton();
   updateDarkModeButton();
+  updateMobileLanguageButton();
+  updateMobileDarkModeButton();
 }
 
 function initLanguageSwitcher() {
@@ -407,6 +412,7 @@ function initLanguageSwitcher() {
   const savedLang = getCurrentLanguage();
   updatePageLanguage();
   updateLanguageButton();
+  updateMobileLanguageButton();
   
   // Toggle on click
   langButton.addEventListener("click", () => {
@@ -476,11 +482,111 @@ function setActiveNavLink() {
 }
 
 // ============================================
+// Mobile Menu
+// ============================================
+function initMobileMenu() {
+  const hamburger = document.getElementById("hamburger");
+  const mobileMenu = document.getElementById("mobileMenu");
+  const mobileOverlay = document.getElementById("mobileOverlay");
+  const mobileMenuLinks = document.querySelectorAll(".mobile-menu-links a");
+  const mobileDarkToggle = document.getElementById("mobileDarkToggle");
+  const mobileLangToggle = document.getElementById("mobileLangToggle");
+  
+  if (!hamburger || !mobileMenu || !mobileOverlay) return;
+  
+  // Toggle menu
+  function toggleMenu() {
+    const isOpen = mobileMenu.classList.contains("active");
+    
+    if (isOpen) {
+      closeMenu();
+    } else {
+      openMenu();
+    }
+  }
+  
+  function openMenu() {
+    hamburger.classList.add("active");
+    mobileMenu.classList.add("active");
+    mobileOverlay.classList.add("active");
+    document.body.classList.add("menu-open");
+  }
+  
+  function closeMenu() {
+    hamburger.classList.remove("active");
+    mobileMenu.classList.remove("active");
+    mobileOverlay.classList.remove("active");
+    document.body.classList.remove("menu-open");
+  }
+  
+  // Hamburger click
+  hamburger.addEventListener("click", toggleMenu);
+  
+  // Overlay click
+  mobileOverlay.addEventListener("click", closeMenu);
+  
+  // ESC key
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && mobileMenu.classList.contains("active")) {
+      closeMenu();
+    }
+  });
+  
+  // Menu link clicks
+  mobileMenuLinks.forEach(link => {
+    link.addEventListener("click", closeMenu);
+  });
+  
+  // Sync mobile toggles with main toggles
+  if (mobileDarkToggle) {
+    mobileDarkToggle.addEventListener("click", () => {
+      document.body.classList.toggle("dark");
+      const isDark = document.body.classList.contains("dark");
+      localStorage.setItem("darkMode", isDark);
+      updateDarkModeButton();
+      updateMobileDarkModeButton();
+    });
+  }
+  
+  if (mobileLangToggle) {
+    mobileLangToggle.addEventListener("click", () => {
+      const currentLang = getCurrentLanguage();
+      const newLang = currentLang === "de" ? "en" : "de";
+      setLanguage(newLang);
+      updateMobileLanguageButton();
+    });
+  }
+}
+
+function updateMobileDarkModeButton() {
+  const mobileDarkToggle = document.getElementById("mobileDarkToggle");
+  if (!mobileDarkToggle) return;
+  
+  const isDark = document.body.classList.contains("dark");
+  const currentLang = getCurrentLanguage();
+  
+  mobileDarkToggle.textContent = isDark 
+    ? translations[currentLang].darkModeDark 
+    : translations[currentLang].darkModeLight;
+}
+
+function updateMobileLanguageButton() {
+  const mobileLangToggle = document.getElementById("mobileLangToggle");
+  if (!mobileLangToggle) return;
+  
+  const currentLang = getCurrentLanguage();
+  mobileLangToggle.textContent = currentLang === "de" 
+    ? translations.de.languageDE 
+    : translations.en.languageEN;
+}
+
+// ============================================
 // Initialize on Page Load
 // ============================================
 document.addEventListener("DOMContentLoaded", () => {
   initDarkMode();
   initLanguageSwitcher();
+  initMobileMenu();
   setActiveNavLink();
   
   // Initialize AOS if available
