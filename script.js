@@ -1,11 +1,53 @@
 // ============================================
+// Initialize Theme (Before Header Loads)
+// ============================================
+function initTheme() {
+  const savedDarkMode = localStorage.getItem("darkMode") === "true";
+  if (savedDarkMode) {
+    document.body.classList.add("dark");
+  }
+}
+
+// ============================================
+// Load Header Component
+// ============================================
+async function loadHeaderComponent() {
+  try {
+    const response = await fetch('_header.html');
+    const html = await response.text();
+    const headerPlaceholder = document.getElementById('header-placeholder');
+    if (headerPlaceholder) {
+      headerPlaceholder.innerHTML = html;
+    }
+    return true;
+  } catch (error) {
+    console.warn('Header component could not be loaded:', error);
+    return false;
+  }
+}
+
+// Initialize theme FIRST
+initTheme();
+
+// Load header and initialize components
+document.addEventListener("DOMContentLoaded", () => {
+  loadHeaderComponent().then(() => {
+    setTimeout(() => {
+      initLanguageSwitcher();
+      setActiveNavLink();
+      initMobileMenu();
+      initDarkMode();
+    }, 500);
+  });
+});
+
+// ============================================
 // Translations
 // ============================================
 const translations = {
   de: {
     // Navigation
-    navHome: "Start",
-    navProjects: "Projekte",
+    navHome: "Portfolio",
     navCV: "Lebenslauf",
     navContact: "Kontakt",
     navLinkedIn: "LinkedIn",
@@ -77,13 +119,13 @@ const translations = {
       "Fehler beim Senden. Bitte versuche es später erneut oder schreibe mir direkt per E-Mail.",
     contactValidation:
       "Bitte prüfe deine Eingaben und fülle alle Pflichtfelder aus.",
-    contactBackHome: "Zurück zur Startseite",
+    contactBackHome: "Zurück zum Portfolio",
 
     // Thank You Page
     thankYouTitle: "Danke für deine Nachricht",
     thankYouMessage:
       "Ich habe deine Nachricht erhalten und melde mich so bald wie möglich.",
-    thankYouHome: "Zur Startseite",
+    thankYouHome: "Zurück zum Portfolio",
     thankYouContact: "Noch eine Nachricht",
     thankYouLinkedIn: "LinkedIn",
 
@@ -215,7 +257,7 @@ const translations = {
     datenschutzTitle: "Datenschutz",
 
     // New: Shared legal buttons
-    legalBackHome: "← Zurück zur Startseite",
+    legalBackHome: "← Zurück zum Portfolio",
 
     // New: Impressum extra keys
     impressumAddressPlaceholder: "[Adresse Platzhalter]",
@@ -284,8 +326,7 @@ const translations = {
 
   en: {
     // Navigation
-    navHome: "Home",
-    navProjects: "Projects",
+    navHome: "Portfolio",
     navCV: "CV",
     navContact: "Contact",
     navLinkedIn: "LinkedIn",
@@ -357,13 +398,13 @@ const translations = {
       "Error sending message. Please try again later or email me directly.",
     contactValidation:
       "Please check your inputs and fill all required fields.",
-    contactBackHome: "Back to Home",
+    contactBackHome: "Back to Portfolio",
 
     // Thank You Page
     thankYouTitle: "Thank You for Your Message",
     thankYouMessage:
       "I've received your message and will get back to you as soon as possible.",
-    thankYouHome: "Back to Home",
+    thankYouHome: "Back to Portfolio",
     thankYouContact: "Send Another Message",
     thankYouLinkedIn: "LinkedIn",
 
@@ -496,7 +537,7 @@ const translations = {
     datenschutzTitle: "Privacy Policy",
 
     // New: Shared legal buttons
-    legalBackHome: "← Back to Home",
+    legalBackHome: "← Back to Portfolio",
 
     // New: Impressum extra keys
     impressumAddressPlaceholder: "[Address placeholder]",
