@@ -7,6 +7,9 @@
   <meta name="description" content="Portfolio von Marcel Richter. Angewandte Informatik mit Schwerpunkt Embedded Systems. Projekte, Skills, Kontakt und Links.">
   <meta name="keywords" content="Marcel Richter, Embedded Systems, C, C++, Embedded Linux, Portfolio, HTWG Konstanz">
   <meta name="author" content="Marcel Richter">
+  
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💻</text></svg>">
 
   <link rel="stylesheet" href="style.css">
   <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
@@ -40,7 +43,11 @@
 
     <div id="mobileOverlay" class="mobile-overlay"></div>
 
-    <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <div id="mobileMenu" class="mobile-menu" role="dialog" aria-modal="true" aria-label="Mobile Navigation">
+      <button id="mobileMenuClose" class="mobile-menu-close" aria-label="Menü schließen" role="button" tabindex="0">
+        <span class="visually-hidden">Schließen</span>
+      </button>
+
       <ul class="mobile-menu-links">
         <li><a href="index.html" data-i18n="navHome">Start</a></li>
         <li><a href="index.html#projects" data-i18n="navProjects">Projekte</a></li>

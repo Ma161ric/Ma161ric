@@ -6,6 +6,9 @@
   <title>Lebenslauf | Marcel Richter</title>
   <meta name="description" content="Lebenslauf von Marcel Richter. Student der Angewandten Informatik mit Schwerpunkt Embedded Systems.">
 
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💻</text></svg>">
+
   <!-- CSS -->
   <link rel="stylesheet" href="style.css">
   <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
@@ -16,14 +19,14 @@
     <nav class="nav-container">
       <a href="index.html" class="nav-logo">Marcel Richter</a>
 
-      <!-- Hamburger Menu Button (Mobile) -->
-      <button id="hamburger" class="hamburger" aria-label="Menu">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
+      <div class="nav-mobile-controls">
+        <button id="hamburger" class="hamburger" aria-label="Menu" aria-controls="mobileMenu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
 
-      <!-- Desktop Navigation -->
       <ul class="nav-links">
         <li><a href="index.html" data-i18n="navHome">Start</a></li>
         <li><a href="index.html#projects" data-i18n="navProjects">Projekte</a></li>
@@ -32,18 +35,19 @@
         <li><a href="https://www.linkedin.com/in/marcel-ric/" target="_blank" rel="noopener" data-i18n="navLinkedIn">LinkedIn</a></li>
       </ul>
 
-      <!-- Desktop Controls -->
       <div class="nav-controls">
         <button id="darkModeToggle" class="toggle-btn" aria-label="Dark Mode umschalten">Dark Mode</button>
         <button id="languageToggle" class="toggle-btn" aria-label="Sprache wechseln">English</button>
       </div>
     </nav>
 
-    <!-- Mobile Menu Overlay -->
     <div id="mobileOverlay" class="mobile-overlay"></div>
 
-    <!-- Mobile Menu -->
-    <div id="mobileMenu" class="mobile-menu">
+    <div id="mobileMenu" class="mobile-menu" role="dialog" aria-modal="true" aria-label="Mobile Navigation">
+      <button id="mobileMenuClose" class="mobile-menu-close" aria-label="Menü schließen" role="button" tabindex="0">
+        <span class="visually-hidden">Schließen</span>
+      </button>
+
       <ul class="mobile-menu-links">
         <li><a href="index.html" data-i18n="navHome">Start</a></li>
         <li><a href="index.html#projects" data-i18n="navProjects">Projekte</a></li>

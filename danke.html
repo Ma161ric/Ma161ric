@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Danke | Marcel Richter</title>
   <meta name="description" content="Vielen Dank für deine Nachricht. Ich melde mich so bald wie möglich.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💻</text></svg>">
 
   <!-- CSS -->
   <link rel="stylesheet" href="style.css">
@@ -42,7 +43,10 @@
     <div id="mobileOverlay" class="mobile-overlay"></div>
 
     <!-- Mobile Menu -->
-    <div id="mobileMenu" class="mobile-menu">
+    <div id="mobileMenu" class="mobile-menu" role="dialog" aria-modal="true" aria-label="Mobile Navigation">
+      <button id="mobileMenuClose" class="mobile-menu-close" aria-label="Menu schließen" role="button" tabindex="0">
+        <span class="visually-hidden">Schließen</span>
+      </button>
       <ul class="mobile-menu-links">
         <li><a href="index.html" data-i18n="navHome">Start</a></li>
         <li><a href="index.html#projects" data-i18n="navProjects">Projekte</a></li>
