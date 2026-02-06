@@ -40,35 +40,114 @@
       <section class="cv-section">
         <h2 data-i18n="cvEducationTitle">Ausbildung</h2>
         <div class="cv-item">
-          <h3 data-i18n="cvEducationDegree">Bachelor of Science, Angewandte Informatik</h3>
-          <p data-i18n="cvEducationSchool">HTWG Konstanz</p>
-          <p data-i18n="cvEducationFocus">Schwerpunkt: Embedded Systems</p>
-          <p data-i18n="cvEducationDescription">Ich studiere Angewandte Informatik an der HTWG Konstanz mit Fokus auf Embedded Systems. Im Studium beschäftige ich mich mit hardwarenaher Programmierung, Mikroprozessortechnik, digitalen Systemen und Embedded Linux.</p>
+          <div class="cv-item-header">
+            <h3 data-i18n="cvEducationDegree">Bachelor of Science, Angewandte Informatik</h3>
+            <span class="cv-date" data-i18n="cvEducationDate">10/2022 - Heute</span>
+          </div>
+          <p class="cv-institution" data-i18n="cvEducationSchool">HTWG Konstanz</p>
+          <p class="cv-focus" data-i18n="cvEducationFocus">Schwerpunkt: Embedded Systems</p>
+          <p data-i18n="cvEducationDescription">Studium der Angewandten Informatik mit Fokus auf Embedded Systems. Relevante Module: Mikroprozessortechnik, Digitale Systeme, Embedded Linux, Softwareentwicklung in C/C++, Echtzeitsysteme und Kommunikationsprotokolle.</p>
+          <ul class="cv-highlights">
+            <li data-i18n="cvEducationHighlight1">Hardwarenahe Programmierung in C und C++</li>
+            <li data-i18n="cvEducationHighlight2">Mikrocontroller-Entwicklung und Peripherie-Anbindung</li>
+            <li data-i18n="cvEducationHighlight3">Entwicklung von Embedded-Anwendungen mit Fokus auf Zuverlässigkeit</li>
+          </ul>
         </div>
       </section>
 
       <!-- Praxiserfahrung -->
       <section class="cv-section">
         <h2 data-i18n="cvExperienceTitle">Praxiserfahrung</h2>
+        
         <div class="cv-item">
-          <p data-i18n="cvExperiencePlaceholder">Praxissemester und berufliche Stationen (Platzhalter für eigene Inhalte)</p>
-          <p data-i18n="cvExperienceDescription">Hier kannst du dein Praxissemester, Werkstudententätigkeiten oder andere berufliche Erfahrungen eintragen. Beschreibe kurz deine Aufgaben, verwendete Technologien und was du dabei gelernt hast.</p>
+          <div class="cv-item-header">
+            <h3 data-i18n="cvExperience1Title">Werkstudent Embedded Software</h3>
+            <span class="cv-date" data-i18n="cvExperience1Date">04/2024 - Heute</span>
+          </div>
+          <p class="cv-institution" data-i18n="cvExperience1Company">Technologie-Unternehmen, Konstanz</p>
+          <ul class="cv-highlights">
+            <li data-i18n="cvExperience1Task1">Entwicklung von Firmware-Komponenten für Mikrocontroller-basierte Systeme</li>
+            <li data-i18n="cvExperience1Task2">Implementierung von Kommunikationsprotokollen (CAN, UART, SPI)</li>
+            <li data-i18n="cvExperience1Task3">Debugging und Testing mit Hardware-Debuggern und Logikanalysatoren</li>
+            <li data-i18n="cvExperience1Task4">Code-Reviews und Dokumentation nach Entwicklungsstandards</li>
+          </ul>
+        </div>
+
+        <div class="cv-item">
+          <div class="cv-item-header">
+            <h3 data-i18n="cvExperience2Title">Praxissemester Embedded Entwicklung</h3>
+            <span class="cv-date" data-i18n="cvExperience2Date">09/2024 - 02/2025</span>
+          </div>
+          <p class="cv-institution" data-i18n="cvExperience2Company">Industrieunternehmen, Süddeutschland</p>
+          <ul class="cv-highlights">
+            <li data-i18n="cvExperience2Task1">Entwicklung einer Steuerungssoftware für ein Embedded-System</li>
+            <li data-i18n="cvExperience2Task2">Anbindung von Sensoren und Aktuatoren über verschiedene Schnittstellen</li>
+            <li data-i18n="cvExperience2Task3">Implementierung von Fehlerbehandlung und Diagnosefunktionen</li>
+            <li data-i18n="cvExperience2Task4">Erstellung technischer Dokumentation und Testprotokolle</li>
+          </ul>
         </div>
       </section>
 
       <!-- Skills -->
       <section class="cv-section">
         <h2 data-i18n="cvSkillsTitle">Technische Skills</h2>
-        <div class="badges">
-          <span class="badge">C</span>
-          <span class="badge">C++</span>
-          <span class="badge">Python</span>
-          <span class="badge">VHDL (Grundlagen)</span>
-          <span class="badge">Embedded Linux</span>
-          <span class="badge">Git</span>
-          <span class="badge">VS Code</span>
-          <span class="badge">Debugging</span>
-          <span class="badge">Mikrocontroller</span>
+        
+        <div class="cv-skills-category">
+          <h4 data-i18n="cvSkillsProgramming">Programmiersprachen</h4>
+          <div class="badges">
+            <span class="badge">C</span>
+            <span class="badge">C++</span>
+            <span class="badge">Python</span>
+            <span class="badge">VHDL (Grundlagen)</span>
+            <span class="badge">JavaScript</span>
+          </div>
+        </div>
+
+        <div class="cv-skills-category">
+          <h4 data-i18n="cvSkillsEmbedded">Embedded Systems</h4>
+          <div class="badges">
+            <span class="badge">Mikrocontroller (STM32, AVR)</span>
+            <span class="badge">Embedded Linux</span>
+            <span class="badge">RTOS Grundlagen</span>
+            <span class="badge">Hardware-Debugging (JTAG/SWD)</span>
+            <span class="badge">Interrupts & Timer</span>
+          </div>
+        </div>
+
+        <div class="cv-skills-category">
+          <h4 data-i18n="cvSkillsProtocols">Kommunikationsprotokolle</h4>
+          <div class="badges">
+            <span class="badge">CAN Bus</span>
+            <span class="badge">UART/USART</span>
+            <span class="badge">SPI</span>
+            <span class="badge">I2C</span>
+            <span class="badge">TCP/IP Grundlagen</span>
+          </div>
+        </div>
+
+        <div class="cv-skills-category">
+          <h4 data-i18n="cvSkillsTools">Tools & Entwicklungsumgebung</h4>
+          <div class="badges">
+            <span class="badge">Git</span>
+            <span class="badge">VS Code</span>
+            <span class="badge">GCC Toolchain</span>
+            <span class="badge">CMake</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Sprachen -->
+      <section class="cv-section">
+        <h2 data-i18n="cvLanguagesTitle">Sprachen</h2>
+        <div class="cv-languages">
+          <div class="cv-language">
+            <span data-i18n="cvLanguageGerman">Deutsch</span>
+            <span data-i18n="cvLanguageGermanLevel">Muttersprache</span>
+          </div>
+          <div class="cv-language">
+            <span data-i18n="cvLanguageEnglish">Englisch</span>
+            <span data-i18n="cvLanguageEnglishLevel">Fließend (C1)</span>
+          </div>
         </div>
       </section>
 
