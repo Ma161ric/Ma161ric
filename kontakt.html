@@ -3,29 +3,63 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Kontakt – Marcel Richter</title>
+    <title>Kontakt | Marcel Richter</title>
+    <meta
+      name="description"
+      content="Kontaktseite von Marcel Richter. Schreib mir per E-Mail oder nutze das Kontaktformular."
+    />
     <link rel="stylesheet" href="style.css" />
   </head>
+
   <body>
-    <button id="darkModeToggle">🌗 Dark Mode</button>
+    <button id="darkModeToggle" aria-label="Dark Mode umschalten">
+      🌗 Dark Mode
+    </button>
 
     <main class="kontaktseite">
       <h1>📫 Kontakt aufnehmen</h1>
+
       <p>
         Schreib mir gern eine Nachricht an
         <a href="mailto:marcel.richter.fn@gmx.de">marcel.richter.fn@gmx.de</a>
-        oder erreiche mich direkt über mein Kontaktformular. Ich freue mich auf
-        deine Nachricht!
+        oder nutze das Kontaktformular. Ich freue mich auf deine Nachricht.
       </p>
+
+      <div class="kontakt-links">
+        <a
+          class="link-btn"
+          href="https://www.linkedin.com/in/marcel-ric/"
+          target="_blank"
+          rel="noopener"
+          >💼 LinkedIn</a
+        >
+        <a class="link-btn" href="index.html">🏠 Startseite</a>
+      </div>
 
       <form
         id="kontaktForm"
         class="kontakt-formular"
         action="https://formsubmit.co/marcel.richter.fn%40gmx.de"
         method="POST"
+        novalidate
       >
+        <!-- Formsubmit Optionen -->
         <input type="hidden" name="_captcha" value="false" />
-        <input type="hidden" name="_subject" value="Neue Nachricht von der Website" />
+        <input
+          type="hidden"
+          name="_subject"
+          value="Neue Nachricht von der Website"
+        />
+        <input type="hidden" name="_template" value="table" />
+
+        <!-- Optional. Wenn du lieber ohne JS umleiten willst, aktivieren und das JS Redirect entfernen -->
+        <input type="hidden" name="_next" value="danke.html" />
+
+        <!-- Honeypot gegen Spam -->
+        <div style="display: none;">
+          <label for="website">Website</label>
+          <input type="text" id="website" name="_honey" tabindex="-1" autocomplete="off" />
+        </div>
 
         <label for="name">Name</label>
         <input
@@ -34,6 +68,7 @@
           name="name"
           placeholder="Dein Name"
           required
+          autocomplete="name"
         />
 
         <label for="email">E-Mail</label>
@@ -43,6 +78,7 @@
           name="email"
           placeholder="Deine E-Mail"
           required
+          autocomplete="email"
         />
 
         <label for="nachricht">Nachricht</label>
@@ -55,7 +91,23 @@
         ></textarea>
 
         <button type="submit" id="submitBtn">📨 Nachricht senden</button>
-        <div id="errorMessage" class="error-message" style="display: none; color: red; margin-top: 10px;"></div>
+
+        <div
+          id="errorMessage"
+          class="error-message"
+          style="display: none; color: red; margin-top: 10px;"
+          role="alert"
+          aria-live="polite"
+        ></div>
+
+        <div
+          id="successMessage"
+          class="success-message"
+          style="display: none; margin-top: 10px;"
+          aria-live="polite"
+        >
+          ✅ Nachricht wurde gesendet. Weiterleitung läuft.
+        </div>
       </form>
 
       <div class="zurueck-link">
@@ -66,42 +118,48 @@
     <script src="script.js"></script>
 
     <script>
-      document.getElementById('kontaktForm').addEventListener('submit', async (e) => {
+      document.getElementById("kontaktForm").addEventListener("submit", async (e) => {
         e.preventDefault();
 
         const form = e.target;
-        const submitBtn = document.getElementById('submitBtn');
-        const errorMessage = document.getElementById('errorMessage');
+        const submitBtn = document.getElementById("submitBtn");
+        const errorMessage = document.getElementById("errorMessage");
+        const successMessage = document.getElementById("successMessage");
 
-        // Reset error message
-        errorMessage.style.display = 'none';
-        errorMessage.textContent = '';
+        errorMessage.style.display = "none";
+        errorMessage.textContent = "";
+        successMessage.style.display = "none";
 
-        // Disable button during submission
+        if (!form.checkValidity()) {
+          errorMessage.textContent = "Bitte prüfe deine Eingaben und fülle alle Pflichtfelder aus.";
+          errorMessage.style.display = "block";
+          return;
+        }
+
         submitBtn.disabled = true;
-        submitBtn.textContent = '⏳ Wird gesendet...';
+        submitBtn.textContent = "⏳ Wird gesendet...";
 
         try {
           const response = await fetch(form.action, {
-            method: 'POST',
+            method: "POST",
+            headers: { Accept: "application/json" },
             body: new FormData(form),
           });
 
           if (response.ok) {
-            // Redirect to danke.html on success
-            window.location.href = 'danke.html';
-          } else {
-            throw new Error(`Server error: ${response.status}`);
+            successMessage.style.display = "block";
+            window.location.href = "danke.html";
+            return;
           }
-        } catch (error) {
-          // Show error message
-          errorMessage.textContent = '❌ Fehler beim Senden! Bitte versuche es später erneut oder kontaktiere mich direkt.';
-          errorMessage.style.display = 'block';
-          console.error('Form submission error:', error);
 
-          // Re-enable button
+          throw new Error("Server error: " + response.status);
+        } catch (error) {
+          errorMessage.textContent =
+            "❌ Fehler beim Senden. Bitte versuche es später erneut oder schreibe mir direkt per E-Mail.";
+          errorMessage.style.display = "block";
+
           submitBtn.disabled = false;
-          submitBtn.textContent = '📨 Nachricht senden';
+          submitBtn.textContent = "📨 Nachricht senden";
         }
       });
     </script>
