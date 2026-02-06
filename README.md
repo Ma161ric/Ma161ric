@@ -1,23 +1,20 @@
-# 👋 Hallo, ich bin Ma161Ric
+# 👋 Hallo, ich bin Marcel
 
-🎓 Bachelorstudent der Angewandten Informatik an der HTWG Konstanz  
-🔧 Spezialisierung: Embedded Systems  
-📍 Konstanz, Deutschland
+🎓 Student der Angewandten Informatik an der HTWG Konstanz  
+🔧 Schwerpunkt: Embedded Systems  
+📍 Konstanz, Deutschland  
 
----
+## Kurzprofil
 
-## 🧠 Was ich lerne
+Ich interessiere mich für hardwarenahe Software, zuverlässige Systeme und Kommunikation zwischen Geräten. In meinem Portfolio zeige ich Projekte, die ich im Studium und in eigenen Arbeiten umgesetzt habe.
 
-Im Rahmen meines Studiums mit Schwerpunkt auf Embedded Systems beschäftige ich mich intensiv mit:
+## Schwerpunkte
 
-- **Digitale Systeme**: Entwurf und Analyse digitaler Schaltungen, Logikgatter, Flip-Flops und FSMs.
-- **Mikroprozessorsysteme**: Programmierung von Mikrocontrollern (z. B. TI MSP430), Interrupts, Timer, Speicherverwaltung.
-- **Embedded Systems**: Entwicklung eingebetteter Systeme mit Fokus auf Echtzeitfähigkeit, Energieeffizienz und Zuverlässigkeit.
-- **Kommunikationstechnik**: Grundlagen der Datenübertragung, Protokolle und Netzwerktechnologien.
-- **Ubiquitous Computing**: Integration von Computern in Alltagsgegenstände, IoT-Anwendungen.
-- **Parallel Computing**: Konzepte paralleler Programmierung und deren Anwendung in eingebetteten Systemen.
-
----
+- Embedded Entwicklung mit C und C++
+- Sensorik und Peripherie anbinden und auswerten
+- Interrupts, Timer, Zustandsmaschinen und Timing
+- Grundlagen digitaler Systeme und Mikroprozessortechnik
+- Embedded Linux Grundlagen, Tooling und Debugging
 
 ## 🛠️ Technologien & Tools
 
@@ -27,23 +24,19 @@ Im Rahmen meines Studiums mit Schwerpunkt auf Embedded Systems beschäftige ich 
 ![VHDL](https://img.shields.io/badge/VHDL-FFA500?style=flat)
 ![Linux](https://img.shields.io/badge/Linux-FCC624?style=flat&logo=linux&logoColor=black)
 ![Git](https://img.shields.io/badge/Git-F05032?style=flat&logo=git&logoColor=white)
-![VS Code](https://img.shields.io/badge/VS%20Code-007ACC?style=flat&logo=visual-studio-code&logoColor=white)
+![VS%20Code](https://img.shields.io/badge/VS%20Code-007ACC?style=flat&logo=visual-studio-code&logoColor=white)
 
----
+## 📚 Projekte
 
-## 📚 Aktuelle Projekte
+- **IoT Projekt**: Sensorwerte erfassen und übertragen. Fokus auf robuste Kommunikation und saubere Struktur.
+- **Embedded Systems Projekt**: Hardwarenahe Anwendung mit definiertem Timing. Fokus auf Interrupts, Timer und Zustandsmaschine.
+- **Temperatursensor & Bus-Kommunikation**: Temperaturdaten erfassen und zwischen Knoten austauschen. Fokus auf Nachrichtenformat und Logging.
 
-- **Embedded Systems Projekt**: Umbau eines iPod Classic zu einem Raspberry Pi-basierten Mediaplayer.
-- **IoT-Anwendung**: Implementierung eines eigenen Smart-Home-Projekts mit Mikrocontrollern und Sensoren.
+## 🔗 Links
 
----
+- LinkedIn: https://www.linkedin.com/in/marcel-ric/
+- Portfolio: https://Ma161ric.github.io/Ma161ric
 
-## 📫 Kontakt
-
-- [🌐 Portfolio](https://Ma161ric.github.io/Ma161ric)
-
----
-
-## 📈 GitHub-Statistiken
+## 📈 GitHub Statistiken
 
 ![ma161ric's GitHub Stats](https://github-readme-stats.vercel.app/api?username=ma161ric&show_icons=true&theme=default)
