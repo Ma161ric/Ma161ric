@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mobile UX Test | Marcel Richter</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .test-section {
+      background: var(--glass-bg);
+      backdrop-filter: blur(14px);
+      border: 1px solid var(--glass-border);
+      border-radius: var(--radius-lg);
+      padding: var(--spacing-xl);
+      margin-bottom: var(--spacing-lg);
+    }
+    .test-section h2 {
+      text-align: left;
+      font-size: 1.5rem;
+      margin-bottom: var(--spacing-md);
+      color: var(--color-primary);
+    }
+    .button-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: var(--spacing-md);
+      margin-top: var(--spacing-md);
+    }
+    .badge-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--spacing-sm);
+      margin-top: var(--spacing-md);
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav-container">
+      <a href="index.html" class="nav-logo">Mobile Test</a>
+      
+      <button id="hamburger" class="hamburger" aria-label="Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="mobile-test.html">Test</a></li>
+      </ul>
+      
+      <div class="nav-controls">
+        <button id="darkModeToggle" class="toggle-btn">Dark Mode</button>
+        <button id="languageToggle" class="toggle-btn">English</button>
+      </div>
+    </nav>
+    
+    <div id="mobileOverlay" class="mobile-overlay"></div>
+    
+    <div id="mobileMenu" class="mobile-menu">
+      <ul class="mobile-menu-links">
+        <li><a href="index.html">Start</a></li>
+        <li><a href="cv.html">Lebenslauf</a></li>
+        <li><a href="kontakt.html">Kontakt</a></li>
+        <li><a href="projekt-iot.html">IoT Projekt</a></li>
+        <li><a href="mobile-test.html">Mobile Test</a></li>
+      </ul>
+      
+      <div class="mobile-controls">
+        <button id="mobileDarkToggle" class="toggle-btn">Dark Mode</button>
+        <button id="mobileLangToggle" class="toggle-btn">English</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="content">
+    <div class="test-section">
+      <h2>🎯 Button Interactions</h2>
+      <p>Tippe auf die Buttons um den Ripple-Effekt zu sehen:</p>
+      <div class="button-grid">
+        <button class="btn btn-primary">Primary</button>
+        <button class="btn btn-secondary">Secondary</button>
+        <button class="btn btn-primary">Mit Ripple</button>
+        <button class="btn btn-secondary">Auch hier</button>
+      </div>
+    </div>
+
+    <div class="test-section">
+      <h2>🎚️ Toggle Buttons</h2>
+      <p>Teste die Toggle-Buttons mit verbessertem Feedback:</p>
+      <div class="button-grid">
+        <button class="toggle-btn">Dark Mode</button>
+        <button class="toggle-btn">Light Mode</button>
+        <button class="toggle-btn">English</button>
+        <button class="toggle-btn">Deutsch</button>
+      </div>
+    </div>
+
+    <div class="test-section">
+      <h2>🏷️ Badges</h2>
+      <p>Badges mit Touch-Feedback:</p>
+      <div class="badge-grid">
+        <span class="badge">C</span>
+        <span class="badge">C++</span>
+        <span class="badge">Python</span>
+        <span class="badge">Embedded</span>
+        <span class="badge">IoT</span>
+        <span class="badge">Linux</span>
+        <span class="badge">Git</span>
+        <span class="badge">CAN Bus</span>
+      </div>
+    </div>
+
+    <div class="test-section">
+      <h2>🍔 Hamburger Menu</h2>
+      <p>Features:</p>
+      <ul class="bullets">
+        <li>Smooth Slide-In Animation mit Bounce</li>
+        <li>Gestaffelte Link-Animationen</li>
+        <li>Ripple-Effekte auf Links</li>
+        <li>ESC zum Schließen</li>
+        <li>Overlay-Click zum Schließen</li>
+        <li>Body Scroll Lock</li>
+      </ul>
+    </div>
+
+    <div class="test-section">
+      <h2>✨ Mobile Features</h2>
+      <ul class="bullets">
+        <li>Ripple-Effekte auf allen interaktiven Elementen</li>
+        <li>44px+ Touch Targets überall</li>
+        <li>Smooth Bounce-Animationen</li>
+        <li>Optimierte Transitions (cubic-bezier)</li>
+        <li>Kein Tap-Highlight (verhindert Flash)</li>
+        <li>User-Select: none auf Buttons</li>
+        <li>Scale-Feedback bei :active</li>
+      </ul>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-content">
+      <p>Mobile UX Test Page - Resize dein Browserfenster oder teste auf dem Handy!</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
