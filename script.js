@@ -85,7 +85,7 @@ const translations = {
     projectIoTFeature1: "Messwerte, Status, einfache Fehlerfälle und Plausibilisierung",
     projectIoTFeature2: "Strukturierte Implementierung in C oder C++ mit klaren Modulen",
 
-    projectMakeNowTitle: "make_now. GitHub Projekt",
+    projectMakeNowTitle: "DayFlow. GitHub Projekt",
     projectMakeNowSummary:
       "Open Source Projekt auf GitHub. Ein kleines Tool, das meinen Workflow automatisiert und wiederholbare Schritte vereinfacht.",
     projectMakeNowFeature1: "AI Extraktion und Dauer Schätzung über Groq API. Review und Confirm bleibt beim Nutzer",
@@ -316,7 +316,7 @@ const translations = {
     projectIoTFeature1: "Measurements, status, simple error cases and plausibility checks",
     projectIoTFeature2: "Structured implementation in C or C++ with clear modules",
 
-    projectMakeNowTitle: "make_now. GitHub Project",
+    projectMakeNowTitle: "DayFlow. GitHub Project",
     projectMakeNowSummary:
       "Open Source project on GitHub. A small tool that automates my workflow and simplifies repetitive steps.",
     projectMakeNowFeature1: "AI extraction and duration estimation via Groq API. Review and confirm remain with the user",
@@ -825,19 +825,36 @@ const autoTranslationDict = {
   "AI & Planung": "AI & Planning",
   "Persistierung": "Persistence",
   "Deployment": "Deployment",
+  
+  // CV Preview - Praxiserfahrung
+  "Werkstudent, Hyperstone GmbH": "Working Student, Hyperstone GmbH",
+  "Praktikum, Hyperstone GmbH": "Internship, Hyperstone GmbH",
+  "03/2023 bis 02/2024, Konstanz": "03/2023 to 02/2024, Konstanz",
+  "09/2022 bis 02/2023, Konstanz": "09/2022 to 02/2023, Konstanz",
+  "Schwerpunkt auf RAID Simulation und Konzeptüberarbeitung. Dazu habe ich die Firmware Simulation unterstützt und verschiedene RAID Konfigurationen implementiert, um Leistungsunterschiede messbar zu machen.": "Focus on RAID simulation and concept revision. I supported firmware simulation and implemented various RAID configurations to measure performance differences.",
+  "Einstieg in das Firmware Umfeld. Fokus auf nachvollziehbares Testen, Dokumentation und sauberes Vorgehen im Team.": "Entry into the firmware field. Focus on comprehensible testing, documentation and clean teamwork.",
 };
 
-// Automatische Text-Übersetzung für nicht-markierte Elemente
+// Automatische Text-Übersetzung für nicht-markierte Elemente (bidirektional)
 function autoTranslatePageContent() {
   const currentLang = localStorage.getItem("language") || "de";
-  if (currentLang === "de") return; // Nur wenn Englisch gewählt ist
+
+  // Erstelle inverse Dictionary für DE->EN und EN->DE
+  const deToEn = autoTranslationDict;
+  const enToDe = {};
+  
+  for (const [de, en] of Object.entries(autoTranslationDict)) {
+    enToDe[en] = de;
+  }
+
+  const translationMap = currentLang === "en" ? deToEn : enToDe;
 
   // Hilfsfunktion zum Durchsuchen und Ersetzen von TextNodes
   function traverseText(node) {
     if (node.nodeType === Node.TEXT_NODE) {
       const text = node.textContent.trim();
-      if (text.length > 5 && autoTranslationDict[text]) {
-        node.textContent = autoTranslationDict[text];
+      if (text.length > 5 && translationMap[text]) {
+        node.textContent = translationMap[text];
       }
     } else if (node.nodeType === Node.ELEMENT_NODE) {
       // Überspringe bestimmte Tags
@@ -854,13 +871,13 @@ function autoTranslatePageContent() {
       Array.from(node.childNodes).forEach(traverseText);
 
       // Übersetze title attribute
-      if (node.title && autoTranslationDict[node.title]) {
-        node.title = autoTranslationDict[node.title];
+      if (node.title && translationMap[node.title]) {
+        node.title = translationMap[node.title];
       }
 
       // Übersetze placeholder
-      if (node.placeholder && autoTranslationDict[node.placeholder]) {
-        node.placeholder = autoTranslationDict[node.placeholder];
+      if (node.placeholder && translationMap[node.placeholder]) {
+        node.placeholder = translationMap[node.placeholder];
       }
     }
   }
