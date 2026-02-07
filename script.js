@@ -562,7 +562,7 @@ const translations = {
     cvSkillGit: "Git",
     cvSkillVSCode: "VS Code",
     cvSkillDebugging: "Debugging",
-    cvEduFhrTitle: "University of Applied Sciences entrance qualification",
+    cvEduFhrTitle: "University entrance qualification",
     cvEduFhrSchool: "Karl-Maybach-Gymnasium, Friedrichshafen",
     cvSkillCatSoftwareDev: "Software Development",
     cvSkillGitVersioning: "Git version control",
