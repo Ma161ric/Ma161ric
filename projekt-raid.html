@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>IoT Sensor Projekt | Marcel Richter</title>
-  <meta name="description" content="IoT Sensor Projekt: Sensorwerte erfassen, verarbeiten und übertragen mit Fokus auf robuste Kommunikation.">
+  <title>Firmware Simulation. RAID Benchmarks | Marcel Richter</title>
+  <meta name="description" content="RAID Benchmarks Projekt: Firmware Simulation und Performance Tests mit verschiedenen RAID Konfigurationen.">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23312e81'/><text x='50' y='65' font-size='48' font-weight='bold' fill='%23818cf8' text-anchor='middle' font-family='Arial, sans-serif'>MR</text></svg>">
   
   <!-- CSS -->
@@ -19,23 +19,24 @@
     <article class="project-detail" data-aos="fade-up">
       <!-- Project Header -->
       <header class="project-header">
-        <h1 data-i18n="projectIoTTitle">IoT Sensor Projekt</h1>
-        <p class="project-oneliner" data-i18n="projectIoTSummary">Sensorwerte erfassen, verarbeiten und übertragen. Fokus auf robuste Kommunikation und strukturierten Code.</p>
+        <h1 data-i18n="projectRaidTitle">Firmware Simulation. RAID Benchmarks</h1>
+        <p class="project-oneliner" data-i18n="projectRaidSummary">Praxisprojekt aus meiner Zeit bei Hyperstone. Simulation und Performance Tests im Umfeld von RAID Konfigurationen.</p>
       </header>
 
       <!-- Ziel -->
       <section class="project-section">
         <h2 data-i18n="projectGoalTitle">Ziel</h2>
-        <p data-i18n="projectIoTGoal">Das Projekt befasst sich mit der Erfassung von Sensordaten, ihrer Verarbeitung und Übertragung. Der Fokus liegt auf einer robusten Kommunikation und einer sauberen, wartbaren Code-Struktur. Das System soll Messwerte zuverlässig erfassen und Status-Informationen bereitstellen, auch bei einfachen Fehlerszenarien.</p>
+        <p>Entwicklung einer Firmware-Simulation zur Durchführung von Performance Tests und Benchmarks für verschiedene RAID-Konfigurationen. Das Projekt sollte es ermöglichen, die Auswirkungen unterschiedlicher RAID-Setups auf die Performance zu verstehen und zu quantifizieren.</p>
       </section>
 
       <!-- Mein Beitrag -->
       <section class="project-section">
         <h2 data-i18n="projectContributionTitle">Mein Beitrag</h2>
         <ul>
-          <li data-i18n="projectIoTContrib1">Implementierung der Sensor-Schnittstelle und Datenerfassung</li>
-          <li data-i18n="projectIoTContrib2">Entwicklung eines Protokolls zur strukturierten Datenübertragung</li>
-          <li data-i18n="projectIoTContrib3">Fehlerbehandlung bei Sensor-Ausfällen und Kommunikationsfehlern</li>
+          <li data-i18n="projectRaidFeature1">Simulation der Firmware, strukturierte Auswertung von Testergebnissen</li>
+          <li data-i18n="projectRaidFeature2">Implementierung verschiedener RAID Konfigurationen für Leistungstests</li>
+          <li>Automatisierung von Test-Szenarien und Datensammlung</li>
+          <li>Dokumentation der Ergebnisse und Performance-Analysen</li>
         </ul>
       </section>
 
@@ -44,9 +45,9 @@
         <h2 data-i18n="projectTechTitle">Tech Stack</h2>
         <div class="badges">
           <span class="badge">C / C++</span>
-          <span class="badge">Mikrocontroller</span>
-          <span class="badge">Sensorik</span>
-          <span class="badge">IoT Protokolle</span>
+          <span class="badge">Firmware Simulation</span>
+          <span class="badge">RAID</span>
+          <span class="badge">Performance Testing</span>
           <span class="badge">Git</span>
         </div>
       </section>
@@ -54,33 +55,17 @@
       <!-- Umsetzung -->
       <section class="project-section">
         <h2 data-i18n="projectImplementationTitle">Umsetzung</h2>
-        <p data-i18n="projectIoTImplementation">Die Umsetzung erfolgte in mehreren Schritten. Zunächst wurde der Sensor angebunden und die Datenerfassung implementiert. Anschließend wurde ein einfaches Protokoll definiert, um die Daten strukturiert zu übertragen. Die Fehlerbehandlung umfasst Timeouts, Checksummen und defensive Programmierung. Der Code wurde modular aufgebaut, um Wartbarkeit und Erweiterbarkeit zu gewährleisten.</p>
-      </section>
-
-      <!-- Screenshots -->
-      <section class="project-section">
-        <h2 data-i18n="projectScreenshotsTitle">Screenshots</h2>
-        <div class="project-screenshot">
-          [Screenshot Platzhalter: System-Architektur oder Messwerte-Ausgabe]
-        </div>
+        <p>Die Implementierung begann mit der Analyse der verschiedenen RAID-Level und deren Charakteristiken. Es wurde eine Simulationsumgebung aufgebaut, die es ermöglichte, realistische Szenarien zu testen. Anschließend wurden automatisierte Test-Läufe für verschiedene Konfigurationen durchgeführt und die Performance-Metriken systematisch erfasst. Die Ergebnisse wurden dokumentiert und analysiert, um Optimierungsmöglichkeiten zu identifizieren.</p>
       </section>
 
       <!-- Lessons Learned -->
       <section class="project-section">
         <h2 data-i18n="projectLessonsTitle">Lessons Learned</h2>
         <ul>
-          <li data-i18n="projectIoTLesson1">Defensive Programmierung bei hardwarenaher Entwicklung zahlt sich aus.</li>
-          <li data-i18n="projectIoTLesson2">Strukturierte Fehlerbehandlung erleichtert das Debugging erheblich.</li>
+          <li>Performance-Tests erfordern sorgfältige Planung und Kontrolle von Variablen.</li>
+          <li>Automatisierung ist essentiell für reproduzierbare und zuverlässige Ergebnisse.</li>
+          <li>Gute Dokumentation der Test-Ergebnisse ist für die Nachvollziehbarkeit wichtig.</li>
         </ul>
-      </section>
-
-      <!-- Links -->
-      <section class="project-section">
-        <h2 data-i18n="projectLinksTitle">Links</h2>
-        <div class="project-links">
-          <a href="#" class="btn btn-secondary" data-i18n="projectRepo">GitHub Repository</a>
-          <a href="#" class="btn btn-secondary" data-i18n="projectDemo">Live Demo</a>
-        </div>
       </section>
 
       <!-- Navigation -->

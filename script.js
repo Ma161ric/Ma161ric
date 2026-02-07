@@ -79,23 +79,24 @@ const translations = {
 
     // Projects
     projectsTitle: "Projekte",
-    projectIoTTitle: "IoT Sensor Projekt",
+    projectIoTTitle: "Ubiquitous Computing. Sensor Projekt",
     projectIoTSummary:
-      "Sensorwerte erfassen, verarbeiten und übertragen. Fokus auf robuste Kommunikation und saubere Struktur.",
-    projectIoTFeature1: "Messwerte, Status, einfache Fehlerfälle",
-    projectIoTFeature2: "Mikrocontroller, Sensorik, C oder C++",
+      "Sensorwerte erfassen, verarbeiten und übertragen. Fokus auf robuste Datenwege und nachvollziehbare Zustände.",
+    projectIoTFeature1: "Messwerte, Status, einfache Fehlerfälle und Plausibilisierung",
+    projectIoTFeature2: "Strukturierte Implementierung in C oder C++ mit klaren Modulen",
 
-    projectEmbeddedTitle: "Embedded Systems Projekt",
-    projectEmbeddedSummary:
-      "Hardwarenahe Anwendung mit klar definiertem Timing. Fokus auf Interrupts, Timer und Zustandsmaschine.",
-    projectEmbeddedFeature1: "Echtzeitnahes Verhalten und Debugging",
-    projectEmbeddedFeature2: "C, Toolchain, Git",
+    projectMakeNowTitle: "make_now. GitHub Projekt",
+    projectMakeNowSummary:
+      "Open Source Projekt auf GitHub. Ein kleines Tool, das meinen Workflow automatisiert und wiederholbare Schritte vereinfacht.",
+    projectMakeNowFeature1: "AI Extraktion und Dauer Schätzung über Groq API. Review und Confirm bleibt beim Nutzer",
+    projectMakeNowFeature2: "Monorepo mit Core Package für Regeln, Scheduling Engine und Validierung. Tests mit Vitest",
+    projectMakeNowFeature3: "Optional Firebase Auth und Firestore Sync. Security Headers, CSP und Firestore Rules",
 
-    projectCANTitle: "CAN Bus Kommunikation",
-    projectCANSummary:
-      "Temperaturdaten erfassen und zwischen Knoten austauschen. Fokus auf Nachrichtenformat und nachvollziehbares Logging.",
-    projectCANFeature1: "Protokoll, Payload, Fehlerszenarien",
-    projectCANFeature2: "Embedded C, Schnittstellen, Debugging",
+    projectRaidTitle: "Firmware Simulation. RAID Benchmarks",
+    projectRaidSummary:
+      "Praxisprojekt aus meiner Zeit bei Hyperstone. Simulation und Performance Tests im Umfeld von RAID Konfigurationen.",
+    projectRaidFeature1: "Simulation der Firmware, strukturierte Auswertung von Testergebnissen",
+    projectRaidFeature2: "Implementierung verschiedener RAID Konfigurationen für Leistungstests",
 
     // Footer
     footerContact: "Kontakt",
@@ -131,62 +132,13 @@ const translations = {
 
     // CV Page
     cvTitle: "Lebenslauf",
-    cvEducationTitle: "Ausbildung",
-    cvEducationDegree: "Bachelor of Science, Angewandte Informatik",
-    cvEducationDate: "10/2022 - Heute",
+    cvEducationTitle: "Schulischer Werdegang",
+    cvEducationDegree: "Bachelor of Science - Angewandte Informatik",
     cvEducationSchool: "HTWG Konstanz",
-    cvEducationFocus: "Schwerpunkt: Embedded Systems",
-    cvEducationDescription:
-      "Studium der Angewandten Informatik mit Fokus auf Embedded Systems. Relevante Module: Mikroprozessortechnik, Digitale Systeme, Embedded Linux, Softwareentwicklung in C/C++, Echtzeitsysteme und Kommunikationsprotokolle.",
-    cvEducationHighlight1: "Hardwarenahe Programmierung in C und C++",
-    cvEducationHighlight2:
-      "Mikrocontroller-Entwicklung und Peripherie-Anbindung",
-    cvEducationHighlight3:
-      "Entwicklung von Embedded-Anwendungen mit Fokus auf Zuverlässigkeit",
-
-    cvExperienceTitle: "Praxiserfahrung",
-    cvExperience1Title: "Werkstudent Embedded Software",
-    cvExperience1Date: "04/2024 - Heute",
-    cvExperience1Company: "Technologie-Unternehmen, Konstanz",
-    cvExperience1Task1:
-      "Entwicklung von Firmware-Komponenten für Mikrocontroller-basierte Systeme",
-    cvExperience1Task2:
-      "Implementierung von Kommunikationsprotokollen (CAN, UART, SPI)",
-    cvExperience1Task3:
-      "Debugging und Testing mit Hardware-Debuggern und Logikanalysatoren",
-    cvExperience1Task4:
-      "Code-Reviews und Dokumentation nach Entwicklungsstandards",
-
-    cvExperience2Title: "Praxissemester Embedded Entwicklung",
-    cvExperience2Date: "09/2024 - 02/2025",
-    cvExperience2Company: "Industrieunternehmen, Süddeutschland",
-    cvExperience2Task1:
-      "Entwicklung einer Steuerungssoftware für ein Embedded-System",
-    cvExperience2Task2:
-      "Anbindung von Sensoren und Aktuatoren über verschiedene Schnittstellen",
-    cvExperience2Task3:
-      "Implementierung von Fehlerbehandlung und Diagnosefunktionen",
-    cvExperience2Task4:
-      "Erstellung technischer Dokumentation und Testprotokolle",
-
-    cvExperiencePlaceholder:
-      "Praxissemester und berufliche Stationen (Platzhalter für eigene Inhalte)",
-    cvExperiencePreview: "Praxissemester und berufliche Stationen",
-    cvExperienceDescription:
-      "Hier kannst du dein Praxissemester, Werkstudententätigkeiten oder andere berufliche Erfahrungen eintragen. Beschreibe kurz deine Aufgaben, verwendete Technologien und was du dabei gelernt hast.",
-
-    cvSkillsTitle: "Technische Skills",
-    cvSkillsProgramming: "Programmiersprachen",
-    cvSkillsEmbedded: "Embedded Systems",
-    cvSkillsProtocols: "Kommunikationsprotokolle",
-    cvSkillsTools: "Tools & Entwicklungsumgebung",
-
-    cvLanguagesTitle: "Sprachen",
-    cvLanguageGerman: "Deutsch",
-    cvLanguageGermanLevel: "Muttersprache",
-    cvLanguageEnglish: "Englisch",
-    cvLanguageEnglishLevel: "Fließend (C1)",
-
+    cvEducationFocus: "Vertiefung: Embedded Systems",
+    cvEducationDescription: "Student der Angewandten Informatik mit Schwerpunkt auf Embedded Systems.",
+    cvExperienceTitle: "Professionelle Erfahrung",
+    cvSkillsTitle: "Kenntnisse",
     cvDownload: "CV als PDF herunterladen",
     cvContactBtn: "Kontakt aufnehmen",
     cvPreviewTitle: "Lebenslauf",
@@ -358,23 +310,24 @@ const translations = {
 
     // Projects
     projectsTitle: "Projects",
-    projectIoTTitle: "IoT Sensor Project",
+    projectIoTTitle: "Ubiquitous Computing. Sensor Project",
     projectIoTSummary:
-      "Capturing, processing, and transmitting sensor data. Focus on robust communication and clean structure.",
-    projectIoTFeature1: "Measurements, status, basic error handling",
-    projectIoTFeature2: "Microcontroller, sensors, C or C++",
+      "Capturing, processing, and transmitting sensor data. Focus on robust data paths and comprehensible states.",
+    projectIoTFeature1: "Measurements, status, simple error cases and plausibility checks",
+    projectIoTFeature2: "Structured implementation in C or C++ with clear modules",
 
-    projectEmbeddedTitle: "Embedded Systems Project",
-    projectEmbeddedSummary:
-      "Hardware-oriented application with well-defined timing. Focus on interrupts, timers, and state machines.",
-    projectEmbeddedFeature1: "Real-time behavior and debugging",
-    projectEmbeddedFeature2: "C, toolchain, Git",
+    projectMakeNowTitle: "make_now. GitHub Project",
+    projectMakeNowSummary:
+      "Open Source project on GitHub. A small tool that automates my workflow and simplifies repetitive steps.",
+    projectMakeNowFeature1: "AI extraction and duration estimation via Groq API. Review and confirm remain with the user",
+    projectMakeNowFeature2: "Monorepo with core package for rules, scheduling engine and validation. Tests with Vitest",
+    projectMakeNowFeature3: "Optional Firebase Auth and Firestore Sync. Security Headers, CSP and Firestore Rules",
 
-    projectCANTitle: "CAN Bus Communication",
-    projectCANSummary:
-      "Capturing temperature data and exchanging between nodes. Focus on message format and traceable logging.",
-    projectCANFeature1: "Protocol, payload, error scenarios",
-    projectCANFeature2: "Embedded C, interfaces, debugging",
+    projectRaidTitle: "Firmware Simulation. RAID Benchmarks",
+    projectRaidSummary:
+      "Practical project from my time at Hyperstone. Simulation and performance testing in the RAID configuration environment.",
+    projectRaidFeature1: "Firmware simulation, structured evaluation of test results",
+    projectRaidFeature2: "Implementation of various RAID configurations for performance testing",
 
     // Footer
     footerContact: "Contact",
@@ -411,61 +364,12 @@ const translations = {
     // CV Page
     cvTitle: "Curriculum Vitae",
     cvEducationTitle: "Education",
-    cvEducationDegree: "Bachelor of Science, Applied Computer Science",
-    cvEducationDate: "10/2022 - Present",
+    cvEducationDegree: "Bachelor of Science - Applied Computer Science",
     cvEducationSchool: "HTWG Konstanz",
     cvEducationFocus: "Focus: Embedded Systems",
-    cvEducationDescription:
-      "Studies in Applied Computer Science with focus on Embedded Systems. Relevant courses: Microprocessor Technology, Digital Systems, Embedded Linux, Software Development in C/C++, Real-Time Systems, and Communication Protocols.",
-    cvEducationHighlight1: "Low-level programming in C and C++",
-    cvEducationHighlight2:
-      "Microcontroller development and peripheral integration",
-    cvEducationHighlight3:
-      "Development of embedded applications with focus on reliability",
-
-    cvExperienceTitle: "Experience",
-    cvExperience1Title: "Working Student Embedded Software",
-    cvExperience1Date: "04/2024 - Present",
-    cvExperience1Company: "Technology Company, Konstanz",
-    cvExperience1Task1:
-      "Development of firmware components for microcontroller-based systems",
-    cvExperience1Task2:
-      "Implementation of communication protocols (CAN, UART, SPI)",
-    cvExperience1Task3:
-      "Debugging and testing with hardware debuggers and logic analyzers",
-    cvExperience1Task4:
-      "Code reviews and documentation according to development standards",
-
-    cvExperience2Title: "Internship Embedded Development",
-    cvExperience2Date: "09/2024 - 02/2025",
-    cvExperience2Company: "Industrial Company, Southern Germany",
-    cvExperience2Task1:
-      "Development of control software for an embedded system",
-    cvExperience2Task2:
-      "Integration of sensors and actuators via various interfaces",
-    cvExperience2Task3:
-      "Implementation of error handling and diagnostic functions",
-    cvExperience2Task4:
-      "Creation of technical documentation and test protocols",
-
-    cvExperiencePlaceholder:
-      "Internship and professional experience (placeholder for your content)",
-    cvExperiencePreview: "Internship and professional experience",
-    cvExperienceDescription:
-      "Here you can add your internship, working student positions, or other professional experiences. Briefly describe your tasks, technologies used, and what you learned.",
-
-    cvSkillsTitle: "Technical Skills",
-    cvSkillsProgramming: "Programming Languages",
-    cvSkillsEmbedded: "Embedded Systems",
-    cvSkillsProtocols: "Communication Protocols",
-    cvSkillsTools: "Tools & Development Environment",
-
-    cvLanguagesTitle: "Languages",
-    cvLanguageGerman: "German",
-    cvLanguageGermanLevel: "Native",
-    cvLanguageEnglish: "English",
-    cvLanguageEnglishLevel: "Fluent (C1)",
-
+    cvEducationDescription: "Applied Computer Science student with focus on Embedded Systems.",
+    cvExperienceTitle: "Professional Experience",
+    cvSkillsTitle: "Skills",
     cvDownload: "Download CV as PDF",
     cvContactBtn: "Get in Touch",
     cvPreviewTitle: "Curriculum Vitae",
@@ -658,6 +562,7 @@ function setLanguage(lang) {
   updateDarkModeButton();
   updateMobileLanguageButton();
   updateMobileDarkModeButton();
+  autoTranslatePageContent();
 }
 
 function initLanguageSwitcher() {
@@ -869,11 +774,107 @@ function updateMobileLanguageButton() {
 }
 
 // ============================================
+// Auto-Translation Dictionary
+// ============================================
+const autoTranslationDict = {
+  // projekt-makenow.html
+  "Schreib Notizen natürlich, ohne Formulare": "Write notes naturally, without forms",
+  "Groq-powered AI extrahiert Aufgaben, Events und Ideen automatisch": "Groq-powered AI automatically extracts tasks, events and ideas",
+  "Du behältst die Kontrolle—überprüfe und bestätige alle Vorschläge": "You stay in control—review and confirm all suggestions",
+  "AI generiert fokussierte Tagesplans: 1 Hauptaufgabe + 2 kleine Aufgaben": "AI generates focused daily plans: 1 main task + 2 smaller ones",
+  "Firebase-powered Cloud-Sync über Geräte": "Firebase-powered cloud sync across devices",
+  "Email, Google und Apple Sign-in mit Firebase Authentication": "Email, Google and Apple Sign-in with Firebase Authentication",
+  "Schöne Light und Dark Modes": "Beautiful light and dark modes",
+  "Funktioniert nahtlos auf Desktop und Mobile": "Works seamlessly on desktop and mobile",
+  "Groq API für intelligente Task-Extraktion und Duration-Estimation": "Groq API for intelligent task extraction and duration estimation",
+  "Monorepo mit Core Package für Business-Logic, Scheduling Engine und Validierung": "Monorepo with core package for business logic, scheduling engine and validation",
+  "Firebase Auth, Firestore für Real-time Sync, Security Headers, CSP und Firestore Rules": "Firebase Auth, Firestore for real-time sync, Security Headers, CSP and Firestore Rules",
+  "React + TypeScript Screens für Inbox, Today Planning und Daily Review": "React + TypeScript screens for Inbox, Today Planning and Daily Review",
+  "Auch mit Cloud-Sync sollte die App offline funktionieren": "The app should work offline even with cloud sync",
+  "AI-Output braucht Bestätigung": "AI output requires confirmation",
+  "Monorepo mit Workspaces skaliert gut": "Monorepo with workspaces scales well",
+  
+  // projekt-raid.html
+  "Automatisierung von Test-Szenarien und Datensammlung": "Automation of test scenarios and data collection",
+  "Automatisierung ist essentiell für reproduzierbare und zuverlässige Tests": "Automation is essential for reproducible and reliable tests",
+  "Dokumentation der Ergebnisse und Performance-Analysen": "Documentation of results and performance analysis",
+  
+  // cv.html
+  "Fachhochschulreife": "Fachhochschulreife",
+  "Werkstudent": "Working Student",
+  "Praktikum": "Internship",
+  "RAID-Simulation und Konzeptüberarbeitung": "RAID simulation and concept revision",
+  "Simulation der Firmware": "Firmware simulation",
+  "Implementierung verschiedener RAID-Konfigurationen zum Leistungstest": "Implementation of various RAID configurations for performance testing",
+  "Programmiersprachen": "Programming Languages",
+  "Softwareentwicklung": "Software Development",
+  "Kommunikationstechnik": "Communication Technology",
+  "Ubiquitous Computing": "Ubiquitous Computing",
+  "Digitale Systeme": "Digital Systems",
+  "Sprachkenntnisse": "Languages",
+  "Deutsch": "German",
+  "Englisch": "English",
+  "Französisch": "French",
+  "Spanisch": "Spanish",
+  
+  // Verschiedenes
+  "Kern-Features": "Core Features",
+  "Mein Beitrag": "My Contribution",
+  "MVP Feature-Set": "MVP Feature Set",
+  "Architektur": "Architecture",
+  "AI & Planung": "AI & Planning",
+  "Persistierung": "Persistence",
+  "Deployment": "Deployment",
+};
+
+// Automatische Text-Übersetzung für nicht-markierte Elemente
+function autoTranslatePageContent() {
+  const currentLang = localStorage.getItem("language") || "de";
+  if (currentLang === "de") return; // Nur wenn Englisch gewählt ist
+
+  // Hilfsfunktion zum Durchsuchen und Ersetzen von TextNodes
+  function traverseText(node) {
+    if (node.nodeType === Node.TEXT_NODE) {
+      const text = node.textContent.trim();
+      if (text.length > 5 && autoTranslationDict[text]) {
+        node.textContent = autoTranslationDict[text];
+      }
+    } else if (node.nodeType === Node.ELEMENT_NODE) {
+      // Überspringe bestimmte Tags
+      if (["SCRIPT", "STYLE", "NOSCRIPT", "META", "LINK", "TITLE"].includes(node.tagName)) {
+        return;
+      }
+
+      // Überspringe Elemente mit data-i18n
+      if (node.hasAttribute("data-i18n")) {
+        return;
+      }
+
+      // Durchsuche Kinder
+      Array.from(node.childNodes).forEach(traverseText);
+
+      // Übersetze title attribute
+      if (node.title && autoTranslationDict[node.title]) {
+        node.title = autoTranslationDict[node.title];
+      }
+
+      // Übersetze placeholder
+      if (node.placeholder && autoTranslationDict[node.placeholder]) {
+        node.placeholder = autoTranslationDict[node.placeholder];
+      }
+    }
+  }
+
+  traverseText(document.body);
+}
+
+// ============================================
 // Initialize on Page Load
 // ============================================
 document.addEventListener("DOMContentLoaded", () => {
   initDarkMode();
   initLanguageSwitcher();
+  autoTranslatePageContent();
   initMobileMenu();
   setActiveNavLink();
 

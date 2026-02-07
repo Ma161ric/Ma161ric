@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Marcel Richter | Portfolio</title>
-  <meta name="description" content="Portfolio von Marcel Richter. Angewandte Informatik mit Schwerpunkt Embedded Systems. Projekte, Skills, Kontakt und Links.">
-  <meta name="keywords" content="Marcel Richter, Embedded Systems, C, C++, Embedded Linux, Portfolio, HTWG Konstanz">
+  <title>Portfolio | Marcel Richter</title>
+  <meta name="description" content="Portfolio von Marcel Richter. Angewandte Informatik mit Vertiefung Embedded Systems an der HTWG Konstanz. Projekte, Skills, Praxiserfahrung und Kontakt.">
+  <meta name="keywords" content="Marcel Richter, Embedded Systems, Mikroprozessorsysteme, Kommunikationstechnik, Digitale Systeme, Ubiquitous Computing, C, C++, Embedded Linux, HTWG Konstanz">
   <meta name="author" content="Marcel Richter">
   
   <!-- Favicon -->
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💻</text></svg>">
-
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23312e81'/><text x='50' y='65' font-size='48' font-weight='bold' fill='%23818cf8' text-anchor='middle' font-family='Arial, sans-serif'>MR</text></svg>">
+  
   <link rel="stylesheet" href="style.css">
   <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
 </head>
@@ -27,17 +27,17 @@
       >
       <div class="hero-text">
         <h1>
-          <span data-i18n="heroGreeting">👋 Hi, ich bin</span>
+          <span data-i18n="heroGreeting"> Hi, ich bin</span>
           <span class="hero-name">Marcel Richter</span>
         </h1>
         <p class="hero-subtitle" data-i18n="heroSubtitle">
           Student der Angewandten Informatik an der HTWG Konstanz
         </p>
         <p class="hero-focus" data-i18n="heroFocus">
-          Schwerpunkt: Embedded Systems
+          Vertiefung: Embedded Systems
         </p>
         <p class="hero-tagline" data-i18n="heroTagline">
-          Ich interessiere mich für hardwarenahe Software, zuverlässige Systeme und Kommunikation zwischen Geräten. Hier zeige ich Projekte und Skills, die ich im Studium und in eigenen Arbeiten aufgebaut habe.
+          Ich interessiere mich für hardwarenahe Software und zuverlässige Systeme. Im Studium lag mein Fokus auf Mikroprozessorsystemen, digitalen Systemen, Kommunikationstechnik, Ubiquitous Computing und Parallel Computing. Praktisch habe ich bei Hyperstone an Firmware Simulationen gearbeitet und RAID Konfigurationen für Performance Tests umgesetzt.
         </p>
       </div>
     </div>
@@ -47,10 +47,10 @@
     <section id="about" data-aos="fade-up">
       <h2 data-i18n="aboutTitle">Kurzprofil</h2>
       <ul class="bullets">
-        <li data-i18n="aboutItem1">Embedded Entwicklung mit Fokus auf C und C++</li>
-        <li data-i18n="aboutItem2">Grundlagen digitaler Systeme und Mikroprozessortechnik</li>
-        <li data-i18n="aboutItem3">Sensorik und Peripherie, Interrupts, Timer, Zustandsmaschinen</li>
-        <li data-i18n="aboutItem4">Embedded Linux Grundlagen und Tooling im Alltag</li>
+        <li data-i18n="aboutItem1">Embedded Entwicklung mit Fokus auf C und C++ und sauberer Struktur</li>
+        <li data-i18n="aboutItem2">Mikroprozessorsysteme, Rechnerarchitektur und hardwarenahe Programmierung</li>
+        <li data-i18n="aboutItem3">Kommunikationstechnik und Schnittstellen. Von Nachrichtenformaten bis Fehlerszenarien</li>
+        <li data-i18n="aboutItem4">Digitale Systeme und Grundlagen von VHDL. Dazu Tooling im Alltag mit Git</li>
       </ul>
     </section>
 
@@ -60,10 +60,15 @@
         <span class="badge">C</span>
         <span class="badge">C++</span>
         <span class="badge">Python</span>
+        <span class="badge">Java</span>
+        <span class="badge">Scala</span>
         <span class="badge">VHDL (Grundlagen)</span>
-        <span class="badge">Embedded Linux</span>
+        <span class="badge">Embedded Linux (Grundlagen)</span>
         <span class="badge">Git</span>
         <span class="badge">VS Code</span>
+        <span class="badge">Debugging</span>
+        <span class="badge">Agiles Arbeiten</span>
+        <span class="badge">Kommunikationstechnik</span>
       </div>
       <p class="hint" data-i18n="skillsHint">
         Hinweis: Ich liste hier nur Dinge, die ich praktisch genutzt habe. Tiefe und Details zeige ich in den Projekten.
@@ -75,50 +80,57 @@
 
       <div class="projects-grid">
         <article class="project-card">
-          <h3><a href="projekt-iot.html" data-i18n="projectIoTTitle">IoT Sensor Projekt</a></h3>
+          <h3><a href="projekt-iot.html" data-i18n="projectIoTTitle">Ubiquitous Computing. Sensor Projekt</a></h3>
           <p class="project-summary" data-i18n="projectIoTSummary">
-            Sensorwerte erfassen, verarbeiten und übertragen. Fokus auf robuste Kommunikation und saubere Struktur.
+            Sensorwerte erfassen, verarbeiten und übertragen. Fokus auf robuste Datenwege und nachvollziehbare Zustände.
           </p>
           <ul class="project-features">
-            <li data-i18n="projectIoTFeature1">Messwerte, Status, einfache Fehlerfälle</li>
-            <li data-i18n="projectIoTFeature2">Mikrocontroller, Sensorik, C oder C++</li>
+            <li data-i18n="projectIoTFeature1">Messwerte, Status, einfache Fehlerfälle und Plausibilisierung</li>
+            <li data-i18n="projectIoTFeature2">Strukturierte Implementierung in C oder C++ mit klaren Modulen</li>
           </ul>
           <div class="project-tech">
-            <span class="tech-tag">IoT</span>
+            <span class="tech-tag">Ubiquitous</span>
             <span class="tech-tag">C/C++</span>
-            <span class="tech-tag">Sensoren</span>
+            <span class="tech-tag">Sensorik</span>
           </div>
         </article>
 
         <article class="project-card">
-          <h3><a href="projekt-embedded.html" data-i18n="projectEmbeddedTitle">Embedded Systems Projekt</a></h3>
-          <p class="project-summary" data-i18n="projectEmbeddedSummary">
-            Hardwarenahe Anwendung mit klar definiertem Timing. Fokus auf Interrupts, Timer und Zustandsmaschine.
+          <h3>
+            <a href="projekt-makenow.html" target="_blank" rel="noopener" data-i18n="projectMakeNowTitle">
+              DayFlow. AI Day Planner (make_now)
+            </a>
+          </h3>
+          <p class="project-summary" data-i18n="projectMakeNowSummary">
+            DayFlow ist ein KI gestützter Tagesplaner, der freie Notizen aus der Inbox in strukturierte Aufgaben und realistische Tagespläne überführt. Der Nutzer bestätigt alle Vorschläge, danach erstellt die App einen Fokus Plan mit einer Hauptaufgabe plus zwei kleinen Aufgaben.
           </p>
           <ul class="project-features">
-            <li data-i18n="projectEmbeddedFeature1">Echtzeitnahes Verhalten und Debugging</li>
-            <li data-i18n="projectEmbeddedFeature2">C, Toolchain, Git</li>
+            <li data-i18n="projectMakeNowFeature1">AI Extraktion und Dauer Schätzung über Groq API. Review und Confirm bleibt beim Nutzer</li>
+            <li data-i18n="projectMakeNowFeature2">Monorepo mit Core Package für Regeln, Scheduling Engine und Validierung. Tests mit Vitest</li>
+            <li data-i18n="projectMakeNowFeature3">Optional Firebase Auth und Firestore Sync. Security Headers, CSP und Firestore Rules</li>
           </ul>
           <div class="project-tech">
-            <span class="tech-tag">Embedded</span>
-            <span class="tech-tag">C</span>
-            <span class="tech-tag">Realtime</span>
+            <span class="tech-tag">React</span>
+            <span class="tech-tag">TypeScript</span>
+            <span class="tech-tag">Vite</span>
+            <span class="tech-tag">Firebase</span>
+            <span class="tech-tag">Groq API</span>
           </div>
         </article>
 
         <article class="project-card">
-          <h3><a href="projekt-can.html" data-i18n="projectCANTitle">CAN Bus Kommunikation</a></h3>
-          <p class="project-summary" data-i18n="projectCANSummary">
-            Temperaturdaten erfassen und zwischen Knoten austauschen. Fokus auf Nachrichtenformat und nachvollziehbares Logging.
+          <h3><a href="projekt-raid.html" data-i18n="projectRaidTitle">Firmware Simulation. RAID Benchmarks</a></h3>
+          <p class="project-summary" data-i18n="projectRaidSummary">
+            Praxisprojekt aus meiner Zeit bei Hyperstone. Simulation und Performance Tests im Umfeld von RAID Konfigurationen.
           </p>
           <ul class="project-features">
-            <li data-i18n="projectCANFeature1">Protokoll, Payload, Fehlerszenarien</li>
-            <li data-i18n="projectCANFeature2">Embedded C, Schnittstellen, Debugging</li>
+            <li data-i18n="projectRaidFeature1">Simulation der Firmware, strukturierte Auswertung von Testergebnissen</li>
+            <li data-i18n="projectRaidFeature2">Implementierung verschiedener RAID Konfigurationen für Leistungstests</li>
           </ul>
           <div class="project-tech">
-            <span class="tech-tag">CAN Bus</span>
-            <span class="tech-tag">C</span>
-            <span class="tech-tag">Hardware</span>
+            <span class="tech-tag">Firmware</span>
+            <span class="tech-tag">C/C++</span>
+            <span class="tech-tag">Performance</span>
           </div>
         </article>
       </div>
@@ -133,34 +145,46 @@
           <div class="cv-preview-item">
             <h4 data-i18n="cvEducationDegree">Bachelor of Science, Angewandte Informatik</h4>
             <p class="cv-preview-detail" data-i18n="cvEducationSchool">HTWG Konstanz</p>
-            <p class="cv-preview-detail" data-i18n="cvEducationFocus">Schwerpunkt: Embedded Systems</p>
+            <p class="cv-preview-detail" data-i18n="cvEducationFocus">Vertiefung: Embedded Systems</p>
             <p class="cv-preview-description" data-i18n="cvEducationDescription">
-              Ich studiere Angewandte Informatik an der HTWG Konstanz mit Fokus auf Embedded Systems. Im Studium beschäftige ich mich mit hardwarenaher Programmierung, Mikroprozessortechnik, digitalen Systemen und Embedded Linux.
+              Im Hauptstudium habe ich die Vertiefung Embedded Systems gewählt. Inhaltlich gehören dazu Embedded Systems, Kommunikationstechnik, Mikroprozessorsysteme, Digitale Systeme, Ubiquitous Computing und Parallel Computing. Ergänzend kamen Grundlagen aus Systemprogrammierung, Betriebssystemen, Rechnernetzen und verteilten Systemen dazu.
             </p>
           </div>
         </div>
 
         <div class="cv-preview-card glass">
           <h3 data-i18n="cvExperienceTitle">Praxiserfahrung</h3>
+
           <div class="cv-preview-item">
-            <p class="cv-preview-description" data-i18n="cvExperienceDescription">
-              Hier kannst du dein Praxissemester, Werkstudententätigkeiten oder andere berufliche Erfahrungen eintragen. Beschreibe kurz deine Aufgaben, verwendete Technologien und was du dabei gelernt hast.
+            <h4>Werkstudent, Hyperstone GmbH</h4>
+            <p class="cv-preview-detail">03/2023 bis 02/2024, Konstanz</p>
+            <p class="cv-preview-description">
+              Schwerpunkt auf RAID Simulation und Konzeptüberarbeitung. Dazu habe ich die Firmware Simulation unterstützt und verschiedene RAID Konfigurationen implementiert, um Leistungsunterschiede messbar zu machen.
+            </p>
+          </div>
+
+          <div class="cv-preview-item">
+            <h4>Praktikum, Hyperstone GmbH</h4>
+            <p class="cv-preview-detail">09/2022 bis 02/2023, Konstanz</p>
+            <p class="cv-preview-description">
+              Einstieg in das Firmware Umfeld. Fokus auf nachvollziehbares Testen, Dokumentation und sauberes Vorgehen im Team.
             </p>
           </div>
         </div>
 
         <div class="cv-preview-card glass cv-skills-card">
-          <h3 data-i18n="cvSkillsTitle">🛠️ Technische Skills</h3>
+          <h3 data-i18n="cvSkillsTitle">Technische Skills</h3>
           <div class="badges">
             <span class="badge">C</span>
             <span class="badge">C++</span>
             <span class="badge">Python</span>
+            <span class="badge">Java</span>
+            <span class="badge">Scala</span>
             <span class="badge">VHDL (Grundlagen)</span>
-            <span class="badge">Embedded Linux</span>
+            <span class="badge">Embedded Linux (Grundlagen)</span>
             <span class="badge">Git</span>
             <span class="badge">VS Code</span>
             <span class="badge">Debugging</span>
-            <span class="badge">Mikrocontroller</span>
           </div>
         </div>
       </div>

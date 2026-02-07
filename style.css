@@ -1442,7 +1442,7 @@ section h2 {
 }
 
 .project-section ul li::before {
-  content: "✓";
+  content: "•";
   position: absolute;
   left: 0;
   color: var(--color-primary);
