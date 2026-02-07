@@ -19,28 +19,28 @@
     <article class="project-detail" data-aos="fade-up">
       <!-- Project Header -->
       <header class="project-header">
-        <h1>DayFlow - AI-powered Day Planner</h1>
-        <p class="project-oneliner">Transform notes into structured daily plans with intelligent task extraction and scheduling.</p>
+        <h1 data-i18n="projectMakeNowH1">DayFlow - AI-powered Day Planner</h1>
+        <p class="project-oneliner" data-i18n="projectMakeNowOneliner">Transform notes into structured daily plans with intelligent task extraction and scheduling.</p>
       </header>
 
       <!-- Ziel -->
       <section class="project-section">
         <h2 data-i18n="projectGoalTitle">Ziel</h2>
-        <p>DayFlow hilft dir, Gedanken mühelos zu erfassen und sie in umsetzbare Pläne umzuwandeln. Mit AI-gestützter Extraktion und intelligenter Planung erstellt es realistische Tagesplans, die du tatsächlich schaffen kannst. Das MVP fokussiert auf Kern-Funktionen: Inbox-Erfassung, AI-Extraktion, Review & Bestätigung, und intelligente tägliche Planung (1 Hauptaufgabe + 2 kleine Aufgaben).</p>
+        <p data-i18n="projectMakeNowGoal">DayFlow hilft dir, Gedanken mühelos zu erfassen und sie in umsetzbare Pläne umzuwandeln. Mit AI-gestützter Extraktion und intelligenter Planung erstellt es realistische Tagesplans, die du tatsächlich schaffen kannst. Das MVP fokussiert auf Kern-Funktionen: Inbox-Erfassung, AI-Extraktion, Review & Bestätigung, und intelligente tägliche Planung (1 Hauptaufgabe + 2 kleine Aufgaben).</p>
       </section>
 
       <!-- Kern-Features -->
       <section class="project-section">
-        <h2>Kern-Features</h2>
+        <h2 data-i18n="projectMakeNowCoreFeatures">Kern-Features</h2>
         <ul>
-          <li><strong>Inbox Capture</strong> - Schreib Notizen natürlich, ohne Formulare</li>
-          <li><strong>AI Extraction</strong> - Groq-powered AI extrahiert Aufgaben, Events und Ideen automatisch</li>
-          <li><strong>Review & Confirm</strong> - Du behältst die Kontrolle—überprüfe und bestätige alle Vorschläge</li>
-          <li><strong>Smart Planning</strong> - AI generiert fokussierte Tagesplans: 1 Hauptaufgabe + 2 kleine Aufgaben</li>
-          <li><strong>Real-time Sync</strong> - Firebase-powered Cloud-Sync über Geräte</li>
-          <li><strong>Secure Auth</strong> - Email, Google und Apple Sign-in mit Firebase Authentication</li>
-          <li><strong>Theme Support</strong> - Schöne Light und Dark Modes</li>
-          <li><strong>Responsive Design</strong> - Funktioniert nahtlos auf Desktop und Mobile</li>
+          <li data-i18n="projectMakeNowFeatureInbox"><strong>Inbox Capture</strong> - Schreib Notizen natürlich, ohne Formulare</li>
+          <li data-i18n="projectMakeNowFeatureAI"><strong>AI Extraction</strong> - Groq-powered AI extrahiert Aufgaben, Events und Ideen automatisch</li>
+          <li data-i18n="projectMakeNowFeatureReview"><strong>Review & Confirm</strong> - Du behältst die Kontrolle—überprüfe und bestätige alle Vorschläge</li>
+          <li data-i18n="projectMakeNowFeaturePlanning"><strong>Smart Planning</strong> - AI generiert fokussierte Tagesplans: 1 Hauptaufgabe + 2 kleine Aufgaben</li>
+          <li data-i18n="projectMakeNowFeatureSync"><strong>Real-time Sync</strong> - Firebase-powered Cloud-Sync über Geräte</li>
+          <li data-i18n="projectMakeNowFeatureAuth"><strong>Secure Auth</strong> - Email, Google und Apple Sign-in mit Firebase Authentication</li>
+          <li data-i18n="projectMakeNowFeatureTheme"><strong>Theme Support</strong> - Schöne Light und Dark Modes</li>
+          <li data-i18n="projectMakeNowFeatureResponsive"><strong>Responsive Design</strong> - Funktioniert nahtlos auf Desktop und Mobile</li>
         </ul>
       </section>
 
@@ -72,22 +72,22 @@
       <!-- Umsetzung -->
       <section class="project-section">
         <h2 data-i18n="projectImplementationTitle">Umsetzung</h2>
-        <p><strong>Architektur:</strong> Das Projekt ist als Monorepo mit npm Workspaces strukturiert. Apps/Web enthält die Vite + React Anwendung mit den Screens (Inbox, Today, Review). Packages/Core enthält die Business-Logic: Datenmodelle, Scheduling Rules, State Transitions und Validierung.</p>
-        <p><strong>AI & Planung:</strong> Die Groq API wird für Task-Extraktion und Duration-Estimation genutzt. Der User überprüft alle AI-Vorschläge vor der Bestätigung. Die Scheduling Engine generiert dann fokussierte Tagesplans basierend auf den bestätigten Aufgaben.</p>
-        <p><strong>Persistierung:</strong> Firebase Firestore speichert Tasks und Daily Plans. Firebase Auth handhabt Sign-in. Firestore Security Rules schützen Userdaten. Real-time Sync ermöglicht nahtlose Multi-Device Experience.</p>
-        <p><strong>Deployment:</strong> Vercel hostet Frontend + Serverless APIs. Firebase hostet Auth und Firestore. Environment Variables sind konfiguriert für beide Services.</p>
+        <p data-i18n="projectMakeNowImplArch"><strong>Architektur:</strong> Das Projekt ist als Monorepo mit npm Workspaces strukturiert. Apps/Web enthält die Vite + React Anwendung mit den Screens (Inbox, Today, Review). Packages/Core enthält die Business-Logic: Datenmodelle, Scheduling Rules, State Transitions und Validierung.</p>
+        <p data-i18n="projectMakeNowImplAI"><strong>AI & Planung:</strong> Die Groq API wird für Task-Extraktion und Duration-Estimation genutzt. Der User überprüft alle AI-Vorschläge vor der Bestätigung. Die Scheduling Engine generiert dann fokussierte Tagesplans basierend auf den bestätigten Aufgaben.</p>
+        <p data-i18n="projectMakeNowImplPersist"><strong>Persistierung:</strong> Firebase Firestore speichert Tasks und Daily Plans. Firebase Auth handhabt Sign-in. Firestore Security Rules schützen Userdaten. Real-time Sync ermöglicht nahtlose Multi-Device Experience.</p>
+        <p data-i18n="projectMakeNowImplDeploy"><strong>Deployment:</strong> Vercel hostet Frontend + Serverless APIs. Firebase hostet Auth und Firestore. Environment Variables sind konfiguriert für beide Services.</p>
       </section>
 
       <!-- MVP Features -->
       <section class="project-section">
-        <h2>MVP Feature-Set</h2>
+        <h2 data-i18n="projectMakeNowMVPTitle">MVP Feature-Set</h2>
         <ul>
-          <li>📝 App Inbox - Freeform Text Input direkt in der App</li>
-          <li>🤖 Note → Structure - AI extrahiert Tasks, Events, Ideas</li>
-          <li>⏲️ Duration Estimation - AI schätzt Duration-Ranges mit Confidence</li>
-          <li>📅 Daily Plan - 1 Focus Task + 2 Mini Tasks + Buffer</li>
-          <li>✅ One-Tap Confirm - Erstellt Today-Liste ohne Calendar-Schreib-Zugriff</li>
-          <li>🌙 Daily Review - Abend-Review: Done, Postponed, oder Open</li>
+          <li data-i18n="projectMakeNowMVP1">📝 App Inbox - Freeform Text Input direkt in der App</li>
+          <li data-i18n="projectMakeNowMVP2">🤖 Note → Structure - AI extrahiert Tasks, Events, Ideas</li>
+          <li data-i18n="projectMakeNowMVP3">⏲️ Duration Estimation - AI schätzt Duration-Ranges mit Confidence</li>
+          <li data-i18n="projectMakeNowMVP4">📅 Daily Plan - 1 Focus Task + 2 Mini Tasks + Buffer</li>
+          <li data-i18n="projectMakeNowMVP5">✅ One-Tap Confirm - Erstellt Today-Liste ohne Calendar-Schreib-Zugriff</li>
+          <li data-i18n="projectMakeNowMVP6">🌙 Daily Review - Abend-Review: Done, Postponed, oder Open</li>
         </ul>
       </section>
 
@@ -95,10 +95,10 @@
       <section class="project-section">
         <h2 data-i18n="projectLessonsTitle">Lessons Learned</h2>
         <ul>
-          <li><strong>Local-first ist wichtig:</strong> Auch mit Cloud-Sync sollte die App offline funktionieren.</li>
-          <li><strong>AI-Output braucht Bestätigung:</strong> Nutzer-Review ist essentiell für Vertrauen und Kontrollgefühl.</li>
-          <li><strong>Monorepo mit Workspaces skaliert gut:</strong> Separation von Core-Logic und UI ermöglicht zuverlässiges Testing.</li>
-          <li><strong>Fokus auf MVP-Scope:</strong> Die Beschränkung auf 1+2 Task Format macht das Planing fokussiert und realistisch.</li>
+          <li data-i18n="projectMakeNowLesson1"><strong>Local-first ist wichtig:</strong> Auch mit Cloud-Sync sollte die App offline funktionieren.</li>
+          <li data-i18n="projectMakeNowLesson2"><strong>AI-Output braucht Bestätigung:</strong> Nutzer-Review ist essentiell für Vertrauen und Kontrollgefühl.</li>
+          <li data-i18n="projectMakeNowLesson3"><strong>Monorepo mit Workspaces skaliert gut:</strong> Separation von Core-Logic und UI ermöglicht zuverlässiges Testing.</li>
+          <li data-i18n="projectMakeNowLesson4"><strong>Fokus auf MVP-Scope:</strong> Die Beschränkung auf 1+2 Task Format macht das Planing fokussiert und realistisch.</li>
         </ul>
       </section>
 

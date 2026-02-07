@@ -57,6 +57,7 @@ const translations = {
     darkModeDark: "Light Mode",
     languageDE: "English",
     languageEN: "Deutsch",
+    mobileMenuClose: "Schließen",
 
     // Hero
     heroGreeting: "Hi, ich bin",
@@ -79,24 +80,67 @@ const translations = {
 
     // Projects
     projectsTitle: "Projekte",
-    projectIoTTitle: "Ubiquitous Computing. Sensor Projekt",
+
+    // IoT Project (Automatic Light Controller)
+    projectIoTTitle: "Automatic Light Controller",
     projectIoTSummary:
-      "Sensorwerte erfassen, verarbeiten und übertragen. Fokus auf robuste Datenwege und nachvollziehbare Zustände.",
-    projectIoTFeature1: "Messwerte, Status, einfache Fehlerfälle und Plausibilisierung",
-    projectIoTFeature2: "Strukturierte Implementierung in C oder C++ mit klaren Modulen",
+      "Automatische Lichtsteuerung basierend auf Umgebungshelligkeit. MQTT Telemetrie via HiveMQ, Auswertung und Visualisierung in Datacake.",
+    projectIoTFeature1:
+      "Helligkeit messen, Schwellwerte prüfen, Licht ein oder aus und Dimmen für Sunrise und Sunset",
+    projectIoTFeature2:
+      "MQTT Datenfluss: Arduino Nano sendet Payload an HiveMQ, Datacake decodiert und zeigt die Werte",
 
     projectMakeNowTitle: "DayFlow. GitHub Projekt",
     projectMakeNowSummary:
       "Open Source Projekt auf GitHub. Ein kleines Tool, das meinen Workflow automatisiert und wiederholbare Schritte vereinfacht.",
-    projectMakeNowFeature1: "AI Extraktion und Dauer Schätzung über Groq API. Review und Confirm bleibt beim Nutzer",
-    projectMakeNowFeature2: "Monorepo mit Core Package für Regeln, Scheduling Engine und Validierung. Tests mit Vitest",
-    projectMakeNowFeature3: "Optional Firebase Auth und Firestore Sync. Security Headers, CSP und Firestore Rules",
+    projectMakeNowFeature1:
+      "AI Extraktion und Dauer Schätzung über Groq API. Review und Confirm bleibt beim Nutzer",
+    projectMakeNowFeature2:
+      "Monorepo mit Core Package für Regeln, Scheduling Engine und Validierung. Tests mit Vitest",
+    projectMakeNowFeature3:
+      "Optional Firebase Auth und Firestore Sync. Security Headers, CSP und Firestore Rules",
+    projectMakeNowH1: "DayFlow - AI-powered Day Planner",
+    projectMakeNowOneliner: "Transform notes into structured daily plans with intelligent task extraction and scheduling.",
+    projectMakeNowGoal: "DayFlow hilft dir, Gedanken mühelos zu erfassen und sie in umsetzbare Pläne umzuwandeln. Mit AI-gestützter Extraktion und intelligenter Planung erstellt es realistische Tagesplans, die du tatsächlich schaffen kannst. Das MVP fokussiert auf Kern-Funktionen: Inbox-Erfassung, AI-Extraktion, Review & Bestätigung, und intelligente tägliche Planung (1 Hauptaufgabe + 2 kleine Aufgaben).",
+    projectMakeNowCoreFeatures: "Kern-Features",
+    projectMakeNowFeatureInbox: "<strong>Inbox Capture</strong> - Schreib Notizen natürlich, ohne Formulare",
+    projectMakeNowFeatureAI: "<strong>AI Extraction</strong> - Groq-powered AI extrahiert Aufgaben, Events und Ideen automatisch",
+    projectMakeNowFeatureReview: "<strong>Review & Confirm</strong> - Du behältst die Kontrolle—überprüfe und bestätige alle Vorschläge",
+    projectMakeNowFeaturePlanning: "<strong>Smart Planning</strong> - AI generiert fokussierte Tagesplans: 1 Hauptaufgabe + 2 kleine Aufgaben",
+    projectMakeNowFeatureSync: "<strong>Real-time Sync</strong> - Firebase-powered Cloud-Sync über Geräte",
+    projectMakeNowFeatureAuth: "<strong>Secure Auth</strong> - Email, Google und Apple Sign-in mit Firebase Authentication",
+    projectMakeNowFeatureTheme: "<strong>Theme Support</strong> - Schöne Light und Dark Modes",
+    projectMakeNowFeatureResponsive: "<strong>Responsive Design</strong> - Funktioniert nahtlos auf Desktop und Mobile",
+    projectMakeNowImplArch: "<strong>Architektur:</strong> Das Projekt ist als Monorepo mit npm Workspaces strukturiert. Apps/Web enthält die Vite + React Anwendung mit den Screens (Inbox, Today, Review). Packages/Core enthält die Business-Logic: Datenmodelle, Scheduling Rules, State Transitions und Validierung.",
+    projectMakeNowImplAI: "<strong>AI & Planung:</strong> Die Groq API wird für Task-Extraktion und Duration-Estimation genutzt. Der User überprüft alle AI-Vorschläge vor der Bestätigung. Die Scheduling Engine generiert dann fokussierte Tagesplans basierend auf den bestätigten Aufgaben.",
+    projectMakeNowImplPersist: "<strong>Persistierung:</strong> Firebase Firestore speichert Tasks und Daily Plans. Firebase Auth handhabt Sign-in. Firestore Security Rules schützen Userdaten. Real-time Sync ermöglicht nahtlose Multi-Device Experience.",
+    projectMakeNowImplDeploy: "<strong>Deployment:</strong> Vercel hostet Frontend + Serverless APIs. Firebase hostet Auth und Firestore. Environment Variables sind konfiguriert für beide Services.",
+    projectMakeNowMVPTitle: "MVP Feature-Set",
+    projectMakeNowMVP1: "📝 App Inbox - Freeform Text Input direkt in der App",
+    projectMakeNowMVP2: "🤖 Note → Structure - AI extrahiert Tasks, Events, Ideas",
+    projectMakeNowMVP3: "⏲️ Duration Estimation - AI schätzt Duration-Ranges mit Confidence",
+    projectMakeNowMVP4: "📅 Daily Plan - 1 Focus Task + 2 Mini Tasks + Buffer",
+    projectMakeNowMVP5: "✅ One-Tap Confirm - Erstellt Today-Liste ohne Calendar-Schreib-Zugriff",
+    projectMakeNowMVP6: "🌙 Daily Review - Abend-Review: Done, Postponed, oder Open",
+    projectMakeNowLesson1: "<strong>Local-first ist wichtig:</strong> Auch mit Cloud-Sync sollte die App offline funktionieren.",
+    projectMakeNowLesson2: "<strong>AI-Output braucht Bestätigung:</strong> Nutzer-Review ist essentiell für Vertrauen und Kontrollgefühl.",
+    projectMakeNowLesson3: "<strong>Monorepo mit Workspaces skaliert gut:</strong> Separation von Core-Logic und UI ermöglicht zuverlässiges Testing.",
+    projectMakeNowLesson4: "<strong>Fokus auf MVP-Scope:</strong> Die Beschränkung auf 1+2 Task Format macht das Planing fokussiert und realistisch.",
 
     projectRaidTitle: "Firmware Simulation. RAID Benchmarks",
     projectRaidSummary:
       "Praxisprojekt aus meiner Zeit bei Hyperstone. Simulation und Performance Tests im Umfeld von RAID Konfigurationen.",
-    projectRaidFeature1: "Simulation der Firmware, strukturierte Auswertung von Testergebnissen",
-    projectRaidFeature2: "Implementierung verschiedener RAID Konfigurationen für Leistungstests",
+    projectRaidFeature1:
+      "Simulation der Firmware, strukturierte Auswertung von Testergebnissen",
+    projectRaidFeature2:
+      "Implementierung verschiedener RAID Konfigurationen für Leistungstests",
+    projectRaidFeature3: "Automatisierung von Test-Szenarien und Datensammlung",
+    projectRaidFeature4: "Dokumentation der Ergebnisse und Performance-Analysen",
+    projectRaidGoal: "Entwicklung einer Firmware-Simulation zur Durchführung von Performance Tests und Benchmarks für verschiedene RAID-Konfigurationen. Das Projekt sollte es ermöglichen, die Auswirkungen unterschiedlicher RAID-Setups auf die Performance zu verstehen und zu quantifizieren.",
+    projectRaidImplementation: "Die Implementierung begann mit der Analyse der verschiedenen RAID-Level und deren Charakteristiken. Es wurde eine Simulationsumgebung aufgebaut, die es ermöglichte, realistische Szenarien zu testen. Anschließend wurden automatisierte Test-Läufe für verschiedene Konfigurationen durchgeführt und die Performance-Metriken systematisch erfasst. Die Ergebnisse wurden dokumentiert und analysiert, um Optimierungsmöglichkeiten zu identifizieren.",
+    projectRaidLesson1: "Performance-Tests erfordern sorgfältige Planung und Kontrolle von Variablen.",
+    projectRaidLesson2: "Automatisierung ist essentiell für reproduzierbare und zuverlässige Ergebnisse.",
+    projectRaidLesson3: "Gute Dokumentation der Test-Ergebnisse ist für die Nachvollziehbarkeit wichtig.",
 
     // Footer
     footerContact: "Kontakt",
@@ -121,6 +165,8 @@ const translations = {
     contactValidation:
       "Bitte prüfe deine Eingaben und fülle alle Pflichtfelder aus.",
     contactBackHome: "Zurück zum Portfolio",
+    contactHoneypotLabel: "Website",
+    contactSuccessMessage: "Nachricht wurde gesendet. Weiterleitung läuft...",
 
     // Thank You Page
     thankYouTitle: "Danke für deine Nachricht",
@@ -134,17 +180,52 @@ const translations = {
     cvTitle: "Lebenslauf",
     cvEducationTitle: "Schulischer Werdegang",
     cvEducationDegree: "Bachelor of Science - Angewandte Informatik",
+    cvEducationDegreeShort: "Bachelor of Science, Angewandte Informatik",
     cvEducationSchool: "HTWG Konstanz",
     cvEducationFocus: "Vertiefung: Embedded Systems",
-    cvEducationDescription: "Student der Angewandten Informatik mit Schwerpunkt auf Embedded Systems.",
+    cvEducationDescription:
+      "Student der Angewandten Informatik mit Schwerpunkt auf Embedded Systems.",
+    cvEducationDateBachelor: "02/2026",
+    cvEduFhrDate: "2019",
     cvExperienceTitle: "Professionelle Erfahrung",
-    cvSkillsTitle: "Kenntnisse",
+    cvExpWerkstudent: "Werkstudent",
+    cvExpWerkstudentDate: "03/2023 - 02/2024",
+    cvExpWerkstudentCompany: "Hyperstone GmbH, Konstanz",
+    cvExpWerkstudentTask1: "RAID-Simulation und Konzeptüberarbeitung",
+    cvExpWerkstudentTask2: "Simulation der Firmware",
+    cvExpWerkstudentTask3: "Implementierung verschiedener RAID-Konfigurationen zum Leistungstest",
+    cvExpWerkstudentDesc: "Schwerpunkt auf RAID Simulation und Konzeptüberarbeitung. Dazu habe ich die Firmware Simulation unterstützt und verschiedene RAID Konfigurationen implementiert, um Leistungsunterschiede messbar zu machen.",
+    cvExpPraktikum: "Praktikum",
+    cvExpPraktikumDate: "09/2022 - 02/2023",
+    cvExpPraktikumCompany: "Hyperstone GmbH, Konstanz",
+    cvExpPraktikumDesc: "Einstieg in das Firmware Umfeld. Fokus auf nachvollziehbares Testen, Dokumentation und sauberes Vorgehen im Team.",
+    cvSkillsTitle: "Technische Skills",
+    cvSkillC: "C",
+    cvSkillCpp: "C++",
+    cvSkillPython: "Python",
+    cvSkillJava: "Java",
+    cvSkillScala: "Scala",
+    cvSkillVhdlBasics: "VHDL (Grundlagen)",
+    cvSkillEmbeddedLinuxBasics: "Embedded Linux (Grundlagen)",
+    cvSkillGit: "Git",
+    cvSkillVSCode: "VS Code",
+    cvSkillDebugging: "Debugging",
+    cvEduFhrTitle: "Fachhochschulreife",
+    cvEduFhrSchool: "Karl-Maybach-Gymnasium, Friedrichshafen",
+    cvSkillCatSoftwareDev: "Softwareentwicklung",
+    cvSkillGitVersioning: "Git Versionierung",
+    cvSkillAgile: "Agiles Arbeiten",
+    cvLanguagesTitle: "Sprachkenntnisse",
+    cvLangGerman: "Deutsch",
+    cvLangEnglish: "Englisch",
+    cvLangFrench: "Französisch",
+    cvLangSpanish: "Spanisch",
     cvDownload: "CV als PDF herunterladen",
     cvContactBtn: "Kontakt aufnehmen",
     cvPreviewTitle: "Lebenslauf",
     cvViewFull: "Vollständigen Lebenslauf ansehen",
 
-    // Project Detail
+    // Project Detail (shared)
     projectGoalTitle: "Ziel",
     projectContributionTitle: "Mein Beitrag",
     projectTechTitle: "Tech Stack",
@@ -157,20 +238,48 @@ const translations = {
     projectRepo: "GitHub Repository",
     projectDemo: "Live Demo",
 
-    // IoT Project Details
+    // IoT Project Details (Automatic Light Controller)
     projectIoTGoal:
-      "Das Projekt befasst sich mit der Erfassung von Sensordaten, ihrer Verarbeitung und Übertragung. Der Fokus liegt auf einer robusten Kommunikation und einer sauberen, wartbaren Code-Struktur. Das System soll Messwerte zuverlässig erfassen und Status-Informationen bereitstellen, auch bei einfachen Fehlerszenarien.",
-    projectIoTContrib1: "Implementierung der Sensor-Schnittstelle und Datenerfassung",
+      "Ziel des Projekts ist eine einfache, robuste Automatisierung für Raumlicht. Ein LDR misst die Umgebungshelligkeit. Bei niedriger Helligkeit schaltet das System das Licht ein, bei hoher Helligkeit wieder aus. Zusätzlich wird ein Sunrise und Sunset Use Case abgebildet, mit schrittweisem Dimmen bis aus oder bis volle Helligkeit.",
+    projectIoTContrib1:
+      "Sensoranbindung und Auslesen der Helligkeitswerte mit LDR am Arduino Nano",
     projectIoTContrib2:
-      "Entwicklung eines Protokolls zur strukturierten Datenübertragung",
+      "Implementierung eines MQTT Clients und Versand strukturierter Payloads an einen HiveMQ Broker",
     projectIoTContrib3:
-      "Fehlerbehandlung bei Sensor-Ausfällen und Kommunikationsfehlern",
+      "Schwellwertlogik, Dimmen für Sunrise und Sunset sowie einfache Fehlerfälle wie ungültige Messwerte",
     projectIoTImplementation:
-      "Die Umsetzung erfolgte in mehreren Schritten. Zunächst wurde der Sensor angebunden und die Datenerfassung implementiert. Anschließend wurde ein einfaches Protokoll definiert, um die Daten strukturiert zu übertragen. Die Fehlerbehandlung umfasst Timeouts, Checksummen und defensive Programmierung. Der Code wurde modular aufgebaut, um Wartbarkeit und Erweiterbarkeit zu gewährleisten.",
+      "Der Ablauf ist klar getrennt. Zuerst werden die Sensorwerte ausgelesen und plausibilisiert. Danach werden die Werte geprüft und als Payload per MQTT an den Broker gesendet. In Datacake wird die Payload decodiert und als Dashboard dargestellt. Auf Basis der Helligkeit wird der Lichtzustand gesetzt, inklusive Dimmverlauf für Sunrise und Sunset.",
+
+    projectIoTImpl1:
+      "Read and handle values: Messwertaufnahme und einfache Plausibilisierung",
+    projectIoTImpl2:
+      "Check values and send: Schwellwertprüfung, Payload erzeugen, MQTT Publish an HiveMQ",
+    projectIoTImpl3:
+      "Datacake decode: Payload decoding und Visualisierung als Dashboard",
+
+    projectUseCaseTitle: "Use Case",
+    projectIoTUseCase1:
+      "Sunrise: Licht schrittweise dimmen, bis es komplett aus ist",
+    projectIoTUseCase2:
+      "Sunset: Licht einschalten und schrittweise auf volle Helligkeit dimmen",
+
+    projectChallengesTitle: "Herausforderungen",
+    projectIoTChallenge1:
+      "Integration in ein Smart Home Setup mit mehreren Lampen war unerwartet aufwendig",
+    projectIoTChallenge2:
+      "Viele mögliche Komponenten und Ansätze. Zwei volle Tage gingen für Integrationsthemen verloren",
+
     projectIoTLesson1:
-      "Defensive Programmierung bei hardwarenaher Entwicklung zahlt sich aus.",
+      "Systemintegration kostet oft mehr Zeit als die reine Sensorlogik. Eine klare Architektur spart Debugging",
     projectIoTLesson2:
-      "Strukturierte Fehlerbehandlung erleichtert das Debugging erheblich.",
+      "Gute Dokumentation und eindeutige Schnittstellen sind entscheidend, wenn mehrere Tools zusammenspielen",
+
+    projectFutureTitle: "Ausblick",
+    projectIoTFuture1: "Integration in ioBroker weiterverfolgen",
+    projectIoTFuture2:
+      "Licht automatisch deaktivieren, wenn niemand zu Hause ist. Aktivieren bei Heimkehr",
+    projectIoTFuture3:
+      "Optionaler Weckmodus, z.B. sanftes Aufdimmen am Morgen",
 
     // Embedded Project Details
     projectEmbeddedGoal:
@@ -204,14 +313,16 @@ const translations = {
 
     // Impressum (existing)
     impressumTitle: "Impressum",
+    impressumTMGTitle: "Angaben gemäß § 5 TMG",
+    impressumContactTitle: "Kontakt",
 
     // Datenschutz (existing)
     datenschutzTitle: "Datenschutz",
 
-    // New: Shared legal buttons
+    // Shared legal buttons
     legalBackHome: "← Zurück zum Portfolio",
 
-    // New: Impressum extra keys
+    // Impressum extra keys
     impressumAddressPlaceholder: "[Adresse Platzhalter]",
     impressumCityPlaceholder: "[PLZ Ort Platzhalter]",
     impressumDisclaimerTitle: "Haftungsausschluss",
@@ -225,13 +336,14 @@ const translations = {
     impressumCopyrightText:
       "Die durch den Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers.",
     impressumExternalServicesTitle: "Externe Dienste",
-    impressumExternalServicesIntro: "Diese Website nutzt folgende externe Dienste:",
+    impressumExternalServicesIntro:
+      "Diese Website nutzt folgende externe Dienste:",
     impressumServiceFormSubmit:
       "Kontaktformular-Service zur Übermittlung von Nachrichten",
     impressumServiceAOS: "JavaScript-Bibliothek für Scroll-Animationen",
     impressumServiceGitHubPages: "Hosting-Plattform für statische Websites",
 
-    // New: Datenschutz page extra keys
+    // Datenschutz page extra keys
     privacyIntroTitle: "Datenschutzerklärung",
     privacyIntroText:
       "Der Schutz deiner Daten ist mir wichtig. Diese Datenschutzerklärung informiert dich über die Verarbeitung personenbezogener Daten bei der Nutzung dieser Website.",
@@ -259,7 +371,8 @@ const translations = {
     privacyLocalStorageText:
       "Diese Website nutzt den lokalen Speicher deines Browsers (LocalStorage) zur Speicherung deiner Einstellungen. Diese Daten verbleiben auf deinem Gerät und werden nicht an Server übermittelt.",
     privacyLocalStorageItem1Title: "Dark Mode Einstellung",
-    privacyLocalStorageItem1Text: "Speichert deine Präferenz für den Dark Mode",
+    privacyLocalStorageItem1Text:
+      "Speichert deine Präferenz für den Dark Mode",
     privacyLocalStorageItem2Title: "Spracheinstellung",
     privacyLocalStorageItem2Text: "Speichert deine bevorzugte Sprache",
     privacyLocalStorageDeleteText:
@@ -288,6 +401,7 @@ const translations = {
     darkModeDark: "Light Mode",
     languageDE: "English",
     languageEN: "Deutsch",
+    mobileMenuClose: "Close",
 
     // Hero
     heroGreeting: "Hi, I'm",
@@ -299,7 +413,8 @@ const translations = {
     // About
     aboutTitle: "Profile",
     aboutItem1: "Embedded development with focus on C and C++",
-    aboutItem2: "Fundamentals of digital systems and microprocessor technology",
+    aboutItem2:
+      "Fundamentals of digital systems and microprocessor technology",
     aboutItem3: "Sensors and peripherals, interrupts, timers, state machines",
     aboutItem4: "Embedded Linux fundamentals and everyday tooling",
 
@@ -310,24 +425,67 @@ const translations = {
 
     // Projects
     projectsTitle: "Projects",
-    projectIoTTitle: "Ubiquitous Computing. Sensor Project",
+
+    // IoT Project (Automatic Light Controller)
+    projectIoTTitle: "Automatic Light Controller",
     projectIoTSummary:
-      "Capturing, processing, and transmitting sensor data. Focus on robust data paths and comprehensible states.",
-    projectIoTFeature1: "Measurements, status, simple error cases and plausibility checks",
-    projectIoTFeature2: "Structured implementation in C or C++ with clear modules",
+      "Automatic lighting control based on ambient brightness. MQTT telemetry via HiveMQ, processing and visualization in Datacake.",
+    projectIoTFeature1:
+      "Measure brightness, check thresholds, switch light on or off, plus dimming for sunrise and sunset",
+    projectIoTFeature2:
+      "MQTT data flow: Arduino Nano publishes payload to HiveMQ, Datacake decodes and visualizes the values",
 
     projectMakeNowTitle: "DayFlow. GitHub Project",
     projectMakeNowSummary:
       "Open Source project on GitHub. A small tool that automates my workflow and simplifies repetitive steps.",
-    projectMakeNowFeature1: "AI extraction and duration estimation via Groq API. Review and confirm remain with the user",
-    projectMakeNowFeature2: "Monorepo with core package for rules, scheduling engine and validation. Tests with Vitest",
-    projectMakeNowFeature3: "Optional Firebase Auth and Firestore Sync. Security Headers, CSP and Firestore Rules",
+    projectMakeNowFeature1:
+      "AI extraction and duration estimation via Groq API. Review and confirm remain with the user",
+    projectMakeNowFeature2:
+      "Monorepo with core package for rules, scheduling engine and validation. Tests with Vitest",
+    projectMakeNowFeature3:
+      "Optional Firebase Auth and Firestore Sync. Security Headers, CSP and Firestore Rules",
+    projectMakeNowH1: "DayFlow - AI-powered Day Planner",
+    projectMakeNowOneliner: "Transform notes into structured daily plans with intelligent task extraction and scheduling.",
+    projectMakeNowGoal: "DayFlow helps you capture thoughts effortlessly and turn them into actionable plans. With AI-powered extraction and intelligent planning, it creates realistic daily plans that you can actually achieve. The MVP focuses on core features: inbox capture, AI extraction, review & confirmation, and intelligent daily planning (1 main task + 2 small tasks).",
+    projectMakeNowCoreFeatures: "Core Features",
+    projectMakeNowFeatureInbox: "<strong>Inbox Capture</strong> - Write notes naturally, without forms",
+    projectMakeNowFeatureAI: "<strong>AI Extraction</strong> - Groq-powered AI automatically extracts tasks, events and ideas",
+    projectMakeNowFeatureReview: "<strong>Review & Confirm</strong> - You stay in control—review and confirm all suggestions",
+    projectMakeNowFeaturePlanning: "<strong>Smart Planning</strong> - AI generates focused daily plans: 1 main task + 2 smaller ones",
+    projectMakeNowFeatureSync: "<strong>Real-time Sync</strong> - Firebase-powered cloud sync across devices",
+    projectMakeNowFeatureAuth: "<strong>Secure Auth</strong> - Email, Google and Apple Sign-in with Firebase Authentication",
+    projectMakeNowFeatureTheme: "<strong>Theme Support</strong> - Beautiful light and dark modes",
+    projectMakeNowFeatureResponsive: "<strong>Responsive Design</strong> - Works seamlessly on desktop and mobile",
+    projectMakeNowImplArch: "<strong>Architecture:</strong> The project is structured as a monorepo with npm Workspaces. Apps/Web contains the Vite + React application with screens (Inbox, Today, Review). Packages/Core contains the business logic: data models, scheduling rules, state transitions and validation.",
+    projectMakeNowImplAI: "<strong>AI & Planning:</strong> The Groq API is used for task extraction and duration estimation. The user reviews all AI suggestions before confirmation. The scheduling engine then generates focused daily plans based on confirmed tasks.",
+    projectMakeNowImplPersist: "<strong>Persistence:</strong> Firebase Firestore stores tasks and daily plans. Firebase Auth handles sign-in. Firestore Security Rules protect user data. Real-time sync enables seamless multi-device experience.",
+    projectMakeNowImplDeploy: "<strong>Deployment:</strong> Vercel hosts frontend + serverless APIs. Firebase hosts Auth and Firestore. Environment variables are configured for both services.",
+    projectMakeNowMVPTitle: "MVP Feature Set",
+    projectMakeNowMVP1: "📝 App Inbox - Freeform text input directly in the app",
+    projectMakeNowMVP2: "🤖 Note → Structure - AI extracts tasks, events, ideas",
+    projectMakeNowMVP3: "⏲️ Duration Estimation - AI estimates duration ranges with confidence",
+    projectMakeNowMVP4: "📅 Daily Plan - 1 focus task + 2 mini tasks + buffer",
+    projectMakeNowMVP5: "✅ One-Tap Confirm - Creates today list without calendar write access",
+    projectMakeNowMVP6: "🌙 Daily Review - Evening review: Done, Postponed, or Open",
+    projectMakeNowLesson1: "<strong>Local-first is important:</strong> The app should work offline even with cloud sync.",
+    projectMakeNowLesson2: "<strong>AI output requires confirmation:</strong> User review is essential for trust and sense of control.",
+    projectMakeNowLesson3: "<strong>Monorepo with workspaces scales well:</strong> Separation of core logic and UI enables reliable testing.",
+    projectMakeNowLesson4: "<strong>Focus on MVP scope:</strong> The limitation to 1+2 task format makes planning focused and realistic.",
 
     projectRaidTitle: "Firmware Simulation. RAID Benchmarks",
     projectRaidSummary:
       "Practical project from my time at Hyperstone. Simulation and performance testing in the RAID configuration environment.",
-    projectRaidFeature1: "Firmware simulation, structured evaluation of test results",
-    projectRaidFeature2: "Implementation of various RAID configurations for performance testing",
+    projectRaidFeature1:
+      "Firmware simulation, structured evaluation of test results",
+    projectRaidFeature2:
+      "Implementation of various RAID configurations for performance testing",
+    projectRaidFeature3: "Automation of test scenarios and data collection",
+    projectRaidFeature4: "Documentation of results and performance analysis",
+    projectRaidGoal: "Development of a firmware simulation for conducting performance tests and benchmarks for various RAID configurations. The project should enable understanding and quantifying the impact of different RAID setups on performance.",
+    projectRaidImplementation: "Implementation began with analyzing various RAID levels and their characteristics. A simulation environment was built that enabled testing realistic scenarios. Subsequently, automated test runs for various configurations were performed and performance metrics systematically captured. Results were documented and analyzed to identify optimization opportunities.",
+    projectRaidLesson1: "Performance tests require careful planning and control of variables.",
+    projectRaidLesson2: "Automation is essential for reproducible and reliable results.",
+    projectRaidLesson3: "Good documentation of test results is important for traceability.",
 
     // Footer
     footerContact: "Contact",
@@ -352,6 +510,8 @@ const translations = {
     contactValidation:
       "Please check your inputs and fill all required fields.",
     contactBackHome: "Back to Portfolio",
+    contactHoneypotLabel: "Website",
+    contactSuccessMessage: "Message sent. Redirecting...",
 
     // Thank You Page
     thankYouTitle: "Thank You for Your Message",
@@ -365,17 +525,54 @@ const translations = {
     cvTitle: "Curriculum Vitae",
     cvEducationTitle: "Education",
     cvEducationDegree: "Bachelor of Science - Applied Computer Science",
+    cvEducationDegreeShort: "Bachelor of Science, Applied Computer Science",
     cvEducationSchool: "HTWG Konstanz",
     cvEducationFocus: "Focus: Embedded Systems",
-    cvEducationDescription: "Applied Computer Science student with focus on Embedded Systems.",
+    cvEducationDescription:
+      "Applied Computer Science student with focus on Embedded Systems.",
+    cvEducationDateBachelor: "02/2026",
+    cvEduFhrTitle: "Fachhochschulreife",
+    cvEduFhrSchool: "Karl-Maybach-Gymnasium, Friedrichshafen",
+    cvEduFhrDate: "2019",
     cvExperienceTitle: "Professional Experience",
-    cvSkillsTitle: "Skills",
+    cvExpWerkstudent: "Working Student",
+    cvExpWerkstudentDate: "03/2023 - 02/2024",
+    cvExpWerkstudentCompany: "Hyperstone GmbH, Konstanz",
+    cvExpWerkstudentTask1: "RAID simulation and concept revision",
+    cvExpWerkstudentTask2: "Firmware simulation",
+    cvExpWerkstudentTask3: "Implementation of various RAID configurations for performance testing",
+    cvExpWerkstudentDesc: "Focus on RAID simulation and concept revision. I supported firmware simulation and implemented various RAID configurations to measure performance differences.",
+    cvExpPraktikum: "Internship",
+    cvExpPraktikumDate: "09/2022 - 02/2023",
+    cvExpPraktikumCompany: "Hyperstone GmbH, Konstanz",
+    cvExpPraktikumDesc: "Entry into the firmware field. Focus on comprehensible testing, documentation and clean teamwork.",
+    cvSkillsTitle: "Technical Skills",
+    cvSkillC: "C",
+    cvSkillCpp: "C++",
+    cvSkillPython: "Python",
+    cvSkillJava: "Java",
+    cvSkillScala: "Scala",
+    cvSkillVhdlBasics: "VHDL (basics)",
+    cvSkillEmbeddedLinuxBasics: "Embedded Linux (basics)",
+    cvSkillGit: "Git",
+    cvSkillVSCode: "VS Code",
+    cvSkillDebugging: "Debugging",
+    cvEduFhrTitle: "University of Applied Sciences entrance qualification",
+    cvEduFhrSchool: "Karl-Maybach-Gymnasium, Friedrichshafen",
+    cvSkillCatSoftwareDev: "Software Development",
+    cvSkillGitVersioning: "Git version control",
+    cvSkillAgile: "Agile work",
+    cvLanguagesTitle: "Languages",
+    cvLangGerman: "German",
+    cvLangEnglish: "English",
+    cvLangFrench: "French",
+    cvLangSpanish: "Spanish",
     cvDownload: "Download CV as PDF",
     cvContactBtn: "Get in Touch",
     cvPreviewTitle: "Curriculum Vitae",
     cvViewFull: "View Full CV",
 
-    // Project Detail
+    // Project Detail (shared)
     projectGoalTitle: "Goal",
     projectContributionTitle: "My Contribution",
     projectTechTitle: "Tech Stack",
@@ -388,20 +585,48 @@ const translations = {
     projectRepo: "GitHub Repository",
     projectDemo: "Live Demo",
 
-    // IoT Project Details
+    // IoT Project Details (Automatic Light Controller)
     projectIoTGoal:
-      "The project deals with capturing sensor data, processing, and transmission. The focus is on robust communication and clean, maintainable code structure. The system should reliably capture measurements and provide status information, even in simple error scenarios.",
-    projectIoTContrib1: "Implementation of sensor interface and data acquisition",
+      "The goal of this project is a simple and robust room lighting automation. An LDR measures ambient brightness. When brightness is low, the system turns the light on, and when it is high, it turns it off. In addition, the project implements sunrise and sunset use cases with stepwise dimming either down to off or up to full brightness.",
+    projectIoTContrib1:
+      "Sensor integration and reading ambient brightness via an LDR on an Arduino Nano",
     projectIoTContrib2:
-      "Development of a protocol for structured data transmission",
+      "Implemented an MQTT client and published structured payloads to a HiveMQ broker",
     projectIoTContrib3:
-      "Error handling for sensor failures and communication errors",
+      "Threshold logic, sunrise and sunset dimming, plus basic error handling such as invalid sensor readings",
     projectIoTImplementation:
-      "Implementation was done in several steps. First, the sensor was connected and data acquisition was implemented. Then a simple protocol was defined to transmit data in a structured way. Error handling includes timeouts, checksums, and defensive programming. The code was built modularly to ensure maintainability and extensibility.",
+      "The flow is clearly separated. First, sensor values are read and validated. Then values are evaluated and sent as an MQTT payload to the broker. In Datacake, the payload is decoded and shown on a dashboard. Based on brightness, the light state is set, including dimming behavior for sunrise and sunset.",
+
+    projectIoTImpl1:
+      "Read and handle values: capture readings and basic validation",
+    projectIoTImpl2:
+      "Check values and send: threshold check, build payload, MQTT publish to HiveMQ",
+    projectIoTImpl3:
+      "Datacake decode: payload decoding and dashboard visualization",
+
+    projectUseCaseTitle: "Use case",
+    projectIoTUseCase1:
+      "Sunrise: dim the light step by step until it is fully off",
+    projectIoTUseCase2:
+      "Sunset: turn the light on and dim up step by step to full brightness",
+
+    projectChallengesTitle: "Challenges",
+    projectIoTChallenge1:
+      "Integrating into a smart home setup with multiple lamps was unexpectedly time consuming",
+    projectIoTChallenge2:
+      "Many possible components and approaches. Two full days were lost due to integration topics",
+
     projectIoTLesson1:
-      "Defensive programming pays off in low-level development.",
+      "System integration often takes more time than sensor logic. A clear architecture reduces debugging",
     projectIoTLesson2:
-      "Structured error handling significantly facilitates debugging.",
+      "Good documentation and clear interfaces are essential when multiple tools interact",
+
+    projectFutureTitle: "Next steps",
+    projectIoTFuture1: "Continue the integration with ioBroker",
+    projectIoTFuture2:
+      "Automatically disable the light when nobody is home and enable it when returning",
+    projectIoTFuture3:
+      "Optional wake up mode, for example gentle dim up in the morning",
 
     // Embedded Project Details
     projectEmbeddedGoal:
@@ -436,14 +661,16 @@ const translations = {
 
     // Impressum (existing)
     impressumTitle: "Legal Notice",
+    impressumTMGTitle: "Information according to § 5 TMG",
+    impressumContactTitle: "Contact",
 
     // Datenschutz (existing)
     datenschutzTitle: "Privacy Policy",
 
-    // New: Shared legal buttons
+    // Shared legal buttons
     legalBackHome: "← Back to Portfolio",
 
-    // New: Impressum extra keys
+    // Impressum extra keys
     impressumAddressPlaceholder: "[Address placeholder]",
     impressumCityPlaceholder: "[ZIP City placeholder]",
     impressumDisclaimerTitle: "Disclaimer",
@@ -464,14 +691,14 @@ const translations = {
     impressumServiceAOS: "JavaScript library for scroll animations",
     impressumServiceGitHubPages: "Hosting platform for static websites",
 
-    // New: Datenschutz page extra keys
+    // Datenschutz page extra keys
     privacyIntroTitle: "Privacy policy",
     privacyIntroText:
       "Protecting your data is important to me. This privacy policy informs you about the processing of personal data when using this website.",
     privacyControllerTitle: "Controller",
     privacyHostingTitle: "Hosting",
     privacyHostingText:
-      "This website is hosted on GitHub Pages. GitHub may collect technical log data such as IP addresses, browser type, and access times. For more information, see GitHub’s privacy statement.",
+      "This website is hosted on GitHub Pages. GitHub may collect technical log data such as IP addresses, browser type, and access times. For more information, see GitHub's privacy statement.",
     privacyGithubLinkText: "GitHub privacy statement",
     privacyContactFormTitle: "Contact form",
     privacyContactFormText:
@@ -480,7 +707,7 @@ const translations = {
     privacyContactFormItem2: "Email address",
     privacyContactFormItem3: "Message content",
     privacyContactFormMoreText:
-      "This data is used exclusively to process your request. FormSubmit.co forwards the message to my email address. For more information, see FormSubmit’s privacy policy.",
+      "This data is used exclusively to process your request. FormSubmit.co forwards the message to my email address. For more information, see FormSubmit's privacy policy.",
     privacyFormSubmitLinkText: "FormSubmit privacy policy",
     privacyExternalResourcesTitle: "External resources",
     privacyExternalResourcesText:
@@ -490,7 +717,7 @@ const translations = {
       "These resources are used based on legitimate interests pursuant to Art. 6(1)(f) GDPR to ensure optimal delivery of the website.",
     privacyLocalStorageTitle: "Local storage (LocalStorage)",
     privacyLocalStorageText:
-      "This website uses your browser’s local storage (LocalStorage) to store your settings. This data remains on your device and is not transmitted to servers.",
+      "This website uses your browser's local storage (LocalStorage) to store your settings. This data remains on your device and is not transmitted to servers.",
     privacyLocalStorageItem1Title: "Dark mode setting",
     privacyLocalStorageItem1Text: "Stores your dark mode preference",
     privacyLocalStorageItem2Title: "Language setting",

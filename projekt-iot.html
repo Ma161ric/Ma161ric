@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>IoT Sensor Projekt | Marcel Richter</title>
-  <meta name="description" content="IoT Sensor Projekt: Sensorwerte erfassen, verarbeiten und übertragen mit Fokus auf robuste Kommunikation.">
+  <title>Automatic Light Controller | Marcel Richter</title>
+  <meta name="description" content="Automatic Light Controller: LDR misst Helligkeit, Arduino Nano sendet Daten per MQTT an HiveMQ, Datacake visualisiert und steuert Lichtzustände.">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23312e81'/><text x='50' y='65' font-size='48' font-weight='bold' fill='%23818cf8' text-anchor='middle' font-family='Arial, sans-serif'>MR</text></svg>">
-  
+
   <!-- CSS -->
   <link rel="stylesheet" href="style.css">
   <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
@@ -19,23 +19,29 @@
     <article class="project-detail" data-aos="fade-up">
       <!-- Project Header -->
       <header class="project-header">
-        <h1 data-i18n="projectIoTTitle">IoT Sensor Projekt</h1>
-        <p class="project-oneliner" data-i18n="projectIoTSummary">Sensorwerte erfassen, verarbeiten und übertragen. Fokus auf robuste Kommunikation und strukturierten Code.</p>
+        <h1 data-i18n="projectIoTTitle">Automatic Light Controller</h1>
+        <p class="project-oneliner" data-i18n="projectIoTSummary">
+          Automatische Lichtsteuerung basierend auf Umgebungshelligkeit. MQTT Telemetrie via HiveMQ, Auswertung und Visualisierung in Datacake.
+        </p>
       </header>
 
       <!-- Ziel -->
       <section class="project-section">
         <h2 data-i18n="projectGoalTitle">Ziel</h2>
-        <p data-i18n="projectIoTGoal">Das Projekt befasst sich mit der Erfassung von Sensordaten, ihrer Verarbeitung und Übertragung. Der Fokus liegt auf einer robusten Kommunikation und einer sauberen, wartbaren Code-Struktur. Das System soll Messwerte zuverlässig erfassen und Status-Informationen bereitstellen, auch bei einfachen Fehlerszenarien.</p>
+        <p data-i18n="projectIoTGoal">
+          Ziel des Projekts ist eine einfache, robuste Automatisierung für Raumlicht. Ein LDR misst die Umgebungshelligkeit.
+          Bei niedriger Helligkeit schaltet das System das Licht ein, bei hoher Helligkeit wieder aus.
+          Zusätzlich wird ein Sunrise und Sunset Use Case abgebildet, mit schrittweisem Dimmen bis aus oder bis volle Helligkeit.
+        </p>
       </section>
 
       <!-- Mein Beitrag -->
       <section class="project-section">
         <h2 data-i18n="projectContributionTitle">Mein Beitrag</h2>
         <ul>
-          <li data-i18n="projectIoTContrib1">Implementierung der Sensor-Schnittstelle und Datenerfassung</li>
-          <li data-i18n="projectIoTContrib2">Entwicklung eines Protokolls zur strukturierten Datenübertragung</li>
-          <li data-i18n="projectIoTContrib3">Fehlerbehandlung bei Sensor-Ausfällen und Kommunikationsfehlern</li>
+          <li data-i18n="projectIoTContrib1">Sensoranbindung und Auslesen der Helligkeitswerte mit LDR am Arduino Nano</li>
+          <li data-i18n="projectIoTContrib2">Implementierung eines MQTT Clients und Versand strukturierter Payloads an einen HiveMQ Broker</li>
+          <li data-i18n="projectIoTContrib3">Schwellwertlogik, Dimmen für Sunrise und Sunset sowie einfache Fehlerfälle wie ungültige Messwerte</li>
         </ul>
       </section>
 
@@ -43,34 +49,66 @@
       <section class="project-section">
         <h2 data-i18n="projectTechTitle">Tech Stack</h2>
         <div class="badges">
-          <span class="badge">C / C++</span>
-          <span class="badge">Mikrocontroller</span>
-          <span class="badge">Sensorik</span>
-          <span class="badge">IoT Protokolle</span>
-          <span class="badge">Git</span>
+          <span class="badge">Arduino Nano</span>
+          <span class="badge">MicroPython</span>
+          <span class="badge">LDR Sensor</span>
+          <span class="badge">MQTT</span>
+          <span class="badge">HiveMQ Broker</span>
+          <span class="badge">Datacake Dashboard</span>
         </div>
       </section>
 
       <!-- Umsetzung -->
       <section class="project-section">
         <h2 data-i18n="projectImplementationTitle">Umsetzung</h2>
-        <p data-i18n="projectIoTImplementation">Die Umsetzung erfolgte in mehreren Schritten. Zunächst wurde der Sensor angebunden und die Datenerfassung implementiert. Anschließend wurde ein einfaches Protokoll definiert, um die Daten strukturiert zu übertragen. Die Fehlerbehandlung umfasst Timeouts, Checksummen und defensive Programmierung. Der Code wurde modular aufgebaut, um Wartbarkeit und Erweiterbarkeit zu gewährleisten.</p>
+        <p data-i18n="projectIoTImplementation">
+          Der Ablauf ist klar getrennt. Zuerst werden die Sensorwerte ausgelesen und plausibilisiert.
+          Danach werden die Werte geprüft und als Payload per MQTT an den Broker gesendet.
+          In Datacake wird die Payload decodiert und als Dashboard dargestellt.
+          Auf Basis der Helligkeit wird der Lichtzustand gesetzt, inklusive Dimmverlauf für Sunrise und Sunset.
+        </p>
+
+        <ul>
+          <li data-i18n="projectIoTImpl1">Read and handle values: Messwertaufnahme und einfache Plausibilisierung</li>
+          <li data-i18n="projectIoTImpl2">Check values and send: Schwellwertprüfung, Payload erzeugen, MQTT Publish an HiveMQ</li>
+          <li data-i18n="projectIoTImpl3">Datacake decode: Payload decoding und Visualisierung als Dashboard</li>
+        </ul>
       </section>
 
-      <!-- Screenshots -->
+      <!-- Use Case -->
       <section class="project-section">
-        <h2 data-i18n="projectScreenshotsTitle">Screenshots</h2>
-        <div class="project-screenshot">
-          [Screenshot Platzhalter: System-Architektur oder Messwerte-Ausgabe]
-        </div>
+        <h2 data-i18n="projectUseCaseTitle">Use Case</h2>
+        <ul>
+          <li data-i18n="projectIoTUseCase1">Sunrise: Licht schrittweise dimmen, bis es komplett aus ist</li>
+          <li data-i18n="projectIoTUseCase2">Sunset: Licht einschalten und schrittweise auf volle Helligkeit dimmen</li>
+        </ul>
+      </section>
+
+      <!-- Schwierigkeiten -->
+      <section class="project-section">
+        <h2 data-i18n="projectChallengesTitle">Herausforderungen</h2>
+        <ul>
+          <li data-i18n="projectIoTChallenge1">Integration in ein Smart Home Setup mit mehreren Lampen war unerwartet aufwendig</li>
+          <li data-i18n="projectIoTChallenge2">Viele mögliche Komponenten und Ansätze. Zwei volle Tage gingen für Integrationsthemen verloren</li>
+        </ul>
       </section>
 
       <!-- Lessons Learned -->
       <section class="project-section">
         <h2 data-i18n="projectLessonsTitle">Lessons Learned</h2>
         <ul>
-          <li data-i18n="projectIoTLesson1">Defensive Programmierung bei hardwarenaher Entwicklung zahlt sich aus.</li>
-          <li data-i18n="projectIoTLesson2">Strukturierte Fehlerbehandlung erleichtert das Debugging erheblich.</li>
+          <li data-i18n="projectIoTLesson1">Systemintegration kostet oft mehr Zeit als die reine Sensorlogik. Eine klare Architektur spart Debugging</li>
+          <li data-i18n="projectIoTLesson2">Gute Dokumentation und eindeutige Schnittstellen sind entscheidend, wenn mehrere Tools zusammenspielen</li>
+        </ul>
+      </section>
+
+      <!-- Ausblick -->
+      <section class="project-section">
+        <h2 data-i18n="projectFutureTitle">Ausblick</h2>
+        <ul>
+          <li data-i18n="projectIoTFuture1">Integration in ioBroker weiterverfolgen</li>
+          <li data-i18n="projectIoTFuture2">Licht automatisch deaktivieren, wenn niemand zu Hause ist. Aktivieren bei Heimkehr</li>
+          <li data-i18n="projectIoTFuture3">Optionaler Weckmodus, z.B. sanftes Aufdimmen am Morgen</li>
         </ul>
       </section>
 

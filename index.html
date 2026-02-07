@@ -80,18 +80,24 @@
 
       <div class="projects-grid">
         <article class="project-card">
-          <h3><a href="projekt-iot.html" data-i18n="projectIoTTitle">Ubiquitous Computing. Sensor Projekt</a></h3>
+          <h3>
+            <a href="projekt-iot.html" data-i18n="projectIoTTitle">Automatic Light Controller</a>
+          </h3>
+
           <p class="project-summary" data-i18n="projectIoTSummary">
-            Sensorwerte erfassen, verarbeiten und übertragen. Fokus auf robuste Datenwege und nachvollziehbare Zustände.
+            Automatische Lichtsteuerung basierend auf Umgebungshelligkeit. Sensorwerte per MQTT übertragen und in Datacake visualisiert.
           </p>
           <ul class="project-features">
-            <li data-i18n="projectIoTFeature1">Messwerte, Status, einfache Fehlerfälle und Plausibilisierung</li>
-            <li data-i18n="projectIoTFeature2">Strukturierte Implementierung in C oder C++ mit klaren Modulen</li>
+            <li data-i18n="projectIoTFeature1">Helligkeit messen, Schwellwerte prüfen, Licht ein oder aus und Dimmen für Sunrise und Sunset</li>
+            <li data-i18n="projectIoTFeature2">MQTT Datenfluss: Arduino Nano sendet Payload an HiveMQ, Datacake decodiert und zeigt die Werte</li>
           </ul>
           <div class="project-tech">
-            <span class="tech-tag">Ubiquitous</span>
-            <span class="tech-tag">C/C++</span>
-            <span class="tech-tag">Sensorik</span>
+            <span class="tech-tag">Arduino Nano</span>
+            <span class="tech-tag">MicroPython</span>
+            <span class="tech-tag">MQTT</span>
+            <span class="tech-tag">HiveMQ</span>
+            <span class="tech-tag">Datacake</span>
+            <span class="tech-tag">LDR</span>
           </div>
         </article>
 
@@ -143,7 +149,7 @@
         <div class="cv-preview-card glass">
           <h3 data-i18n="cvEducationTitle">Ausbildung</h3>
           <div class="cv-preview-item">
-            <h4 data-i18n="cvEducationDegree">Bachelor of Science, Angewandte Informatik</h4>
+            <h4 data-i18n="cvEducationDegreeShort">Bachelor of Science, Angewandte Informatik</h4>
             <p class="cv-preview-detail" data-i18n="cvEducationSchool">HTWG Konstanz</p>
             <p class="cv-preview-detail" data-i18n="cvEducationFocus">Vertiefung: Embedded Systems</p>
             <p class="cv-preview-description" data-i18n="cvEducationDescription">
@@ -156,17 +162,17 @@
           <h3 data-i18n="cvExperienceTitle">Praxiserfahrung</h3>
 
           <div class="cv-preview-item">
-            <h4>Werkstudent, Hyperstone GmbH</h4>
-            <p class="cv-preview-detail">03/2023 bis 02/2024, Konstanz</p>
-            <p class="cv-preview-description">
+            <h4 data-i18n="cvExpWerkstudent">Werkstudent, Hyperstone GmbH</h4>
+            <p class="cv-preview-detail" data-i18n="cvExpWerkstudentDate">03/2023 bis 02/2024, Konstanz</p>
+            <p class="cv-preview-description" data-i18n="cvExpWerkstudentDesc">
               Schwerpunkt auf RAID Simulation und Konzeptüberarbeitung. Dazu habe ich die Firmware Simulation unterstützt und verschiedene RAID Konfigurationen implementiert, um Leistungsunterschiede messbar zu machen.
             </p>
           </div>
 
           <div class="cv-preview-item">
-            <h4>Praktikum, Hyperstone GmbH</h4>
-            <p class="cv-preview-detail">09/2022 bis 02/2023, Konstanz</p>
-            <p class="cv-preview-description">
+            <h4 data-i18n="cvExpPraktikum">Praktikum, Hyperstone GmbH</h4>
+            <p class="cv-preview-detail" data-i18n="cvExpPraktikumDate">09/2022 bis 02/2023, Konstanz</p>
+            <p class="cv-preview-description" data-i18n="cvExpPraktikumDesc">
               Einstieg in das Firmware Umfeld. Fokus auf nachvollziehbares Testen, Dokumentation und sauberes Vorgehen im Team.
             </p>
           </div>
@@ -175,16 +181,16 @@
         <div class="cv-preview-card glass cv-skills-card">
           <h3 data-i18n="cvSkillsTitle">Technische Skills</h3>
           <div class="badges">
-            <span class="badge">C</span>
-            <span class="badge">C++</span>
-            <span class="badge">Python</span>
-            <span class="badge">Java</span>
-            <span class="badge">Scala</span>
-            <span class="badge">VHDL (Grundlagen)</span>
-            <span class="badge">Embedded Linux (Grundlagen)</span>
-            <span class="badge">Git</span>
-            <span class="badge">VS Code</span>
-            <span class="badge">Debugging</span>
+            <span class="badge" data-i18n="cvSkillC">C</span>
+            <span class="badge" data-i18n="cvSkillCpp">C++</span>
+            <span class="badge" data-i18n="cvSkillPython">Python</span>
+            <span class="badge" data-i18n="cvSkillJava">Java</span>
+            <span class="badge" data-i18n="cvSkillScala">Scala</span>
+            <span class="badge" data-i18n="cvSkillVhdlBasics">VHDL (Grundlagen)</span>
+            <span class="badge" data-i18n="cvSkillEmbeddedLinuxBasics">Embedded Linux (Grundlagen)</span>
+            <span class="badge" data-i18n="cvSkillGit">Git</span>
+            <span class="badge" data-i18n="cvSkillVSCode">VS Code</span>
+            <span class="badge" data-i18n="cvSkillDebugging">Debugging</span>
           </div>
         </div>
       </div>
