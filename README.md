@@ -1,8 +1,8 @@
-# 👋 Hallo, ich bin Marcel
+# Hallo, ich bin Marcel
 
-🎓 Student der Angewandten Informatik an der HTWG Konstanz  
-🔧 Schwerpunkt: Embedded Systems  
-📍 Konstanz, Deutschland  
+🎓 Masterstudent Informatik, LMU München  
+🎓 B.Sc. Angewandte Informatik (Vertiefung: Embedded Systems), HTWG Konstanz  
+📍 München, Deutschland  
 
 ## Kurzprofil
 
