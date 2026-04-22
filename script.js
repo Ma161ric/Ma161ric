@@ -61,8 +61,7 @@ const translations = {
 
     // Hero
     heroGreeting: "Hi, ich bin",
-    heroSubtitle: "Student der Angewandten Informatik an der HTWG Konstanz",
-    heroFocus: "Schwerpunkt: Embedded Systems",
+    heroSubtitle: "Masterstudent der Informatik an der LMU München",
     heroTagline:
       "Ich interessiere mich für hardwarenahe Software, zuverlässige Systeme und Kommunikation zwischen Geräten. Hier zeige ich Projekte und Skills, die ich im Studium und in eigenen Arbeiten aufgebaut habe.",
 
@@ -182,13 +181,18 @@ const translations = {
 
     // CV Page
     cvTitle: "Lebenslauf",
-    cvEducationTitle: "Schulischer Werdegang",
-    cvEducationDegree: "Bachelor of Science - Angewandte Informatik",
-    cvEducationDegreeShort: "Bachelor of Science, Angewandte Informatik",
-    cvEducationSchool: "HTWG Konstanz",
-    cvEducationFocus: "Vertiefung: Embedded Systems",
-    cvEducationDescription:
-      "Student der Angewandten Informatik mit Schwerpunkt auf Embedded Systems.",
+    cvEducationTitle: "Ausbildung",
+    cvEducationMasterDegree: "Master of Science - Informatik",
+    cvEducationMasterDegreeShort: "Master of Science, Informatik",
+    cvEducationMasterSchool: "LMU München",
+    cvEducationMasterDescription:
+      "Masterstudent der Informatik an der LMU München.",
+    cvEducationBachelorDegree: "Bachelor of Science - Angewandte Informatik",
+    cvEducationBachelorDegreeShort: "Bachelor of Science, Angewandte Informatik",
+    cvEducationBachelorSchool: "HTWG Konstanz",
+    cvEducationBachelorFocus: "Vertiefung: Embedded Systems",
+    cvEducationBachelorDescription:
+      "Abschluss in Angewandter Informatik mit Schwerpunkt auf Embedded Systems.",
     cvEducationDateBachelor: "02/2026",
     cvEduFhrDate: "2019",
     cvExperienceTitle: "Professionelle Erfahrung",
@@ -414,8 +418,7 @@ const translations = {
 
     // Hero
     heroGreeting: "Hi, I'm",
-    heroSubtitle: "Applied Computer Science Student at HTWG Konstanz",
-    heroFocus: "Focus: Embedded Systems",
+    heroSubtitle: "Master's student in Computer Science at LMU Munich",
     heroTagline:
       "I'm interested in low-level software, reliable systems, and device communication. Here I showcase projects and skills I've developed during my studies and personal work.",
 
@@ -537,12 +540,17 @@ const translations = {
     // CV Page
     cvTitle: "Curriculum Vitae",
     cvEducationTitle: "Education",
-    cvEducationDegree: "Bachelor of Science - Applied Computer Science",
-    cvEducationDegreeShort: "Bachelor of Science, Applied Computer Science",
-    cvEducationSchool: "HTWG Konstanz",
-    cvEducationFocus: "Focus: Embedded Systems",
-    cvEducationDescription:
-      "Applied Computer Science student with focus on Embedded Systems.",
+    cvEducationMasterDegree: "Master of Science - Computer Science",
+    cvEducationMasterDegreeShort: "Master of Science, Computer Science",
+    cvEducationMasterSchool: "LMU Munich",
+    cvEducationMasterDescription:
+      "Master's student in Computer Science at LMU Munich.",
+    cvEducationBachelorDegree: "Bachelor of Science - Applied Computer Science",
+    cvEducationBachelorDegreeShort: "Bachelor of Science, Applied Computer Science",
+    cvEducationBachelorSchool: "HTWG Konstanz",
+    cvEducationBachelorFocus: "Focus: Embedded Systems",
+    cvEducationBachelorDescription:
+      "Bachelor's degree in Applied Computer Science with a focus on Embedded Systems.",
     cvEducationDateBachelor: "02/2026",
     cvEduFhrTitle: "Fachhochschulreife",
     cvEduFhrSchool: "Karl-Maybach-Gymnasium, Friedrichshafen",

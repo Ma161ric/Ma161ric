@@ -143,7 +143,7 @@ Es gibt 3 Template-Seiten für Projekte:
 ## 📄 CV Seite (cv.html)
 
 Die CV-Seite enthält:
-- **Ausbildung** - HTWG Konstanz, Angewandte Informatik
+- **Ausbildung** - LMU München, Informatik (Master) und HTWG Konstanz, Angewandte Informatik (Bachelor)
 - **Praxiserfahrung** - Platzhalter für Praxissemester
 - **Skills** - Badges mit Technologien
 - **PDF Download Button** - Verweist auf `assets/CV_Marcel_Richter.pdf` (Platzhalter)

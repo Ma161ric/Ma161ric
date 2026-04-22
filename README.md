@@ -1,6 +1,6 @@
 # Hallo, ich bin Marcel
 
-🎓 Masterstudent Informatik, LMU München  
+🎓 Masterstudent Informatik an der LMU München  
 🎓 B.Sc. Angewandte Informatik (Vertiefung: Embedded Systems), HTWG Konstanz  
 📍 München, Deutschland  
 
