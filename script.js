@@ -779,7 +779,7 @@ Object.assign(translations.de, {
   projectMore: "Details ansehen",
   kindWork: "Beruf",
   kindThesis: "Bachelorarbeit",
-  kindOpenSource: "Open Source",
+  kindOpenSource: "Eigenes Projekt",
   kindIoT: "IoT",
   projectRaidTitle: "Firmware-Simulation & RAID-Performance",
   projectRaidSummary:
@@ -834,6 +834,7 @@ Object.assign(translations.de, {
   cvLangEnglish: "Englisch",
   cvLangFrench: "Französisch",
   cvLangSpanish: "Spanisch",
+  cvLvlNative: "Muttersprache",
   cvInterestsTitle: "Interessen",
   cvInt1: "Wandern",
   cvInt2: "Rennradfahren",
@@ -910,7 +911,7 @@ Object.assign(translations.en, {
   projectMore: "View details",
   kindWork: "Work",
   kindThesis: "Bachelor thesis",
-  kindOpenSource: "Open source",
+  kindOpenSource: "Side project",
   kindIoT: "IoT",
   projectRaidTitle: "Firmware simulation & RAID performance",
   projectRaidSummary:
@@ -964,6 +965,7 @@ Object.assign(translations.en, {
   cvLangEnglish: "English",
   cvLangFrench: "French",
   cvLangSpanish: "Spanish",
+  cvLvlNative: "Native",
   cvInterestsTitle: "Interests",
   cvInt1: "Hiking",
   cvInt2: "Road cycling",

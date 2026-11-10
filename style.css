@@ -354,7 +354,8 @@ a.project-card:hover .project-more svg { transform: translateX(3px); }
 .aside-list a:hover { color: var(--accent); }
 .aside-list svg { width: 16px; height: 16px; color: var(--muted); flex: none; }
 .aside-list.lang li { display: flex; justify-content: space-between; }
-.aside-list.lang span { color: var(--muted); font-size: 13.5px; }
+.aside-list.lang b { font-weight: 400; }
+.aside-list.lang span { font: 500 12.5px var(--mono); color: var(--muted); }
 .cv-aside .btn { width: 100%; }
 
 /* ---------- Unterseiten (Projekte, Kontakt, Recht) ---------- */
