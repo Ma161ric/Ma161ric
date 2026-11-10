@@ -3,200 +3,219 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio | Marcel Richter</title>
-  <meta name="description" content="Portfolio von Marcel Richter. Masterstudent der Informatik an der LMU München. Projekte, Skills, Praxiserfahrung und Kontakt.">
-  <meta name="keywords" content="Marcel Richter, LMU München, Informatik, Master, Embedded Systems, Mikroprozessorsysteme, Kommunikationstechnik, Digitale Systeme, Ubiquitous Computing, C, C++, Embedded Linux, HTWG Konstanz">
+  <title>Marcel Richter · Embedded & Systems</title>
+  <meta name="description" content="Marcel Richter, Masterstudent der Informatik an der LMU München. Firmware-Simulation, NAND-Flash und RAID bei Hyperstone, Schwerpunkte Embedded, parallele Systeme und Security.">
   <meta name="author" content="Marcel Richter">
-  
-  <!-- Favicon -->
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23312e81'/><text x='50' y='65' font-size='48' font-weight='bold' fill='%23818cf8' text-anchor='middle' font-family='Arial, sans-serif'>MR</text></svg>">
-  
+  <meta name="theme-color" content="#f6f5f1" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0d0f12" media="(prefers-color-scheme: dark)">
+  <meta property="og:title" content="Marcel Richter · Embedded & Systems">
+  <meta property="og:description" content="Masterstudent der Informatik an der LMU München. Firmware, Speichersysteme, parallele Systeme.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://ma161ric.github.io/Ma161ric/assets/profilbild@2x.jpg">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect x='6' y='6' width='88' height='88' rx='18' fill='%2315171c'/><text x='50' y='63' font-size='38' font-weight='700' fill='%233ddc97' text-anchor='middle' font-family='ui-monospace,Menlo,monospace'>MR</text></svg>">
   <link rel="stylesheet" href="style.css">
-  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
 </head>
 <body>
   <div id="header-placeholder"></div>
 
-  <section class="hero-section">
-    <div class="hero-content glass" data-aos="fade-up">
-      <img
-        src="assets/profilbild.jpg"
-        srcset="assets/profilbild.jpg 1x, assets/profilbild@2x.jpg 2x"
-        alt="Profilbild von Marcel Richter"
-        class="hero-avatar"
-      >
-      <div class="hero-text">
-        <h1>
-          <span data-i18n="heroGreeting"> Hi, ich bin</span>
-          <span class="hero-name">Marcel Richter</span>
-        </h1>
-        <p class="hero-subtitle" data-i18n="heroSubtitle">
-          Masterstudent der Informatik an der LMU München
-        </p>
-        <p class="hero-tagline" data-i18n="heroTagline">
-          Ich interessiere mich für hardwarenahe Software und zuverlässige Systeme. Im Bachelor lag mein Fokus auf Mikroprozessorsystemen, digitalen Systemen, Kommunikationstechnik, Ubiquitous Computing und Parallel Computing. Praktisch habe ich bei Hyperstone an Firmware Simulationen gearbeitet und RAID Konfigurationen für Performance Tests umgesetzt.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <main class="content">
-    <section id="about" data-aos="fade-up">
-      <h2 data-i18n="aboutTitle">Kurzprofil</h2>
-      <ul class="bullets">
-        <li data-i18n="aboutItem1">Embedded Entwicklung mit Fokus auf C und C++ und sauberer Struktur</li>
-        <li data-i18n="aboutItem2">Mikroprozessorsysteme, Rechnerarchitektur und hardwarenahe Programmierung</li>
-        <li data-i18n="aboutItem3">Kommunikationstechnik und Schnittstellen. Von Nachrichtenformaten bis Fehlerszenarien</li>
-        <li data-i18n="aboutItem4">Digitale Systeme und Grundlagen von VHDL. Dazu Tooling im Alltag mit Git</li>
-      </ul>
-    </section>
-
-    <section id="skills" data-aos="fade-up">
-      <h2 data-i18n="skillsTitle">Skills & Tools</h2>
-      <div class="badges">
-        <span class="badge" data-i18n="cvSkillC">C</span>
-        <span class="badge" data-i18n="cvSkillCpp">C++</span>
-        <span class="badge" data-i18n="cvSkillPython">Python</span>
-        <span class="badge" data-i18n="cvSkillJava">Java</span>
-        <span class="badge" data-i18n="cvSkillScala">Scala</span>
-        <span class="badge" data-i18n="cvSkillVhdlBasics">VHDL (Grundlagen)</span>
-        <span class="badge" data-i18n="cvSkillEmbeddedLinuxBasics">Embedded Linux (Grundlagen)</span>
-        <span class="badge" data-i18n="cvSkillGit">Git</span>
-        <span class="badge" data-i18n="cvSkillVSCode">VS Code</span>
-        <span class="badge" data-i18n="cvSkillDebugging">Debugging</span>
-        <span class="badge" data-i18n="cvSkillAgile">Agiles Arbeiten</span>
-        <span class="badge" data-i18n="cvSkillCommunicationTech">Kommunikationstechnik</span>
-      </div>
-      <p class="hint" data-i18n="skillsHint">
-        Hinweis: Ich liste hier nur Dinge, die ich praktisch genutzt habe. Tiefe und Details zeige ich in den Projekten.
-      </p>
-    </section>
-
-    <section id="projects" data-aos="fade-up">
-      <h2 data-i18n="projectsTitle">Projekte</h2>
-
-      <div class="projects-grid">
-        <article class="project-card">
-          <h3>
-            <a href="projekt-iot.html" data-i18n="projectIoTTitle">Automatic Light Controller</a>
-          </h3>
-
-          <p class="project-summary" data-i18n="projectIoTSummary">
-            Automatische Lichtsteuerung basierend auf Umgebungshelligkeit. Sensorwerte per MQTT übertragen und in Datacake visualisiert.
-          </p>
-          <ul class="project-features">
-            <li data-i18n="projectIoTFeature1">Helligkeit messen, Schwellwerte prüfen, Licht ein oder aus und Dimmen für Sunrise und Sunset</li>
-            <li data-i18n="projectIoTFeature2">MQTT Datenfluss: Arduino Nano sendet Payload an HiveMQ, Datacake decodiert und zeigt die Werte</li>
-          </ul>
-          <div class="project-tech">
-            <span class="tech-tag">Arduino Nano</span>
-            <span class="tech-tag">MicroPython</span>
-            <span class="tech-tag">MQTT</span>
-            <span class="tech-tag">HiveMQ</span>
-            <span class="tech-tag">Datacake</span>
-            <span class="tech-tag">LDR</span>
+  <main>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="wrap">
+        <div class="hero-grid">
+          <div class="hero-text" data-aos>
+            <p class="eyebrow" data-i18n="heroEyebrow">M.Sc. Informatik · LMU München</p>
+            <h1>Marcel Richter<span class="accent-dot">.</span></h1>
+            <p class="hero-lead" data-i18n="heroLead">Ich entwickle Software nah an der Hardware: Firmware, Speichersysteme und parallele Systeme. Im Master an der LMU vertiefe ich Systems, Embedded und Security.</p>
+            <div class="status"><span class="status-dot" aria-hidden="true"></span><span data-i18n="heroStatus">Offen für Werkstudentenstellen in München · Embedded, Firmware, Security</span></div>
+            <div class="hero-actions">
+              <a href="#projects" class="btn btn-primary"><span data-i18n="heroBtnProjects">Projekte ansehen</span></a>
+              <a href="assets/CV_Marcel_Richter.pdf" class="btn btn-secondary" download>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"/></svg>
+                <span data-i18n="heroBtnCV">Lebenslauf (PDF)</span>
+              </a>
+              <span class="hero-social">
+                <a href="https://www.linkedin.com/in/marcel-ric/" class="btn btn-ghost" target="_blank" rel="noopener">LinkedIn ↗</a>
+                <a href="https://github.com/Ma161ric" class="btn btn-ghost" target="_blank" rel="noopener">GitHub ↗</a>
+              </span>
+            </div>
           </div>
-        </article>
 
-        <article class="project-card">
-          <h3>
-            <a href="projekt-makenow.html" data-i18n="projectMakeNowTitle">DayFlow. AI Day Planner</a>
-          </h3>
-          <p class="project-summary" data-i18n="projectMakeNowSummary">
-            DayFlow ist ein KI gestützter Tagesplaner, der freie Notizen aus der Inbox in strukturierte Aufgaben und realistische Tagespläne überführt. Der Nutzer bestätigt alle Vorschläge, danach erstellt die App einen Fokus Plan mit einer Hauptaufgabe plus zwei kleinen Aufgaben.
-          </p>
-          <ul class="project-features">
-            <li data-i18n="projectMakeNowFeature1">AI Extraktion und Dauer Schätzung über Groq API. Review und Confirm bleibt beim Nutzer</li>
-            <li data-i18n="projectMakeNowFeature2">Monorepo mit Core Package für Regeln, Scheduling Engine und Validierung. Tests mit Vitest</li>
-            <li data-i18n="projectMakeNowFeature3">Optional Firebase Auth und Firestore Sync. Security Headers, CSP und Firestore Rules</li>
-          </ul>
-          <div class="project-tech">
-            <span class="tech-tag">React</span>
-            <span class="tech-tag">TypeScript</span>
-            <span class="tech-tag">Vite</span>
-            <span class="tech-tag">Firebase</span>
-            <span class="tech-tag">Groq API</span>
-          </div>
-        </article>
+          <figure class="portrait" data-aos>
+            <div class="portrait-frame">
+              <img src="assets/portrait.jpg" alt="Porträt von Marcel Richter" width="600" height="629" fetchpriority="high">
+            </div>
+            <figcaption class="portrait-tag" data-i18n="portraitTag">München, DE</figcaption>
+          </figure>
+        </div>
 
-        <article class="project-card">
-          <h3><a href="projekt-raid.html" data-i18n="projectRaidTitle">Firmware Simulation. RAID Benchmarks</a></h3>
-          <p class="project-summary" data-i18n="projectRaidSummary">
-            Praxisprojekt aus meiner Zeit bei Hyperstone. Simulation und Performance Tests im Umfeld von RAID Konfigurationen.
-          </p>
-          <ul class="project-features">
-            <li data-i18n="projectRaidFeature1">Simulation der Firmware, strukturierte Auswertung von Testergebnissen</li>
-            <li data-i18n="projectRaidFeature2">Implementierung verschiedener RAID Konfigurationen für Leistungstests</li>
-          </ul>
-          <div class="project-tech">
-            <span class="tech-tag">Firmware</span>
-            <span class="tech-tag">C/C++</span>
-            <span class="tech-tag">Performance</span>
-          </div>
-        </article>
+        <div class="facts" data-aos>
+          <div class="fact"><div class="fact-value" data-i18n="fact1Value">1,5 Jahre</div><div class="fact-label" data-i18n="fact1Label">Firmware-Erfahrung bei Hyperstone</div></div>
+          <div class="fact"><div class="fact-value" data-i18n="fact2Value">B.Sc.</div><div class="fact-label" data-i18n="fact2Label">Angewandte Informatik, HTWG Konstanz</div></div>
+          <div class="fact"><div class="fact-value" data-i18n="fact3Value">M.Sc.</div><div class="fact-label" data-i18n="fact3Label">Informatik, LMU München, seit 2026</div></div>
+          <div class="fact"><div class="fact-value" data-i18n="fact4Value">Tutor</div><div class="fact-label" data-i18n="fact4Label">Digitaltechnik an der HTWG</div></div>
+        </div>
       </div>
     </section>
 
-    <section id="cv-preview" data-aos="fade-up">
-      <h2 data-i18n="cvPreviewTitle">Lebenslauf</h2>
-
-      <div class="cv-preview-grid">
-        <div class="cv-preview-card glass">
-          <h3 data-i18n="cvEducationTitle">Ausbildung</h3>
-          <div class="cv-preview-item">
-            <h4 data-i18n="cvEducationMasterDegreeShort">Master of Science, Informatik</h4>
-            <p class="cv-preview-detail" data-i18n="cvEducationMasterSchool">LMU München</p>
-          </div>
-          <div class="cv-preview-item">
-            <h4 data-i18n="cvEducationBachelorDegreeShort">Bachelor of Science, Angewandte Informatik</h4>
-            <p class="cv-preview-detail" data-i18n="cvEducationBachelorSchool">HTWG Konstanz</p>
-            <p class="cv-preview-detail" data-i18n="cvEducationBachelorFocus">Vertiefung: Embedded Systems</p>
-            <p class="cv-preview-description" data-i18n="cvEducationBachelorDescription">
-              Abschluss in Angewandter Informatik mit Schwerpunkt auf Embedded Systems. Inhaltlich gehörten dazu Embedded Systems, Kommunikationstechnik, Mikroprozessorsysteme, Digitale Systeme, Ubiquitous Computing und Parallel Computing. Ergänzend kamen Grundlagen aus Systemprogrammierung, Betriebssystemen, Rechnernetzen und verteilten Systemen dazu.
-            </p>
-          </div>
+    <!-- Schwerpunkte -->
+    <section class="section" id="focus">
+      <div class="wrap">
+        <div class="section-head" data-aos>
+          <span class="section-index">01</span>
+          <h2 data-i18n="focusTitle">Schwerpunkte</h2>
+          <p data-i18n="focusIntro">Woran ich arbeite und was ich gerade vertiefe.</p>
         </div>
-
-        <div class="cv-preview-card glass">
-          <h3 data-i18n="cvExperienceTitle">Praxiserfahrung</h3>
-
-          <div class="cv-preview-item">
-            <h4 data-i18n="cvExpWerkstudent">Werkstudent, Hyperstone GmbH</h4>
-            <p class="cv-preview-detail" data-i18n="cvExpWerkstudentDate">03/2023 bis 02/2024, Konstanz</p>
-            <p class="cv-preview-description" data-i18n="cvExpWerkstudentDesc">
-              Schwerpunkt auf RAID Simulation und Konzeptüberarbeitung. Dazu habe ich die Firmware Simulation unterstützt und verschiedene RAID Konfigurationen implementiert, um Leistungsunterschiede messbar zu machen.
-            </p>
-          </div>
-
-          <div class="cv-preview-item">
-            <h4 data-i18n="cvExpPraktikum">Praktikum, Hyperstone GmbH</h4>
-            <p class="cv-preview-detail" data-i18n="cvExpPraktikumDate">09/2022 bis 02/2023, Konstanz</p>
-            <p class="cv-preview-description" data-i18n="cvExpPraktikumDesc">
-              Einstieg in das Firmware Umfeld. Fokus auf nachvollziehbares Testen, Dokumentation und sauberes Vorgehen im Team.
-            </p>
-          </div>
+        <div class="focus-grid">
+          <article class="card focus-card" data-aos>
+            <div class="focus-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="6" width="12" height="12" rx="2"/><rect x="9.5" y="9.5" width="5" height="5" rx="1"/><path d="M9 2v4M15 2v4M9 18v4M15 18v4M2 9h4M2 15h4M18 9h4M18 15h4"/></svg></div>
+            <h3 data-i18n="focus1Title">Embedded & Firmware</h3>
+            <p data-i18n="focus1Text">Firmware-Simulation, NAND-Flash-Speicherarchitekturen und RAID aus der Praxis bei Hyperstone. Dazu Cross-Compilation und Testen von Firmware-Tools.</p>
+            <div class="tags"><span class="tag">C</span><span class="tag">C++</span><span class="tag">Python</span><span class="tag">NAND-Flash</span><span class="tag">RAID</span></div>
+          </article>
+          <article class="card focus-card" data-aos>
+            <div class="focus-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/><circle cx="8" cy="6" r="1.6" fill="currentColor"/><circle cx="14" cy="12" r="1.6" fill="currentColor"/><circle cx="10" cy="18" r="1.6" fill="currentColor"/></svg></div>
+            <h3 data-i18n="focus2Title">Parallele & verteilte Systeme</h3>
+            <p data-i18n="focus2Text">Parallel Computing im Bachelor und Master, aktuell Grid- und Cloud-Computing sowie die Verifikation paralleler Programme.</p>
+            <div class="tags"><span class="tag">Parallel Computing</span><span class="tag">Grid & Cloud</span><span class="tag">Verification</span></div>
+          </article>
+          <article class="card focus-card" data-aos>
+            <div class="focus-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6l7-3z"/><path d="M9 12l2 2 4-4"/></svg></div>
+            <h3 data-i18n="focus3Title">Security & Programmanalyse</h3>
+            <p data-i18n="focus3Text">Im Master vertiefe ich Programmanalyse für Security und will sie mit hardwarenaher Entwicklung zusammenbringen.</p>
+            <div class="tags"><span class="tag">Program Analysis</span><span class="tag">Security</span></div>
+          </article>
         </div>
+      </div>
+    </section>
 
-        <div class="cv-preview-card glass cv-skills-card">
-          <h3 data-i18n="cvSkillsTitle">Technische Skills</h3>
-          <div class="badges">
-            <span class="badge" data-i18n="cvSkillC">C</span>
-            <span class="badge" data-i18n="cvSkillCpp">C++</span>
-            <span class="badge" data-i18n="cvSkillPython">Python</span>
-            <span class="badge" data-i18n="cvSkillJava">Java</span>
-            <span class="badge" data-i18n="cvSkillScala">Scala</span>
-            <span class="badge" data-i18n="cvSkillVhdlBasics">VHDL (Grundlagen)</span>
-            <span class="badge" data-i18n="cvSkillEmbeddedLinuxBasics">Embedded Linux (Grundlagen)</span>
-            <span class="badge" data-i18n="cvSkillGit">Git</span>
-            <span class="badge" data-i18n="cvSkillVSCode">VS Code</span>
-            <span class="badge" data-i18n="cvSkillDebugging">Debugging</span>
+    <!-- Erfahrung -->
+    <section class="section" id="experience">
+      <div class="wrap">
+        <div class="section-head" data-aos>
+          <span class="section-index">02</span>
+          <h2 data-i18n="expTitle">Erfahrung</h2>
+        </div>
+        <div class="timeline">
+          <div class="tl-item" data-aos>
+            <div class="tl-meta">03/2023 – 02/2024<span>Konstanz</span></div>
+            <article class="card tl-card">
+              <h3 data-i18n="expWsTitle">Werkstudent</h3>
+              <p class="tl-org" data-i18n="expWsOrg">Hyperstone GmbH · Konstanz</p>
+              <ul>
+                <li data-i18n="expWs1">Simulation der Firmware zur Analyse und Optimierung der RAID-Performance</li>
+                <li data-i18n="expWs2">Implementierung und Test verschiedener RAID-Konfigurationen</li>
+                <li data-i18n="expWs3">Entwicklung und Einsatz eines Python-Modells zur Evaluierung des Firmware-Verhaltens</li>
+              </ul>
+              <div class="tags"><span class="tag">Python</span><span class="tag">C</span><span class="tag">RAID</span><span class="tag">NAND-Flash</span></div>
+            </article>
+          </div>
+          <div class="tl-item" data-aos>
+            <div class="tl-meta">09/2022 – 02/2023<span>Konstanz</span></div>
+            <article class="card tl-card">
+              <h3 data-i18n="expPrTitle">Praktikum</h3>
+              <p class="tl-org" data-i18n="expPrOrg">Hyperstone GmbH · Konstanz</p>
+              <ul>
+                <li data-i18n="expPr1">Cross-Compilation und Testing von Firmware-Tools (hsfmt)</li>
+                <li data-i18n="expPr2">Einarbeitung in NAND-Flash-basierte Speicherarchitekturen und RAID-Konzepte</li>
+              </ul>
+              <div class="tags"><span class="tag">Cross-Compilation</span><span class="tag">Testing</span><span class="tag">NAND-Flash</span></div>
+            </article>
+          </div>
+          <div class="tl-item" data-aos>
+            <div class="tl-meta" data-i18n="expTuDate">Während des Bachelors</div>
+            <article class="card tl-card">
+              <h3 data-i18n="expTuTitle">Tutor Digitaltechnik</h3>
+              <p class="tl-org" data-i18n="expTuOrg">HTWG Konstanz</p>
+              <ul>
+                <li data-i18n="expTu1">Betreuung von Studierenden in der Lehrveranstaltung Digitaltechnik</li>
+              </ul>
+            </article>
           </div>
         </div>
       </div>
+    </section>
 
-      <div class="cv-cta">
-        <a href="cv.html" class="btn btn-primary" data-i18n="cvViewFull">Vollständigen Lebenslauf ansehen</a>
-        <a href="assets/CV_Marcel_Richter.pdf" class="btn btn-secondary" download data-i18n="cvDownload">CV als PDF herunterladen</a>
+    <!-- Projekte -->
+    <section class="section" id="projects">
+      <div class="wrap">
+        <div class="section-head" data-aos>
+          <span class="section-index">03</span>
+          <h2 data-i18n="projectsTitle">Projekte</h2>
+          <p data-i18n="projectsIntro">Aus Beruf, Studium und eigener Initiative.</p>
+        </div>
+        <div class="projects-grid">
+          <a class="card project-card" href="projekt-raid.html" data-aos>
+            <div class="project-top"><span class="project-no">P/01</span><span class="project-kind" data-i18n="kindWork">Beruf</span></div>
+            <h3 data-i18n="projectRaidTitle">Firmware-Simulation & RAID-Performance</h3>
+            <p data-i18n="projectRaidSummary">Bei Hyperstone: Firmware-Simulation und ein Python-Modell, um verschiedene RAID-Konfigurationen auf NAND-Flash-Basis zu bewerten und zu vergleichen.</p>
+            <div class="project-tech"><span class="tech-tag">Python</span><span class="tech-tag">C</span><span class="tech-tag">RAID</span><span class="tech-tag">NAND-Flash</span></div>
+            <span class="project-more"><span data-i18n="projectMore">Details ansehen</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </a>
+          <article class="card project-card" data-aos>
+            <div class="project-top"><span class="project-no">P/02</span><span class="project-kind" data-i18n="kindThesis">Bachelorarbeit</span></div>
+            <h3 data-i18n="projectThesisTitle">Automatisierte Bewertung von Chatnachrichten</h3>
+            <p data-i18n="projectThesisSummary">Bachelorarbeit an der HTWG: klassische ML-Modelle bewerten Chatnachrichten, LLM-gestützte Datenerweiterung vergrößert die Trainingsbasis.</p>
+            <div class="project-tech"><span class="tech-tag">Python</span><span class="tech-tag">Machine Learning</span><span class="tech-tag">LLMs</span><span class="tech-tag">Data Augmentation</span></div>
+          </article>
+          <a class="card project-card" href="projekt-makenow.html" data-aos>
+            <div class="project-top"><span class="project-no">P/03</span><span class="project-kind" data-i18n="kindOpenSource">Open Source</span></div>
+            <h3 data-i18n="projectMakeNowTitle">DayFlow – KI-Tagesplaner</h3>
+            <p data-i18n="projectMakeNowSummary">Macht aus freien Notizen per KI Aufgaben und realistische Tagespläne, jeder Vorschlag wird vom Nutzer bestätigt. Monorepo mit getesteter Scheduling-Engine.</p>
+            <div class="project-tech"><span class="tech-tag">TypeScript</span><span class="tech-tag">React</span><span class="tech-tag">Firebase</span><span class="tech-tag">Vitest</span></div>
+            <span class="project-more"><span data-i18n="projectMore">Details ansehen</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </a>
+          <a class="card project-card" href="projekt-iot.html" data-aos>
+            <div class="project-top"><span class="project-no">P/04</span><span class="project-kind" data-i18n="kindIoT">IoT</span></div>
+            <h3 data-i18n="projectIoTTitle">Automatic Light Controller</h3>
+            <p data-i18n="projectIoTSummary">Lichtsteuerung nach Umgebungshelligkeit mit Sunrise- und Sunset-Dimmung. Sensordaten gehen per MQTT über HiveMQ an ein Datacake-Dashboard.</p>
+            <div class="project-tech"><span class="tech-tag">Arduino Nano</span><span class="tech-tag">MicroPython</span><span class="tech-tag">MQTT</span><span class="tech-tag">HiveMQ</span></div>
+            <span class="project-more"><span data-i18n="projectMore">Details ansehen</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section class="section" id="skills">
+      <div class="wrap">
+        <div class="section-head" data-aos>
+          <span class="section-index">04</span>
+          <h2 data-i18n="skillsTitle">Skills</h2>
+          <p data-i18n="skillsIntro">Was ich praktisch eingesetzt habe. Den Kontext dazu findest du bei Erfahrung und Projekten.</p>
+        </div>
+        <div class="skills-table" data-aos>
+          <div class="skills-row">
+            <h3><span data-i18n="skRowLang">Programmiersprachen</span><small data-i18n="skRowLangSub">Schwerpunkt C, C++ und Python</small></h3>
+            <div class="tags"><span class="tag">C</span><span class="tag">C++</span><span class="tag">Python</span><span class="tag">Java</span><span class="tag">Scala</span><span class="tag">TypeScript</span></div>
+          </div>
+          <div class="skills-row">
+            <h3><span data-i18n="skRowSys">Systems & Embedded</span><small data-i18n="skRowSysSub">Beruf und Studium</small></h3>
+            <div class="tags"><span class="tag">Firmware-Simulation</span><span class="tag">NAND-Flash</span><span class="tag">RAID</span><span class="tag">Cross-Compilation</span><span class="tag">Parallel Computing</span><span class="tag">MQTT</span><span class="tag">Arduino / MicroPython</span></div>
+          </div>
+          <div class="skills-row">
+            <h3><span data-i18n="skRowData">Daten & ML</span><small data-i18n="skRowDataSub">Bachelorarbeit</small></h3>
+            <div class="tags"><span class="tag">Classical ML</span><span class="tag">LLM Data Augmentation</span><span class="tag">Python</span></div>
+          </div>
+          <div class="skills-row">
+            <h3><span data-i18n="skRowTools">Tools & Methoden</span><small data-i18n="skRowToolsSub">Alltag und Projekte</small></h3>
+            <div class="tags"><span class="tag">Git</span><span class="tag">React</span><span class="tag">Vite</span><span class="tag">Firebase</span><span class="tag">Vitest</span><span class="tag">Agile</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="wrap">
+      <div class="cta" data-aos>
+        <div>
+          <h2 data-i18n="ctaTitle">Lass uns sprechen</h2>
+          <p data-i18n="ctaText">Ich suche eine Werkstudentenstelle in München, am liebsten in Embedded, Firmware oder Security.</p>
+        </div>
+        <div class="cta-actions">
+          <a href="kontakt.html" class="btn btn-primary" data-i18n="ctaBtn">Nachricht schreiben</a>
+          <a href="https://www.linkedin.com/in/marcel-ric/" class="btn btn-secondary" target="_blank" rel="noopener">LinkedIn ↗</a>
+        </div>
       </div>
     </section>
   </main>
@@ -204,10 +223,10 @@
   <footer class="site-footer">
     <div class="footer-content">
       <ul class="footer-links">
-        <li><a href="index.html" data-i18n="navHome">Portfolio</a></li>
         <li><a href="cv.html" data-i18n="navCV">Lebenslauf</a></li>
         <li><a href="kontakt.html" data-i18n="footerContact">Kontakt</a></li>
-        <li><a href="https://www.linkedin.com/in/marcel-ric/" target="_blank" rel="noopener" data-i18n="footerLinkedIn">LinkedIn</a></li>
+        <li><a href="https://www.linkedin.com/in/marcel-ric/" target="_blank" rel="noopener">LinkedIn</a></li>
+        <li><a href="https://github.com/Ma161ric" target="_blank" rel="noopener">GitHub</a></li>
       </ul>
       <div class="footer-legal">
         <a href="impressum.html" data-i18n="footerImpressum">Impressum</a>
@@ -216,7 +235,6 @@
     </div>
   </footer>
 
-  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
   <script src="script.js"></script>
 </body>
 </html>

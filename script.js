@@ -1,46 +1,4 @@
-// ============================================
-// Initialize Theme (Before Header Loads)
-// ============================================
-function initTheme() {
-  const savedDarkMode = localStorage.getItem("darkMode") === "true";
-  if (savedDarkMode) {
-    document.body.classList.add("dark");
-  }
-}
-
-// ============================================
-// Load Header Component
-// ============================================
-async function loadHeaderComponent() {
-  try {
-    const response = await fetch('_header.html');
-    const html = await response.text();
-    const headerPlaceholder = document.getElementById('header-placeholder');
-    if (headerPlaceholder) {
-      headerPlaceholder.innerHTML = html;
-    }
-    return true;
-  } catch (error) {
-    console.warn('Header component could not be loaded:', error);
-    return false;
-  }
-}
-
-// Initialize theme FIRST
-initTheme();
-
-// Load header and initialize components
-document.addEventListener("DOMContentLoaded", () => {
-  loadHeaderComponent().then(() => {
-    setTimeout(() => {
-      initLanguageSwitcher();
-      setActiveNavLink();
-      initMobileMenu();
-      initDarkMode();
-    }, 500);
-  });
-});
-
+// Portfolio Marcel Richter – Übersetzungen und Seitenlogik
 // ============================================
 // Translations
 // ============================================
@@ -763,268 +721,268 @@ const translations = {
   }
 };
 
-
-// ================================================================================
-// Dark Mode
 // ============================================
-function initDarkMode() {
-  const toggleButton = document.getElementById("darkModeToggle");
-  if (!toggleButton) {
-    updateMobileDarkModeButton();
-    return;
-  }
-
-  const savedDarkMode = localStorage.getItem("darkMode") === "true";
-  if (savedDarkMode) document.body.classList.add("dark");
-
-  updateDarkModeButton();
-
-  toggleButton.addEventListener("click", () => {
-    document.body.classList.toggle("dark");
-    const isDark = document.body.classList.contains("dark");
-    localStorage.setItem("darkMode", String(isDark));
-    updateDarkModeButton();
-  });
-}
-
-function updateDarkModeButton() {
-  const toggleButton = document.getElementById("darkModeToggle");
-  const isDark = document.body.classList.contains("dark");
-  const currentLang = getCurrentLanguage();
-
-  if (toggleButton) {
-    toggleButton.textContent = isDark
-      ? translations[currentLang].darkModeDark
-      : translations[currentLang].darkModeLight;
-  }
-
-  updateMobileDarkModeButton();
-}
-
+// Inhalte Startseite + Lebenslauf (Stand 11/2026)
+// Überschreibt bzw. ergänzt die Einträge oben.
 // ============================================
-// Language Switcher
-// ============================================
-function getCurrentLanguage() {
-  return localStorage.getItem("language") || "de";
-}
+Object.assign(translations.de, {
+  navHome: "Portfolio",
+  navCV: "Lebenslauf",
+  navContact: "Kontakt",
 
-function setLanguage(lang) {
-  localStorage.setItem("language", lang);
-  updatePageLanguage();
-  updateLanguageButton();
-  updateDarkModeButton();
-  updateMobileLanguageButton();
-  updateMobileDarkModeButton();
-  autoTranslatePageContent();
-}
+  heroEyebrow: "M.Sc. Informatik · LMU München",
+  heroLead:
+    "Ich entwickle Software nah an der Hardware: Firmware, Speichersysteme und parallele Systeme. Im Master an der LMU vertiefe ich Systems, Embedded und Security.",
+  heroStatus: "Offen für Werkstudentenstellen in München · Embedded, Firmware, Security",
+  heroBtnProjects: "Projekte ansehen",
+  heroBtnCV: "Lebenslauf (PDF)",
+  portraitTag: "München, DE",
 
-function initLanguageSwitcher() {
-  const langButton = document.getElementById("languageToggle");
+  fact1Value: "1,5 Jahre",
+  fact1Label: "Firmware-Erfahrung bei Hyperstone",
+  fact2Value: "B.Sc.",
+  fact2Label: "Angewandte Informatik, HTWG Konstanz",
+  fact3Value: "M.Sc.",
+  fact3Label: "Informatik, LMU München, seit 2026",
+  fact4Value: "Tutor",
+  fact4Label: "Digitaltechnik an der HTWG",
 
-  const savedLang = getCurrentLanguage();
-  updatePageLanguage();
-  updateLanguageButton();
-  updateMobileLanguageButton();
+  focusTitle: "Schwerpunkte",
+  focusIntro: "Woran ich arbeite und was ich gerade vertiefe.",
+  focus1Title: "Embedded & Firmware",
+  focus1Text:
+    "Firmware-Simulation, NAND-Flash-Speicherarchitekturen und RAID aus der Praxis bei Hyperstone. Dazu Cross-Compilation und Testen von Firmware-Tools.",
+  focus2Title: "Parallele & verteilte Systeme",
+  focus2Text:
+    "Parallel Computing im Bachelor und Master, aktuell Grid- und Cloud-Computing sowie die Verifikation paralleler Programme.",
+  focus3Title: "Security & Programmanalyse",
+  focus3Text:
+    "Im Master vertiefe ich Programmanalyse für Security und will sie mit hardwarenaher Entwicklung zusammenbringen.",
 
-  if (!langButton) return;
+  expTitle: "Erfahrung",
+  expWsTitle: "Werkstudent",
+  expWsOrg: "Hyperstone GmbH · Konstanz",
+  expWs1: "Simulation der Firmware zur Analyse und Optimierung der RAID-Performance",
+  expWs2: "Implementierung und Test verschiedener RAID-Konfigurationen",
+  expWs3: "Entwicklung und Einsatz eines Python-Modells zur Evaluierung des Firmware-Verhaltens",
+  expPrTitle: "Praktikum",
+  expPrOrg: "Hyperstone GmbH · Konstanz",
+  expPr1: "Cross-Compilation und Testing von Firmware-Tools (hsfmt)",
+  expPr2: "Einarbeitung in NAND-Flash-basierte Speicherarchitekturen und RAID-Konzepte",
+  expTuTitle: "Tutor Digitaltechnik",
+  expTuOrg: "HTWG Konstanz",
+  expTuDate: "Während des Bachelors",
+  expTu1: "Betreuung von Studierenden in der Lehrveranstaltung Digitaltechnik",
 
-  langButton.addEventListener("click", () => {
-    const currentLang = getCurrentLanguage();
-    const newLang = currentLang === "de" ? "en" : "de";
-    setLanguage(newLang);
-  });
-}
+  projectsTitle: "Projekte",
+  projectsIntro: "Aus Beruf, Studium und eigener Initiative.",
+  projectMore: "Details ansehen",
+  kindWork: "Beruf",
+  kindThesis: "Bachelorarbeit",
+  kindOpenSource: "Open Source",
+  kindIoT: "IoT",
+  projectRaidTitle: "Firmware-Simulation & RAID-Performance",
+  projectRaidSummary:
+    "Bei Hyperstone: Firmware-Simulation und ein Python-Modell, um verschiedene RAID-Konfigurationen auf NAND-Flash-Basis zu bewerten und zu vergleichen.",
+  projectThesisTitle: "Automatisierte Bewertung von Chatnachrichten",
+  projectThesisSummary:
+    "Bachelorarbeit an der HTWG: klassische ML-Modelle bewerten Chatnachrichten, LLM-gestützte Datenerweiterung vergrößert die Trainingsbasis.",
+  projectMakeNowTitle: "DayFlow – KI-Tagesplaner",
+  projectMakeNowSummary:
+    "Macht aus freien Notizen per KI Aufgaben und realistische Tagespläne, jeder Vorschlag wird vom Nutzer bestätigt. Monorepo mit getesteter Scheduling-Engine.",
+  projectIoTTitle: "Automatic Light Controller",
+  projectIoTSummary:
+    "Lichtsteuerung nach Umgebungshelligkeit mit Sunrise- und Sunset-Dimmung. Sensordaten gehen per MQTT über HiveMQ an ein Datacake-Dashboard.",
 
-function updateLanguageButton() {
-  const langButton = document.getElementById("languageToggle");
-  if (!langButton) return;
+  skillsTitle: "Skills",
+  skillsIntro: "Was ich praktisch eingesetzt habe. Den Kontext dazu findest du bei Erfahrung und Projekten.",
+  skRowLang: "Programmiersprachen",
+  skRowLangSub: "Schwerpunkt C, C++ und Python",
+  skRowSys: "Systems & Embedded",
+  skRowSysSub: "Beruf und Studium",
+  skRowData: "Daten & ML",
+  skRowDataSub: "Bachelorarbeit",
+  skRowTools: "Tools & Methoden",
+  skRowToolsSub: "Alltag und Projekte",
 
-  const currentLang = getCurrentLanguage();
-  langButton.textContent = currentLang === "de"
-    ? translations.de.languageDE
-    : translations.en.languageEN;
-}
+  ctaTitle: "Lass uns sprechen",
+  ctaText: "Ich suche eine Werkstudentenstelle in München, am liebsten in Embedded, Firmware oder Security.",
+  ctaBtn: "Nachricht schreiben",
 
-function updatePageLanguage() {
-  const lang = getCurrentLanguage();
-  const t = translations[lang];
+  // Lebenslauf
+  cvTitle: "Lebenslauf",
+  cvSub: "Marcel Richter · Stand November 2026",
+  cvDownload: "PDF herunterladen",
+  cvEducationTitle: "Ausbildung",
+  cvExperienceTitle: "Erfahrung",
+  cvSkillsTitle: "Skills",
+  cvToday: "heute",
+  cvMscTitle: "M.Sc. Informatik",
+  cvMscOrg: "LMU München",
+  cvMscText: "Schwerpunkte Systems, Embedded und Security. Ausgewählte Module:",
+  cvBscTitle: "B.Sc. Angewandte Informatik",
+  cvBscOrg: "HTWG Konstanz · Vertiefung Embedded Systems",
+  cvBsc1: "Bachelorarbeit: automatisierte Bewertung von Chatnachrichten mit klassischen ML-Modellen und LLM-gestützter Datenerweiterung",
+  cvBsc2: "Module u. a. Mikroprozessorsysteme, Digitale Systeme, Kommunikationstechnik, Ubiquitous Computing und Parallel Computing",
+  cvBsc3: "Tutor für Digitaltechnik",
+  cvEduFhrTitle: "Fachhochschulreife",
+  cvEduFhrSchool: "Karl-Maybach-Gymnasium, Friedrichshafen",
+  cvAsideContact: "Kontakt",
+  cvAsideMessage: "Nachricht schreiben",
+  cvLanguagesTitle: "Sprachen",
+  cvLangGerman: "Deutsch",
+  cvLangEnglish: "Englisch",
+  cvLangFrench: "Französisch",
+  cvLangSpanish: "Spanisch",
+  cvInterestsTitle: "Interessen",
+  cvInt1: "Wandern",
+  cvInt2: "Rennradfahren",
+  cvInt3: "Foto- und Videografie",
+  cvInt4: "Digitale Innovationen",
 
-  document.documentElement.lang = lang;
+  // Projektseite RAID
+  projectRaidFeature1: "Simulation der Firmware zur Analyse und Optimierung der RAID-Performance",
+  projectRaidFeature2: "Implementierung und Test verschiedener RAID-Konfigurationen",
+  projectRaidFeature3: "Entwicklung und Einsatz eines Python-Modells zur Evaluierung des Firmware-Verhaltens",
+  projectRaidFeature4: "Grundlage aus dem Praktikum: NAND-Flash-Speicherarchitekturen, RAID-Konzepte und Cross-Compilation von Firmware-Tools",
+  projectRaidGoal:
+    "Verstehen und messbar machen, wie sich unterschiedliche RAID-Konfigurationen auf die Performance von NAND-Flash-basierten Speichern auswirken, ohne dafür jedes Setup auf echter Hardware aufbauen zu müssen.",
+  projectRaidImplementation:
+    "Ausgangspunkt waren die RAID-Konzepte und die NAND-Flash-Architektur. Auf Basis der Firmware-Simulation habe ich verschiedene RAID-Konfigurationen umgesetzt und getestet und die Ergebnisse mit einem eigenen Python-Modell ausgewertet, um Leistungsunterschiede vergleichbar zu machen.",
 
-  document.querySelectorAll("[data-i18n]").forEach(element => {
-    const key = element.getAttribute("data-i18n");
-    if (!key || !t[key]) return;
+  // Datenschutz/Impressum: AOS entfernt
+  privacyExternalResourcesText:
+    "Diese Website lädt keine Skripte, Schriften oder Stylesheets von externen Servern. Alle Ressourcen werden direkt über GitHub Pages ausgeliefert.",
+  privacyStatusDate: "Stand: November 2026"
+});
 
-    if (element.tagName === "INPUT" || element.tagName === "TEXTAREA") {
-      if (element.placeholder !== undefined) element.placeholder = t[key];
-    } else {
-      element.textContent = t[key];
-    }
-  });
+Object.assign(translations.en, {
+  navHome: "Portfolio",
+  navCV: "CV",
+  navContact: "Contact",
 
-  document.querySelectorAll("[data-i18n-placeholder]").forEach(element => {
-    const key = element.getAttribute("data-i18n-placeholder");
-    if (key && t[key]) element.placeholder = t[key];
-  });
-}
+  heroEyebrow: "M.Sc. Computer Science · LMU Munich",
+  heroLead:
+    "I build software close to the hardware: firmware, storage systems and parallel systems. In my Master's at LMU Munich I'm going deeper into systems, embedded and security.",
+  heroStatus: "Open to working-student roles in Munich · Embedded, firmware, security",
+  heroBtnProjects: "View projects",
+  heroBtnCV: "CV (PDF)",
+  portraitTag: "Munich, DE",
 
-// ============================================
-// Navigation Active State
-// ============================================
-function setActiveNavLink() {
-  const currentPage = window.location.pathname.split("/").pop() || "index.html";
-  const navLinks = document.querySelectorAll(".nav-links a");
+  fact1Value: "1.5 years",
+  fact1Label: "Firmware experience at Hyperstone",
+  fact2Value: "B.Sc.",
+  fact2Label: "Applied Computer Science, HTWG Konstanz",
+  fact3Value: "M.Sc.",
+  fact3Label: "Computer Science, LMU Munich, since 2026",
+  fact4Value: "Tutor",
+  fact4Label: "Digital logic at HTWG",
 
-  navLinks.forEach(link => {
-    link.classList.remove("active");
-    const href = link.getAttribute("href");
+  focusTitle: "Focus areas",
+  focusIntro: "What I work on and what I'm digging into right now.",
+  focus1Title: "Embedded & firmware",
+  focus1Text:
+    "Firmware simulation, NAND flash storage architectures and RAID from hands-on work at Hyperstone. Plus cross-compiling and testing firmware tools.",
+  focus2Title: "Parallel & distributed systems",
+  focus2Text:
+    "Parallel computing in my Bachelor's and Master's, currently grid and cloud computing and the verification of parallel programs.",
+  focus3Title: "Security & program analysis",
+  focus3Text:
+    "In my Master's I'm studying program analysis for security and want to combine it with low-level development.",
 
-    if (
-      href === currentPage ||
-      (currentPage === "" && href === "index.html") ||
-      (currentPage === "index.html" && href === "index.html")
-    ) {
-      link.classList.add("active");
-    }
-  });
-}
+  expTitle: "Experience",
+  expWsTitle: "Working Student",
+  expWsOrg: "Hyperstone GmbH · Konstanz",
+  expWs1: "Simulated firmware to analyse and optimise RAID performance",
+  expWs2: "Implemented and tested different RAID configurations",
+  expWs3: "Built and used a Python model to evaluate firmware behaviour",
+  expPrTitle: "Intern",
+  expPrOrg: "Hyperstone GmbH · Konstanz",
+  expPr1: "Cross-compilation and testing of firmware tools (hsfmt)",
+  expPr2: "Got up to speed on NAND flash storage architectures and RAID concepts",
+  expTuTitle: "Tutor, Digital Logic",
+  expTuOrg: "HTWG Konstanz",
+  expTuDate: "During my Bachelor's",
+  expTu1: "Supported students in the digital logic course",
 
-// ============================================
-// Mobile Menu
-// ============================================
-function initMobileMenu() {
-  const hamburger = document.getElementById("hamburger");
-  const mobileMenu = document.getElementById("mobileMenu");
-  const mobileOverlay = document.getElementById("mobileOverlay");
-  const mobileMenuClose = document.getElementById("mobileMenuClose");
-  const mobileMenuLinks = document.querySelectorAll(".mobile-menu-links a");
-  const mobileDarkToggle = document.getElementById("mobileDarkToggle");
-  const mobileLangToggle = document.getElementById("mobileLangToggle");
+  projectsTitle: "Projects",
+  projectsIntro: "From work, university and my own initiative.",
+  projectMore: "View details",
+  kindWork: "Work",
+  kindThesis: "Bachelor thesis",
+  kindOpenSource: "Open source",
+  kindIoT: "IoT",
+  projectRaidTitle: "Firmware simulation & RAID performance",
+  projectRaidSummary:
+    "At Hyperstone: firmware simulation and a Python model to evaluate and compare RAID configurations on NAND flash.",
+  projectThesisTitle: "Automated rating of chat messages",
+  projectThesisSummary:
+    "Bachelor thesis at HTWG: classical ML models rate chat messages, LLM-based data augmentation enlarges the training set.",
+  projectMakeNowTitle: "DayFlow – AI day planner",
+  projectMakeNowSummary:
+    "Turns free-form notes into tasks and realistic day plans with AI, and the user confirms every suggestion. Monorepo with a tested scheduling engine.",
+  projectIoTTitle: "Automatic Light Controller",
+  projectIoTSummary:
+    "Light control based on ambient brightness with sunrise and sunset dimming. Sensor data travels via MQTT and HiveMQ to a Datacake dashboard.",
 
-  if (!hamburger || !mobileMenu || !mobileOverlay) {
-    console.warn("Mobile menu elements not found");
-    return;
-  }
+  skillsTitle: "Skills",
+  skillsIntro: "What I've actually used. You'll find the context under experience and projects.",
+  skRowLang: "Programming languages",
+  skRowLangSub: "Mainly C, C++ and Python",
+  skRowSys: "Systems & embedded",
+  skRowSysSub: "Work and university",
+  skRowData: "Data & ML",
+  skRowDataSub: "Bachelor thesis",
+  skRowTools: "Tools & methods",
+  skRowToolsSub: "Day-to-day and projects",
 
-  function setAria(open) {
-    if (hamburger) hamburger.setAttribute("aria-expanded", open ? "true" : "false");
-    if (mobileMenu) mobileMenu.setAttribute("aria-hidden", open ? "false" : "true");
-  }
+  ctaTitle: "Let's talk",
+  ctaText: "I'm looking for a working-student role in Munich, ideally in embedded, firmware or security.",
+  ctaBtn: "Send a message",
 
-  function openMenu() {
-    if (mobileMenu) mobileMenu.classList.add("active");
-    if (mobileOverlay) mobileOverlay.classList.add("active");
-    document.body.classList.add("menu-open");
-    setAria(true);
-    
-    // Focus close button for accessibility
-    if (mobileMenuClose) {
-      setTimeout(() => mobileMenuClose.focus(), 100);
-    }
-  }
+  cvTitle: "Curriculum Vitae",
+  cvSub: "Marcel Richter · as of November 2026",
+  cvDownload: "Download PDF",
+  cvEducationTitle: "Education",
+  cvExperienceTitle: "Experience",
+  cvSkillsTitle: "Skills",
+  cvToday: "present",
+  cvMscTitle: "M.Sc. Computer Science",
+  cvMscOrg: "LMU Munich",
+  cvMscText: "Focus on systems, embedded and security. Selected modules:",
+  cvBscTitle: "B.Sc. Applied Computer Science",
+  cvBscOrg: "HTWG Konstanz · Specialisation: Embedded Systems",
+  cvBsc1: "Thesis: automated rating of chat messages using classical ML models and LLM-based data augmentation",
+  cvBsc2: "Modules include microprocessor systems, digital systems, communications engineering, ubiquitous computing and parallel computing",
+  cvBsc3: "Tutor for digital logic",
+  cvEduFhrTitle: "University entrance qualification (Fachhochschulreife)",
+  cvEduFhrSchool: "Karl-Maybach-Gymnasium, Friedrichshafen",
+  cvAsideContact: "Contact",
+  cvAsideMessage: "Send a message",
+  cvLanguagesTitle: "Languages",
+  cvLangGerman: "German",
+  cvLangEnglish: "English",
+  cvLangFrench: "French",
+  cvLangSpanish: "Spanish",
+  cvInterestsTitle: "Interests",
+  cvInt1: "Hiking",
+  cvInt2: "Road cycling",
+  cvInt3: "Photography and videography",
+  cvInt4: "Digital innovation",
 
-  function closeMenu() {
-    if (mobileMenu) mobileMenu.classList.remove("active");
-    if (mobileOverlay) mobileOverlay.classList.remove("active");
-    document.body.classList.remove("menu-open");
-    setAria(false);
-    
-    // Return focus to hamburger
-    if (hamburger) hamburger.focus();
-  }
+  projectRaidFeature1: "Simulated firmware to analyse and optimise RAID performance",
+  projectRaidFeature2: "Implemented and tested different RAID configurations",
+  projectRaidFeature3: "Built and used a Python model to evaluate firmware behaviour",
+  projectRaidFeature4: "Foundation from my internship: NAND flash storage architectures, RAID concepts and cross-compiling firmware tools",
+  projectRaidGoal:
+    "Understand and measure how different RAID configurations affect the performance of NAND flash storage, without building every setup on real hardware.",
+  projectRaidImplementation:
+    "I started from the RAID concepts and the NAND flash architecture. On top of the firmware simulation I implemented and tested different RAID configurations and evaluated the results with my own Python model to make performance differences comparable.",
 
-  function toggleMenu() {
-    const isOpen = mobileMenu.classList.contains("active");
-    if (isOpen) closeMenu();
-    else openMenu();
-  }
-
-  // Hamburger click
-  if (hamburger) {
-    hamburger.addEventListener("click", (e) => {
-      e.preventDefault();
-      toggleMenu();
-    });
-  }
-
-  // Close button click
-  if (mobileMenuClose) {
-    mobileMenuClose.addEventListener("click", (e) => {
-      e.preventDefault();
-      closeMenu();
-    });
-    
-    // Keyboard support for close button
-    mobileMenuClose.addEventListener("keydown", (e) => {
-      if (e.key === "Enter" || e.key === " ") {
-        e.preventDefault();
-        closeMenu();
-      }
-    });
-  }
-
-  // Overlay click
-  if (mobileOverlay) {
-    mobileOverlay.addEventListener("click", closeMenu);
-  }
-
-  // ESC key
-  document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape" && mobileMenu && mobileMenu.classList.contains("active")) {
-      closeMenu();
-    }
-  });
-
-  // Menu links
-  mobileMenuLinks.forEach(link => link.addEventListener("click", closeMenu));
-
-  // Mobile Dark Toggle
-  if (mobileDarkToggle) {
-    mobileDarkToggle.addEventListener("click", () => {
-      document.body.classList.toggle("dark");
-      const isDark = document.body.classList.contains("dark");
-      localStorage.setItem("darkMode", String(isDark));
-      updateDarkModeButton();
-      updateMobileDarkModeButton();
-    });
-  }
-
-  // Mobile Lang Toggle
-  if (mobileLangToggle) {
-    mobileLangToggle.addEventListener("click", () => {
-      const currentLang = getCurrentLanguage();
-      const newLang = currentLang === "de" ? "en" : "de";
-      setLanguage(newLang);
-      updateMobileLanguageButton();
-    });
-  }
-
-  setAria(false);
-  updateMobileDarkModeButton();
-  updateMobileLanguageButton();
-}
-
-function updateMobileDarkModeButton() {
-  const mobileDarkToggle = document.getElementById("mobileDarkToggle");
-  if (!mobileDarkToggle) return;
-
-  const isDark = document.body.classList.contains("dark");
-  const currentLang = getCurrentLanguage();
-
-  mobileDarkToggle.textContent = isDark
-    ? translations[currentLang].darkModeDark
-    : translations[currentLang].darkModeLight;
-}
-
-function updateMobileLanguageButton() {
-  const mobileLangToggle = document.getElementById("mobileLangToggle");
-  if (!mobileLangToggle) return;
-
-  const currentLang = getCurrentLanguage();
-  mobileLangToggle.textContent = currentLang === "de"
-    ? translations.de.languageDE
-    : translations.en.languageEN;
-}
+  privacyExternalResourcesText:
+    "This website does not load scripts, fonts or stylesheets from external servers. All resources are served directly by GitHub Pages.",
+  privacyStatusDate: "As of November 2026"
+});
 
 // ============================================
 // Auto-Translation Dictionary
@@ -1139,20 +1097,142 @@ function autoTranslatePageContent() {
 }
 
 // ============================================
-// Initialize on Page Load
+// Laufzeit: Theme, Sprache, Header, Menü, Reveal
 // ============================================
-document.addEventListener("DOMContentLoaded", () => {
-  initDarkMode();
-  initLanguageSwitcher();
-  autoTranslatePageContent();
-  initMobileMenu();
-  setActiveNavLink();
+function safeGet(key) {
+  try { return localStorage.getItem(key); } catch (e) { return null; }
+}
+function safeSet(key, value) {
+  try { localStorage.setItem(key, value); } catch (e) { /* ignore */ }
+}
 
-  if (typeof AOS !== "undefined") {
-    AOS.init({
-      duration: 800,
-      once: true,
-      offset: 100
+function getCurrentLanguage() {
+  return safeGet("language") === "en" ? "en" : "de";
+}
+
+function setLanguage(lang) {
+  safeSet("language", lang);
+  updatePageLanguage();
+  autoTranslatePageContent();
+  updateLanguageButton();
+}
+
+function updatePageLanguage() {
+  const lang = getCurrentLanguage();
+  const t = translations[lang];
+  document.documentElement.lang = lang;
+
+  document.querySelectorAll("[data-i18n]").forEach(el => {
+    const key = el.getAttribute("data-i18n");
+    if (!key || !t[key]) return;
+    if (el.tagName === "INPUT" || el.tagName === "TEXTAREA") {
+      el.placeholder = t[key];
+    } else {
+      el.textContent = t[key];
+    }
+  });
+
+  document.querySelectorAll("[data-i18n-placeholder]").forEach(el => {
+    const key = el.getAttribute("data-i18n-placeholder");
+    if (key && t[key]) el.placeholder = t[key];
+  });
+}
+
+function updateLanguageButton() {
+  const btn = document.getElementById("languageToggle");
+  if (!btn) return;
+  const lang = getCurrentLanguage();
+  btn.textContent = lang === "de" ? "EN" : "DE";
+  btn.setAttribute("aria-label", lang === "de" ? "Switch to English" : "Auf Deutsch wechseln");
+}
+
+function applyTheme() {
+  const saved = safeGet("darkMode");
+  const prefersDark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+  const dark = saved === null ? prefersDark : saved === "true";
+  document.body.classList.toggle("dark", dark);
+}
+
+function initControls() {
+  const themeBtn = document.getElementById("darkModeToggle");
+  if (themeBtn) {
+    themeBtn.addEventListener("click", () => {
+      const dark = !document.body.classList.contains("dark");
+      document.body.classList.toggle("dark", dark);
+      safeSet("darkMode", String(dark));
     });
   }
+
+  const langBtn = document.getElementById("languageToggle");
+  if (langBtn) {
+    langBtn.addEventListener("click", () => {
+      setLanguage(getCurrentLanguage() === "de" ? "en" : "de");
+    });
+  }
+
+  const burger = document.getElementById("hamburger");
+  const menu = document.getElementById("mobileMenu");
+  if (burger && menu) {
+    const setOpen = open => {
+      menu.classList.toggle("open", open);
+      burger.setAttribute("aria-expanded", String(open));
+    };
+    burger.addEventListener("click", () => setOpen(!menu.classList.contains("open")));
+    menu.querySelectorAll("a").forEach(a => a.addEventListener("click", () => setOpen(false)));
+    document.addEventListener("keydown", e => { if (e.key === "Escape") setOpen(false); });
+    window.addEventListener("resize", () => { if (window.innerWidth > 760) setOpen(false); });
+  }
+}
+
+function setActiveNavLink() {
+  const current = window.location.pathname.split("/").pop() || "index.html";
+  const isProject = current.startsWith("projekt-");
+  document.querySelectorAll(".nav-links a, .mobile-menu a").forEach(a => {
+    const href = a.getAttribute("href");
+    const active = href === current || (isProject && href === "index.html");
+    a.classList.toggle("active", active);
+    if (active) a.setAttribute("aria-current", "page");
+  });
+}
+
+function initReveal() {
+  const items = document.querySelectorAll("[data-aos]");
+  if (!("IntersectionObserver" in window)) {
+    items.forEach(el => el.classList.add("is-visible"));
+    return;
+  }
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("is-visible");
+        io.unobserve(entry.target);
+      }
+    });
+  }, { rootMargin: "0px 0px -8% 0px", threshold: 0.05 });
+  items.forEach(el => io.observe(el));
+}
+
+async function loadHeaderComponent() {
+  const placeholder = document.getElementById("header-placeholder");
+  if (!placeholder) return;
+  try {
+    const res = await fetch("_header.html");
+    placeholder.outerHTML = await res.text();
+  } catch (e) {
+    console.warn("Header konnte nicht geladen werden:", e);
+  }
+}
+
+document.documentElement.classList.add("js");
+if (document.body) applyTheme();
+
+document.addEventListener("DOMContentLoaded", async () => {
+  applyTheme();
+  initReveal();
+  await loadHeaderComponent();
+  initControls();
+  setActiveNavLink();
+  updatePageLanguage();
+  autoTranslatePageContent();
+  updateLanguageButton();
 });

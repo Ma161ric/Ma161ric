@@ -3,145 +3,159 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lebenslauf | Marcel Richter</title>
-  <meta name="description" content="Lebenslauf von Marcel Richter. Masterstudent der Informatik an der LMU München, zuvor B.Sc. Angewandte Informatik an der HTWG Konstanz.">
-
-  <!-- Favicon -->
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23312e81'/><text x='50' y='65' font-size='48' font-weight='bold' fill='%23818cf8' text-anchor='middle' font-family='Arial, sans-serif'>MR</text></svg>">
-
-  <!-- CSS -->
+  <title>Lebenslauf · Marcel Richter</title>
+  <meta name="description" content="Lebenslauf von Marcel Richter: M.Sc. Informatik an der LMU München, B.Sc. Angewandte Informatik an der HTWG Konstanz, Firmware-Erfahrung bei Hyperstone.">
+  <meta name="author" content="Marcel Richter">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect x='6' y='6' width='88' height='88' rx='18' fill='%2315171c'/><text x='50' y='63' font-size='38' font-weight='700' fill='%233ddc97' text-anchor='middle' font-family='ui-monospace,Menlo,monospace'>MR</text></svg>">
   <link rel="stylesheet" href="style.css">
-  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
 </head>
 <body>
   <div id="header-placeholder"></div>
 
-  <!-- Main Content -->
-  <main class="content">
-    <div class="project-detail" data-aos="fade-up">
-      <h1 data-i18n="cvTitle">Lebenslauf</h1>
+  <main class="wrap">
+    <header class="cv-hero" data-aos>
+      <div>
+        <h1 data-i18n="cvTitle">Lebenslauf</h1>
+        <p data-i18n="cvSub">Marcel Richter · Stand November 2026</p>
+      </div>
+      <a href="assets/CV_Marcel_Richter.pdf" class="btn btn-primary" download>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"/></svg>
+        <span data-i18n="cvDownload">PDF herunterladen</span>
+      </a>
+    </header>
 
-      <!-- Ausbildung -->
-      <section class="cv-section">
-        <h2 data-i18n="cvEducationTitle">Ausbildung</h2>
-        <div class="cv-item">
-          <div class="cv-item-header">
-            <h3 data-i18n="cvEducationMasterDegree">Master of Science - Informatik</h3>
-          </div>
-          <p class="cv-institution" data-i18n="cvEducationMasterSchool">LMU München</p>
-        </div>
-        <div class="cv-item">
-          <div class="cv-item-header">
-            <h3 data-i18n="cvEducationBachelorDegree">Bachelor of Science - Angewandte Informatik</h3>
-            <span class="cv-date" data-i18n="cvEducationDateBachelor">02/2026</span>
-          </div>
-          <p class="cv-institution" data-i18n="cvEducationBachelorSchool">HTWG Konstanz</p>
-        </div>
-        <div class="cv-item">
-          <div class="cv-item-header">
-          <h3 data-i18n="cvEduFhrTitle">Fachhochschulreife</h3>
-            <span class="cv-date" data-i18n="cvEduFhrDate">2019</span>
-          </div>
-          <p class="cv-institution" data-i18n="cvEduFhrSchool">
-            Karl-Maybach-Gymnasium, Friedrichshafen
-          </p>
-        </div>
-      </section>
+    <div class="cv-layout">
+      <div>
+        <section class="cv-block" data-aos>
+          <h2 data-i18n="cvEducationTitle">Ausbildung</h2>
 
-      <!-- Praxiserfahrung -->
-      <section class="cv-section">
-        <h2 data-i18n="cvExperienceTitle">Professionelle Erfahrung</h2>
-
-        <div class="cv-item">
-          <div class="cv-item-header">
-            <h3 data-i18n="cvExpWerkstudent">Werkstudent</h3>
-            <span class="cv-date" data-i18n="cvExpWerkstudentDate">03/2023 - 02/2024</span>
+          <div class="cv-entry">
+            <div class="cv-date">04/2026 – <span data-i18n="cvToday">heute</span></div>
+            <div>
+              <h3 data-i18n="cvMscTitle">M.Sc. Informatik</h3>
+              <p class="cv-org" data-i18n="cvMscOrg">LMU München</p>
+              <p data-i18n="cvMscText">Schwerpunkte Systems, Embedded und Security. Ausgewählte Module:</p>
+              <div class="tags">
+                <span class="tag">Advanced Topics in Parallel Computing</span>
+                <span class="tag">Grid and Cloud Computing</span>
+                <span class="tag">Program Analysis for Security</span>
+                <span class="tag">Verification of Parallel Programs</span>
+              </div>
+            </div>
           </div>
-          <p class="cv-institution" data-i18n="cvExpWerkstudentCompany">Hyperstone GmbH, Konstanz</p>
-          <ul class="cv-highlights">
-            <li data-i18n="cvExpWerkstudentTask1">RAID-Simulation und Konzeptüberarbeitung</li>
-            <li data-i18n="cvExpWerkstudentTask2">Simulation der Firmware</li>
-            <li data-i18n="cvExpWerkstudentTask3">Implementierung verschiedener RAID-Konfigurationen zum Leistungstest</li>
+
+          <div class="cv-entry">
+            <div class="cv-date">10/2020 – 02/2026</div>
+            <div>
+              <h3 data-i18n="cvBscTitle">B.Sc. Angewandte Informatik</h3>
+              <p class="cv-org" data-i18n="cvBscOrg">HTWG Konstanz · Vertiefung Embedded Systems</p>
+              <ul>
+                <li data-i18n="cvBsc1">Bachelorarbeit: automatisierte Bewertung von Chatnachrichten mit klassischen ML-Modellen und LLM-gestützter Datenerweiterung</li>
+                <li data-i18n="cvBsc2">Module u. a. Mikroprozessorsysteme, Digitale Systeme, Kommunikationstechnik, Ubiquitous Computing und Parallel Computing</li>
+                <li data-i18n="cvBsc3">Tutor für Digitaltechnik</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="cv-entry">
+            <div class="cv-date">2019</div>
+            <div>
+              <h3 data-i18n="cvEduFhrTitle">Fachhochschulreife</h3>
+              <p class="cv-org" data-i18n="cvEduFhrSchool">Karl-Maybach-Gymnasium, Friedrichshafen</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="cv-block" data-aos>
+          <h2 data-i18n="cvExperienceTitle">Erfahrung</h2>
+
+          <div class="cv-entry">
+            <div class="cv-date">03/2023 – 02/2024</div>
+            <div>
+              <h3 data-i18n="expWsTitle">Werkstudent</h3>
+              <p class="cv-org" data-i18n="expWsOrg">Hyperstone GmbH · Konstanz</p>
+              <ul>
+                <li data-i18n="expWs1">Simulation der Firmware zur Analyse und Optimierung der RAID-Performance</li>
+                <li data-i18n="expWs2">Implementierung und Test verschiedener RAID-Konfigurationen</li>
+                <li data-i18n="expWs3">Entwicklung und Einsatz eines Python-Modells zur Evaluierung des Firmware-Verhaltens</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="cv-entry">
+            <div class="cv-date">09/2022 – 02/2023</div>
+            <div>
+              <h3 data-i18n="expPrTitle">Praktikum</h3>
+              <p class="cv-org" data-i18n="expPrOrg">Hyperstone GmbH · Konstanz</p>
+              <ul>
+                <li data-i18n="expPr1">Cross-Compilation und Testing von Firmware-Tools (hsfmt)</li>
+                <li data-i18n="expPr2">Einarbeitung in NAND-Flash-basierte Speicherarchitekturen und RAID-Konzepte</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section class="cv-block" data-aos>
+          <h2 data-i18n="cvSkillsTitle">Skills</h2>
+          <div class="skills-table">
+            <div class="skills-row">
+              <h3 data-i18n="skRowLang">Programmiersprachen</h3>
+              <div class="tags"><span class="tag">C</span><span class="tag">C++</span><span class="tag">Python</span><span class="tag">Java</span><span class="tag">Scala</span><span class="tag">TypeScript</span></div>
+            </div>
+            <div class="skills-row">
+              <h3 data-i18n="skRowSys">Systems & Embedded</h3>
+              <div class="tags"><span class="tag">Firmware-Simulation</span><span class="tag">NAND-Flash</span><span class="tag">RAID</span><span class="tag">Cross-Compilation</span><span class="tag">Parallel Computing</span><span class="tag">MQTT</span></div>
+            </div>
+            <div class="skills-row">
+              <h3 data-i18n="skRowData">Daten & ML</h3>
+              <div class="tags"><span class="tag">Classical ML</span><span class="tag">LLM Data Augmentation</span></div>
+            </div>
+            <div class="skills-row">
+              <h3 data-i18n="skRowTools">Tools & Methoden</h3>
+              <div class="tags"><span class="tag">Git</span><span class="tag">React</span><span class="tag">Firebase</span><span class="tag">Vitest</span><span class="tag">Agile</span></div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <aside class="cv-aside" data-aos>
+        <div class="card">
+          <h2 data-i18n="cvAsideContact">Kontakt</h2>
+          <ul class="aside-list">
+            <li><a href="kontakt.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg><span data-i18n="cvAsideMessage">Nachricht schreiben</span></a></li>
+            <li><a href="https://www.linkedin.com/in/marcel-ric/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg>LinkedIn</a></li>
+            <li><a href="https://github.com/Ma161ric" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg>GitHub</a></li>
           </ul>
         </div>
-
-        <div class="cv-item">
-          <div class="cv-item-header">
-            <h3 data-i18n="cvExpPraktikum">Praktikum</h3>
-            <span class="cv-date" data-i18n="cvExpPraktikumDate">09/2022 - 02/2023</span>
-          </div>
-          <p class="cv-institution" data-i18n="cvExpPraktikumCompany">Hyperstone GmbH, Konstanz</p>
+        <div class="card">
+          <h2 data-i18n="cvLanguagesTitle">Sprachen</h2>
+          <ul class="aside-list">
+            <li data-i18n="cvLangGerman">Deutsch</li>
+            <li data-i18n="cvLangEnglish">Englisch</li>
+            <li data-i18n="cvLangFrench">Französisch</li>
+            <li data-i18n="cvLangSpanish">Spanisch</li>
+          </ul>
         </div>
-      </section>
-
-      <!-- Skills -->
-      <section class="cv-section">
-        <h2 data-i18n="cvSkillsTitle">Kenntnisse</h2>
-
-        <div class="cv-skills-category">
-          <h4 data-i18n="cvSkillCatProgrammingLanguages">Programmiersprachen</h4>
-          <div class="badges">
-            <span class="badge" data-i18n="cvSkillPython">Python</span>
-            <span class="badge" data-i18n="cvSkillCpp">C++</span>
-            <span class="badge" data-i18n="cvSkillC">C</span>
-            <span class="badge" data-i18n="cvSkillJava">Java</span>
-            <span class="badge" data-i18n="cvSkillScala">Scala</span>
-          </div>
+        <div class="card">
+          <h2 data-i18n="cvInterestsTitle">Interessen</h2>
+          <ul class="aside-list">
+            <li data-i18n="cvInt1">Wandern</li>
+            <li data-i18n="cvInt2">Rennradfahren</li>
+            <li data-i18n="cvInt3">Foto- und Videografie</li>
+            <li data-i18n="cvInt4">Digitale Innovationen</li>
+          </ul>
         </div>
-
-        <div class="cv-skills-category">
-          <h4 data-i18n="cvSkillCatSoftwareDev">Softwareentwicklung</h4>
-          <div class="badges">
-            <span class="badge" data-i18n="cvSkillGitVersioning">Git Versionierung</span>
-            <span class="badge" data-i18n="cvSkillAgile">Agiles Arbeiten</span>
-          </div>
-        </div>
-
-        <div class="cv-skills-category">
-          <h4 data-i18n="cvSkillCatEmbeddedSystems">Embedded Systems</h4>
-          <div class="badges">
-            <span class="badge" data-i18n="cvSkillCommunicationTech">Kommunikationstechnik</span>
-            <span class="badge" data-i18n="cvSkillUbiquitousComputing">Ubiquitous Computing</span>
-            <span class="badge" data-i18n="cvSkillDigitalSystems">Digitale Systeme</span>
-          </div>
-        </div>
-      </section>
-
-      <!-- Sprachen -->
-      <section class="cv-section">
-        <h2 data-i18n="cvLanguagesTitle">Sprachkenntnisse</h2>
-        <div class="cv-languages">
-          <div class="cv-language">
-            <span data-i18n="cvLangGerman">Deutsch</span>
-          </div>
-          <div class="cv-language">
-            <span data-i18n="cvLangEnglish">Englisch</span>
-          </div>
-          <div class="cv-language">
-            <span data-i18n="cvLangFrench">Französisch</span>
-          </div>
-          <div class="cv-language">
-            <span data-i18n="cvLangSpanish">Spanisch</span>
-          </div>
-        </div>
-      </section>
-
-      <!-- Actions -->
-      <div class="cv-actions">
-        <a href="assets/CV_Marcel_Richter.pdf" class="btn btn-primary" download data-i18n="cvDownload">CV als PDF herunterladen</a>
-        <a href="kontakt.html" class="btn btn-secondary" data-i18n="cvContactBtn">Kontakt aufnehmen</a>
-      </div>
+      </aside>
     </div>
   </main>
 
-  <!-- Footer -->
   <footer class="site-footer">
     <div class="footer-content">
       <ul class="footer-links">
-        <li><a href="index.html" data-i18n="navHome">Start</a></li>
-        <li><a href="cv.html" data-i18n="navCV">Lebenslauf</a></li>
+        <li><a href="index.html" data-i18n="navHome">Portfolio</a></li>
         <li><a href="kontakt.html" data-i18n="footerContact">Kontakt</a></li>
-        <li><a href="https://www.linkedin.com/in/marcel-ric/" target="_blank" rel="noopener" data-i18n="footerLinkedIn">LinkedIn</a></li>
+        <li><a href="https://www.linkedin.com/in/marcel-ric/" target="_blank" rel="noopener">LinkedIn</a></li>
+        <li><a href="https://github.com/Ma161ric" target="_blank" rel="noopener">GitHub</a></li>
       </ul>
       <div class="footer-legal">
         <a href="impressum.html" data-i18n="footerImpressum">Impressum</a>
@@ -150,8 +164,6 @@
     </div>
   </footer>
 
-  <!-- Scripts -->
-  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
