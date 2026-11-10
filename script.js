@@ -986,6 +986,78 @@ Object.assign(translations.en, {
   privacyStatusDate: "As of November 2026"
 });
 
+// Stand FlowCV-Export 11/2026
+Object.assign(translations.de, {
+ "heroLead": "Ich entwickle Software nah an der Hardware: Firmware für NAND-Flash-Controller, Mikrocontroller in C und Assembler, parallele Systeme. Im Master an der LMU vertiefe ich Systems und Security.",
+ "heroStatus": "Ab sofort verfügbar · Werkstudent in München, bis 16 h/Woche",
+ "focus1Text": "1,5 Jahre Firmware für NAND-Flash-Controller bei Hyperstone: Simulation, RAID, Cross-Compilation. Dazu Mikrocontroller in C und Assembler aus den Embedded-Laboren.",
+ "focus3Text": "Program Analysis for Security im Master, dazu Grundlagen in Kryptographie, Secure Coding, Fuzzing und Pentesting.",
+ "expWsTitle": "Werkstudent Software/Firmware",
+ "expWs1": "Simulation von Controller-Firmware zur Analyse und Optimierung der RAID-Performance",
+ "expWs2": "Implementierung und Test verschiedener RAID-Konfigurationen für NAND-Flash-Speicher",
+ "expWs3": "Entwicklung eines Python-Modells zur Bewertung des Firmware-Verhaltens",
+ "expPrTitle": "Praktikant (Praxissemester)",
+ "expTuDate": "WiSe 2024/25",
+ "kindLab": "Labor",
+ "kindTeam": "Teamprojekt · 1,0",
+ "projectLabTitle": "Embedded-Laborprojekte",
+ "projectLabSummary": "Vertiefung Embedded Systems an der HTWG: MSP430-Mikrocontroller in C und Assembler, Peripherie über UART, SPI und I²C, Embedded Linux auf dem Raspberry Pi und Schaltungsentwurf in VHDL für FPGAs.",
+ "projectFlowTitle": "flowculate – Kundenlaufweg-Analyse",
+ "projectFlowSummary": "Web-App aus einem 5er-Team an der HTWG, mit 1,0 bewertet. Ich habe das Frontend mit Umfrage-Flow und Layout-Editor umgesetzt.",
+ "projectThesisTitle": "ML-Pipeline zur Bewertung von Chatnachrichten",
+ "projectThesisSummary": "Bachelorarbeit: leakage-freie Python-Pipeline für rund 2.500 Nachrichten mit 20 Kriterien. Synthetische Trainingsdaten mit lokalem LLM (Gemma 3 via Ollama), vier Modelle mit 6-facher Kreuzvalidierung verglichen.",
+ "skRowLang": "Programmierung",
+ "skRowSys": "Embedded & Systems",
+ "skRowSysSub": "Beruf, Labor und Studium",
+ "skRowSec": "Security",
+ "skRowSecSub": "Grundlagen",
+ "skRowTools": "Tools",
+ "ctaText": "Ich suche ab sofort eine Werkstudentenstelle in München (bis 16 h/Woche), am liebsten in Embedded, Firmware oder Security.",
+ "cvMscDate": "04/2026 – 09/2028 (vsl.)",
+ "cvMscText": "Schwerpunkt Systems & Security. Ausgewählte Module:",
+ "cvBsc1": "Bachelorarbeit: ML-Pipeline zur Bewertung von Chatnachrichten (scikit-learn, Sentence Transformers, synthetische Daten mit Gemma 3 via Ollama)",
+ "cvBsc2": "Embedded-Labore: MSP430 in C und Assembler, UART/SPI/I²C, Embedded Linux auf dem Raspberry Pi, VHDL für FPGAs",
+ "cvBsc3": "Tutor für Digitaltechnik (WiSe 2024/25)",
+ "cvBsc4": "Teamprojekt flowculate (Note 1,0): Frontend in Next.js und TypeScript",
+ "cvLvlEn": "fließend",
+ "cvLvlFr": "Grundkenntnisse"
+});
+Object.assign(translations.en, {
+ "heroLead": "I build software close to the hardware: firmware for NAND flash controllers, microcontrollers in C and assembly, parallel systems. In my Master's at LMU Munich I'm going deeper into systems and security.",
+ "heroStatus": "Available now · working student in Munich, up to 16 h/week",
+ "focus1Text": "1.5 years of firmware for NAND flash controllers at Hyperstone: simulation, RAID, cross-compilation. Plus microcontrollers in C and assembly from the embedded labs.",
+ "focus3Text": "Program Analysis for Security in my Master's, plus basics in cryptography, secure coding, fuzzing and pentesting.",
+ "expWsTitle": "Working Student, Software/Firmware",
+ "expWs1": "Simulated controller firmware to analyse and optimise RAID performance",
+ "expWs2": "Implemented and tested different RAID configurations for NAND flash storage",
+ "expWs3": "Built a Python model to evaluate firmware behaviour",
+ "expPrTitle": "Intern (practical semester)",
+ "expTuDate": "Winter 2024/25",
+ "kindLab": "Lab",
+ "kindTeam": "Team project · 1.0",
+ "projectLabTitle": "Embedded lab projects",
+ "projectLabSummary": "Embedded systems specialisation at HTWG: MSP430 microcontrollers in C and assembly, peripherals via UART, SPI and I²C, embedded Linux on the Raspberry Pi and circuit design in VHDL for FPGAs.",
+ "projectFlowTitle": "flowculate – customer path analysis",
+ "projectFlowSummary": "Web app built by a team of five at HTWG, graded 1.0 (top grade). I built the frontend with the survey flow and layout editor.",
+ "projectThesisTitle": "ML pipeline for rating chat messages",
+ "projectThesisSummary": "Bachelor thesis: leakage-free Python pipeline for about 2,500 messages across 20 criteria. Synthetic training data from a local LLM (Gemma 3 via Ollama), four models compared with 6-fold cross-validation.",
+ "skRowLang": "Programming",
+ "skRowSys": "Embedded & systems",
+ "skRowSysSub": "Work, labs and university",
+ "skRowSec": "Security",
+ "skRowSecSub": "Fundamentals",
+ "skRowTools": "Tools",
+ "ctaText": "I'm looking for a working-student role in Munich starting now (up to 16 h/week), ideally in embedded, firmware or security.",
+ "cvMscDate": "04/2026 – 09/2028 (expected)",
+ "cvMscText": "Focus on systems & security. Selected modules:",
+ "cvBsc1": "Thesis: ML pipeline for rating chat messages (scikit-learn, Sentence Transformers, synthetic data with Gemma 3 via Ollama)",
+ "cvBsc2": "Embedded labs: MSP430 in C and assembly, UART/SPI/I²C, embedded Linux on the Raspberry Pi, VHDL for FPGAs",
+ "cvBsc3": "Tutor for digital logic (winter 2024/25)",
+ "cvBsc4": "Team project flowculate (grade 1.0): frontend in Next.js and TypeScript",
+ "cvLvlEn": "fluent",
+ "cvLvlFr": "basic"
+});
+
 // ============================================
 // Auto-Translation Dictionary
 // ============================================
