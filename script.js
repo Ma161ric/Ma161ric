@@ -1206,6 +1206,11 @@ function updatePageLanguage() {
     }
   });
 
+  document.querySelectorAll("[data-cv-link]").forEach(a => {
+    a.href = lang === "en" ? "assets/CV_Marcel_Richter_EN.pdf" : "assets/CV_Marcel_Richter.pdf";
+    a.setAttribute("download", lang === "en" ? "Marcel_Richter_CV_EN.pdf" : "Marcel_Richter_Lebenslauf.pdf");
+  });
+
   document.querySelectorAll("[data-i18n-placeholder]").forEach(el => {
     const key = el.getAttribute("data-i18n-placeholder");
     if (key && t[key]) el.placeholder = t[key];
