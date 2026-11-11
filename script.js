@@ -1019,7 +1019,7 @@ Object.assign(translations.de, {
  "cvBsc2": "Embedded-Labore: MSP430 in C und Assembler, UART/SPI/I²C, Embedded Linux auf dem Raspberry Pi, VHDL für FPGAs",
  "cvBsc3": "Tutor für Digitaltechnik (WiSe 2024/25)",
  "cvBsc4": "Teamprojekt flowculate (Note 1,0): Frontend in Next.js und TypeScript",
- "cvLvlEn": "fließend",
+ "cvLvlEn": "C1",
  "cvLvlFr": "Grundkenntnisse"
 });
 Object.assign(translations.en, {
@@ -1054,7 +1054,7 @@ Object.assign(translations.en, {
  "cvBsc2": "Embedded labs: MSP430 in C and assembly, UART/SPI/I²C, embedded Linux on the Raspberry Pi, VHDL for FPGAs",
  "cvBsc3": "Tutor for digital logic (winter 2024/25)",
  "cvBsc4": "Team project flowculate (grade 1.0): frontend in Next.js and TypeScript",
- "cvLvlEn": "fluent",
+ "cvLvlEn": "C1",
  "cvLvlFr": "basic"
 });
 
